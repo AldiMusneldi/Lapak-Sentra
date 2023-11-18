@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function TentangKami() {
+function TentangKami() {
   return (
     <div>
       <h1>tentang kami</h1>
     </div>
   );
 }
+
+export default TentangKami;

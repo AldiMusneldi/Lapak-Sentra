@@ -1,15 +1,12 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
-import Home from '../pages/Home/Home';
 
-const Layout = () => {
+const Layout = (props) => {
   return (
     <>
       <Navbar />
-      <main>
-        <Home />
-      </main>
+      <main className="container mx-auto">{props.children}</main>
       <Footer />
     </>
   );

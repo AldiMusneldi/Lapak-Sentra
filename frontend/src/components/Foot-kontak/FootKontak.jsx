@@ -27,12 +27,14 @@ const FootKontak = () => {
                 </a>
               </li>
               <li className="mb-[1rem]">
-                <div className="flex ">
-                  <span>
-                    <img src={iconPone} alt="" />
-                  </span>
-                  <span className="mx-2">+62851-5652-7939</span>
-                </div>
+                <a href="">
+                  <div className="flex ">
+                    <span>
+                      <img src={iconPone} alt="" />
+                    </span>
+                    <span className="mx-2">+62851-5652-7939</span>
+                  </div>
+                </a>
               </li>
             </ul>
             <div className="foot-sosmed flex  w-[60%] justify-between">

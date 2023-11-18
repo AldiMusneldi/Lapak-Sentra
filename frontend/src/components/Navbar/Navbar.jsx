@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactLogo from '../../assets/logo.svg';
+import { Link } from 'react-router-dom';
+import menu from '../Menu/Menu';
 
 const Navbar = () => {
   return (
@@ -7,24 +9,21 @@ const Navbar = () => {
       <header>
         <nav className="container mx-auto flex justify-between p-1 items-center font-Poppins">
           <div className="nav-title scale-100  w-[10%]">
-            <a href="/">
+            <Link to="/">
               <img src={ReactLogo} alt="React Logo" />
-            </a>
+            </Link>
           </div>
           <div className="nav-link w-[40%] text-sm">
             <ul className="flex justify-between ">
-              <li>
-                <a href="">Hunian</a>
-              </li>
-              <li>
-                <a href="">Fasilitas Rumah</a>
-              </li>
-              <li>
-                <a href="">Tentang kami</a>
-              </li>
-              <li>
-                <a href="">Hubungi Kami</a>
-              </li>
+              {menu.map((m) => {
+                return (
+                  <>
+                    <li key={m.id}>
+                      <Link to={m.path}>{m.text}</Link>
+                    </li>
+                  </>
+                );
+              })}
             </ul>
           </div>
           <div className="nav-profile w-[15%] flex justify-between items-center">

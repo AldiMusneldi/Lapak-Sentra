@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import menu from '../Menu/Menu';
 
 const FootMenu = () => {
   return (
@@ -10,18 +12,15 @@ const FootMenu = () => {
         </div>
         <div className="nav-link">
           <ul className="text-sm ">
-            <li className="mb-[1rem]">
-              <a href="">Hunian</a>
-            </li>
-            <li className="mb-[1rem]">
-              <a href="">Fasilitas Rumah</a>
-            </li>
-            <li className="mb-[1rem]">
-              <a href="">Tentang kami</a>
-            </li>
-            <li className="mb-[1rem]">
-              <a href="">Hubungi Kami</a>
-            </li>
+            {menu.map((m) => {
+              return (
+                <>
+                  <li key={m.id} className="mb-[1rem]">
+                    <Link to={m.path}>{m.text}</Link>
+                  </li>
+                </>
+              );
+            })}
           </ul>
         </div>
       </div>
