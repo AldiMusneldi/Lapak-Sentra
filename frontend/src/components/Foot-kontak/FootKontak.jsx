@@ -4,6 +4,7 @@ import iconMail from '../../assets/icons/Mail.svg';
 import iconFB from '../../assets/icons/facebook.svg';
 import iconIg from '../../assets/icons/instagram.svg';
 import iconTw from '../../assets/icons/Twitter.svg';
+import { Link } from 'react-router-dom';
 
 const FootKontak = () => {
   return (
@@ -17,24 +18,24 @@ const FootKontak = () => {
           <div className="nav-link">
             <ul className="text-sm">
               <li className="mb-[1rem]">
-                <a href="">
+                <Link to="">
                   <div className="flex ">
                     <span>
                       <img src={iconMail} alt="" />
                     </span>
                     <span className="mx-2">lapaksentra@gmail.com</span>
                   </div>
-                </a>
+                </Link>
               </li>
               <li className="mb-[1rem]">
-                <a href="">
+                <Link to="">
                   <div className="flex ">
                     <span>
                       <img src={iconPone} alt="" />
                     </span>
                     <span className="mx-2">+62851-5652-7939</span>
                   </div>
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="foot-sosmed flex  w-[60%] justify-between">
