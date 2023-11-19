@@ -10,7 +10,7 @@ const Register = () => {
     <>
       <div className="container mx-auto">
         <div className="flex">
-           <div className="mt-36">
+           <div className="mt-36 pl-36">
              <img src={AnimateTenant} alt="" />
            </div>
            
