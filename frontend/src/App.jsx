@@ -6,6 +6,8 @@ import TentangKami from './pages/Tentang-kami/TentangKami';
 import HubungiKami from './pages/Hubungi-kami/HubungiKami';
 import FasilitasRumah from './pages/Fasilitas-rumah/FasilitasRumah';
 import Hunian from './pages/Hunian/Hunian';
+import Login from './pages/Login/Login';
+import Tenant from './components/Tenant/Tenant';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/fasilitas-rumah" element={<FasilitasRumah />} />
           <Route path="/tentang-kami" element={<TentangKami />} />
           <Route path="/hubungi-kami" element={<HubungiKami />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/tenant" element={<Tenant />} />
         </Routes>
       </Layout>
     </>

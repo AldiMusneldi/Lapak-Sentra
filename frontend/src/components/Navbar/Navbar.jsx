@@ -28,9 +28,9 @@ const Navbar = () => {
           </div>
           <div className="nav-profile w-[15%] flex justify-between items-center">
             <div className=" rounded-md border-2 border-primary_70 py-[10px] px-[17px]">
-              <a href="">
+              <Link to="/login">
                 <span className="font-semibold text-Neutral_70">Masuk</span>
-              </a>
+              </Link>
             </div>
             <div className="rounded-md bg-primary_70 border-2 border-primary_70 py-[10px] px-[17px]">
               <a href="">
