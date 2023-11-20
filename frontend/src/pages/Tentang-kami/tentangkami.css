@@ -1,11 +1,11 @@
 /* tentangkami.css */
-.background-container {
+.background-about {
   position: relative;
-  background: url('../../assets/images/bg-tentangkami.png') center/cover no-repeat;
+  background: url('../../assets/animasi/bg-tentangkami.svg') center/cover no-repeat;
   height: 300px;
 }
 
-.background-container::before {
+.background-about::before {
   content: "";
   position: absolute;
   top: 0;
@@ -15,7 +15,7 @@
   background-color: rgba(105, 92, 255, 0.4);
 }
 
-.background-container h1 {
+.background-about h1 {
   position: relative;
   z-index: 1;
   font-size:50px; 
