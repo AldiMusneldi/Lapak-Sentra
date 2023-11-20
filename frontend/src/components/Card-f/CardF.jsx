@@ -4,7 +4,7 @@ const CardF = (props) => {
   const { fitur } = props;
   return (
     <>
-      <div className="card flex flex-col basis-[27%] border justify-center items-center shadow-lg rounded-[31px]  p-[1rem] text-center">
+      <div className="card flex flex-col basis-[27%] border justify-center items-center  rounded-[31px]  p-[1rem] text-center">
         <div className="card-img basis-[20%]  flex justify-center ">
           <div className="w-[80%] ">
             <img src={fitur.gambar} alt="" />

@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactLogo from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
 import menu from '../Menu/Menu';
 
 const Navbar = () => {
+  useEffect(() => {
+    window.onscroll = function () {
+      const header = document.querySelector('header');
+      const e = header.offsetTop;
+      if (window.pageYOffset > e) {
+        header.classList.add('navbar-fixed');
+        header.classList.remove('navbar');
+      } else {
+        header.classList.remove('navbar-fixed');
+        header.classList.add('navbar');
+      }
+    };
+  });
   return (
     <>
-      <header>
+      <header className="navbar">
         <nav className="container mx-auto flex justify-between p-1 items-center font-Poppins">
           <div className="nav-title scale-100  w-[10%]">
             <Link to="/">
@@ -17,11 +30,11 @@ const Navbar = () => {
             <ul className="flex justify-between ">
               {menu.map((m) => {
                 return (
-                  <>
-                    <li key={m.id}>
-                      <Link to={m.path}>{m.text}</Link>
-                    </li>
-                  </>
+                  <li key={m.id}>
+                    <Link className="text-Neutral_90 hover:text-primary_70 font-medium" to={m.path}>
+                      {m.text}
+                    </Link>
+                  </li>
                 );
               })}
             </ul>

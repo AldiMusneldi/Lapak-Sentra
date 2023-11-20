@@ -11,6 +11,7 @@ export default {
         Neutral_30: '#C9C9C9',
         Neutral_70: '#393939',
         Neutral_90: '#1A1A1A',
+        Eror_70: '#ef4444',
       },
       fontFamily: {
         worksans: ['Work+Sans'],
