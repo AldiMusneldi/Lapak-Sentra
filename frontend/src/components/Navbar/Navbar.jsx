@@ -40,7 +40,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="nav-profile w-[15%] flex justify-between items-center">
-            <div className=" rounded-md border-2 border-primary_70 py-[10px] px-[17px]">
+            <div className=" rounded-md border-2 bg-neutral-50 border-primary_70 py-[10px] px-[17px]">
               <a href="">
                 <span className="font-semibold text-Neutral_70">Masuk</span>
               </a>

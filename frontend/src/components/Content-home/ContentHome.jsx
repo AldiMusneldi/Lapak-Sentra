@@ -3,7 +3,7 @@ import RowRight from '../../assets/icons/row_Right.svg';
 
 import Cards from '../Cards/Cards';
 import SemDat from '../../data/DataBaru';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const ContentHome = () => {
   const [katagori, setKatagori] = useState(SemDat);
@@ -14,25 +14,29 @@ const ContentHome = () => {
 
   return (
     <>
-      <section className="p-[2rem]" id="content">
+      <section className="p-[2rem] my-[2rem] bg-neutral-50" id="content">
         <div className="container mx-auto">
-          <div className="content-title flex  justify-between items-center mb-[2rem]">
+          <div className="content-title ">
             <div className="title basis-[50%] ">
               <h1 className="font-title text-4xl  text-primary_70 font-semibold">Pilih Kebutuhan Anda</h1>
-              <div className="w-[20%] h-[6px] rounded-full bg-secondary_70 my-2"></div>
+              <div className="w-[15%] h-[6px] rounded-full bg-secondary_70 my-2"></div>
             </div>
-            <div className="lihat-semua  ">
-              <div className="justify-center bg-primary_70 flex items-center p-2 text-Neutral_10 font-medium rounded-md">
-                <h1>Lihat semua</h1>
-                <span className=" mt-1">
+          </div>
+          <div className="lihat-semua flex justify-end">
+            <Link to="/lihat-semua">
+              <div className="justify-end flex items-center bg-primary_70 p-2 text-Neutral_10 font-medium rounded-md">
+                <span className=" p-1">
+                  <h1>Lihat semua</h1>
+                </span>
+                <span className=" mt-1 ">
                   <img src={RowRight} alt="" />
                 </span>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="content-menu font-Poppins font-medium text-2xl mb-[1rem]">
             <div className=" ">
-              <ul className="menu-cont border-b-2  border-Neutral_30 justify-between flex">
+              <ul className="menu-cont border-b-2 border-Neutral_30 justify-between flex">
                 <li className="border-b-4 border-primary_70  p-2 ">
                   <button onClick={() => filtered()}>Semua Katagori</button>
                 </li>

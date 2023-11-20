@@ -6,7 +6,11 @@
   box-shadow: 7px 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .card-contents {
-  box-shadow: 1px 1px 11px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-testi {
+  box-shadow: 3px 5px 8px rgba(105, 92, 255, 0.3);
 }
 
 .navbar-fixed {
