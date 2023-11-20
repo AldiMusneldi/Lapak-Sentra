@@ -13,7 +13,9 @@ const Role = () => {
        <div className="container mx-auto justify-center">
          <div className="flex flex-col items-center">
             <div className="mb-[18px]">
-              <img src={ReactLogo} alt="React Logo" />
+                <Link to="/">
+                  <img src={ReactLogo} alt="React Logo" />
+                </Link>
             </div>
             <div>
               <h1 className="font-title text-center font-semibold text-2xl mb-2">Masuk Ke Lapak Sentra</h1>
