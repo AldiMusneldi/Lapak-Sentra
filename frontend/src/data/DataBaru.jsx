@@ -2,6 +2,10 @@ import kost1 from '../assets/gambar-kost&kontrakan/kost1.svg';
 import kost2 from '../assets/gambar-kost&kontrakan/kost2.svg';
 import kost3 from '../assets/gambar-kost&kontrakan/kost3.svg';
 import kost4 from '../assets/gambar-kost&kontrakan/kost4.svg';
+import kontrakan1 from '../assets/gambar-kost&kontrakan/kontrakan1.svg';
+import kontrakan2 from '../assets/gambar-kost&kontrakan/kontrakan2.svg';
+import kontrakan3 from '../assets/gambar-kost&kontrakan/kontrakan3.svg';
+import kontrakan4 from '../assets/gambar-kost&kontrakan/kontrakan4.svg';
 import kipas from '../assets/gambar-barang/kipas.svg';
 import ember from '../assets/gambar-barang/ember.svg';
 import setrika from '../assets/gambar-barang/setrika.svg';
@@ -10,9 +14,9 @@ import sikat from '../assets/gambar-barang/sikat.svg';
 const SemDat = [
   {
     id: 1,
-    title: 'Olive Paragon Mall Tipe A',
+    title: 'Kost Olive Paragon',
     katagoriFas: 'putra',
-    katagori: 'kontrakan',
+    katagori: 'kost',
     kecamatan: 'Jakarta Pusat',
     fasilitas: 'K.Mandi dalam . Ac . Meja . Kasur ',
     gambar: kost1,
@@ -23,7 +27,7 @@ const SemDat = [
     id: 2,
     title: 'Gelong Residence 25 Tipe A Grogol',
     katagoriFas: 'putra',
-    katagori: 'kontrakan',
+    katagori: 'kost',
     kecamatan: ' Jakarta Barat',
     fasilitas: 'K.Mandi dalam . Ac . Meja . Kasur . TV',
     gambar: kost2,
@@ -32,9 +36,9 @@ const SemDat = [
   },
   {
     id: 3,
-    title: 'Olive Paragon Mall Tipe A',
-    katagoriFas: 'putra',
-    katagori: 'kontrakan',
+    title: 'Kost Erwin Duren Pancoran',
+    katagoriFas: 'putri',
+    katagori: 'kost',
     kecamatan: 'Jakarta Pusat',
     fasilitas: 'K.Mandi dalam . Ac . Meja . Kasur ',
     gambar: kost3,
@@ -44,8 +48,8 @@ const SemDat = [
   {
     id: 4,
     title: 'Olive Paragon Mall Tipe A',
-    katagoriFas: 'putra',
-    katagori: 'kontrakan',
+    katagoriFas: 'putri',
+    katagori: 'kost',
     kecamatan: 'Jakarta Pusat',
     fasilitas: 'K.Mandi dalam . Ac . Meja . Kasur ',
     gambar: kost4,
@@ -53,7 +57,51 @@ const SemDat = [
     satuan: 'Bulan',
   },
   {
-    id: 1,
+    id: 5,
+    title: 'Kontrakan Badriah',
+    katagoriFas: 'campur',
+    katagori: 'kontrakan',
+    kecamatan: 'Depok',
+    fasilitas: 'K.Mandi dalam . Ac . Meja . Kasur ',
+    gambar: kontrakan1,
+    harga: 'Rp850.000',
+    satuan: 'Bulan',
+  },
+  {
+    id: 6,
+    title: 'Gelong Residence 25 Tipe A Grogol',
+    katagoriFas: 'campur',
+    katagori: 'kontrakan',
+    kecamatan: 'Kecamatan Lewiliang',
+    fasilitas: 'K.Mandi dalam . Ac . Meja . Kasur ',
+    gambar: kontrakan2,
+    harga: 'Rp2.100.000',
+    satuan: '(Bulan pertama)',
+  },
+  {
+    id: 7,
+    title: ' Duren Tiga Tipe A Pancoran',
+    katagoriFas: 'campur',
+    katagori: 'kontrakan',
+    kecamatan: 'Jakarta Selatan',
+    fasilitas: 'K.Mandi dalam . Ac . Meja . Kasur ',
+    gambar: kontrakan3,
+    harga: 'Rp2.700.000',
+    satuan: 'Bulan',
+  },
+  {
+    id: 8,
+    title: 'Kontrakan Mbok Jum',
+    katagoriFas: 'campur',
+    katagori: 'kontrakan',
+    kecamatan: 'Cilandak',
+    fasilitas: 'K.Mandi dalam . Ac . Meja . Kasur ',
+    gambar: kontrakan4,
+    harga: 'Rp.700.000',
+    satuan: 'Bulan',
+  },
+  {
+    id: 9,
     title: 'Kipas',
     katagori: 'fasilitas rumah',
     katagoriFas: 'elektronik',
@@ -63,7 +111,7 @@ const SemDat = [
     satuan: 'pcs',
   },
   {
-    id: 2,
+    id: 10,
     title: 'Ember',
     katagori: 'fasilitas rumah',
     katagoriFas: 'Kebersihan',
@@ -73,7 +121,7 @@ const SemDat = [
     satuan: 'pcs',
   },
   {
-    id: 3,
+    id: 11,
     title: 'Sikat',
     katagori: 'fasilitas rumah',
     katagoriFas: 'Kebersihan',
@@ -83,7 +131,7 @@ const SemDat = [
     satuan: 'pcs',
   },
   {
-    id: 4,
+    id: 12,
     title: 'Setrika',
     katagori: 'fasilitas rumah',
     katagoriFas: 'eletronik',

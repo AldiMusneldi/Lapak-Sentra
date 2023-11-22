@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
 import RowRight from '../../assets/icons/row_Right.svg';
 
 import Cards from '../Cards/Cards';
 import SemDat from '../../data/DataBaru';
 import { Link, NavLink } from 'react-router-dom';
 
-const ContentHome = () => {
-  const [katagori, setKatagori] = useState(SemDat);
+const ContentHome = ({ katagori, setKatagori }) => {
   function filtered(KatagoriFilter) {
     const filteredData = KatagoriFilter ? SemDat.filter((kat) => kat.katagori === KatagoriFilter) : SemDat;
     setKatagori(filteredData);
@@ -14,8 +12,8 @@ const ContentHome = () => {
 
   return (
     <>
-      <section className="p-[2rem] my-[2rem] bg-neutral-50" id="content">
-        <div className="container mx-auto">
+      <section className="p-[2rem] my-[2rem] bg-slate-50" id="content">
+        <div className="container mx-auto my-[2rem]">
           <div className="content-title ">
             <div className="title basis-[50%] ">
               <h1 className="font-title text-4xl  text-primary_70 font-semibold">Pilih Kebutuhan Anda</h1>

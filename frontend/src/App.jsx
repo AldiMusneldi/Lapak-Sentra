@@ -6,17 +6,22 @@ import TentangKami from './pages/Tentang-kami/TentangKami';
 import HubungiKami from './pages/Hubungi-kami/HubungiKami';
 import FasilitasRumah from './pages/Fasilitas-rumah/FasilitasRumah';
 import Hunian from './pages/Hunian/Hunian';
+import { useState } from 'react';
+import SemDat from './data/DataBaru';
+import Lihatsemua from './pages/Lihat-semua/Lihatsemua';
 
 function App() {
+  const [katagori, setKatagori] = useState(SemDat);
   return (
     <>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home katagori={katagori} setKatagori={setKatagori} />} />
           <Route path="/hunian" element={<Hunian />} />
           <Route path="/fasilitas-rumah" element={<FasilitasRumah />} />
           <Route path="/tentang-kami" element={<TentangKami />} />
           <Route path="/hubungi-kami" element={<HubungiKami />} />
+          <Route path="/lihat-semua" element={<Lihatsemua />} />
         </Routes>
       </Layout>
     </>

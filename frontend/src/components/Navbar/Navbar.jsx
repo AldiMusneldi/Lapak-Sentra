@@ -27,7 +27,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="nav-link w-[40%] text-sm">
-            <ul className="flex justify-between ">
+            <ul className="flex justify-center gap-10 ">
               {menu.map((m) => {
                 return (
                   <li key={m.id}>
