@@ -2,8 +2,10 @@ import React from 'react';
 import menu from '../Menu/Menu';
 import { Link } from 'react-router-dom';
 
-const FootMenu = () => {
-  const dataMenu = menu;
+const FootMenu = ({ navigate }) => {
+  const goToPage = (path) => {
+    navigate(path);
+  };
   return (
     <>
       <div className="foot-menu  basis-[20%] ">
@@ -13,10 +15,10 @@ const FootMenu = () => {
         </div>
         <div className="nav-link">
           <ul className="text-sm ">
-            {dataMenu.map((dataM) => {
+            {menu.map((dataM) => {
               return (
                 <li key={dataM.id} className="mb-[1rem]">
-                  <Link className=" hover:text-primary_70" to={dataM.path}>
+                  <Link className=" hover:text-primary_70" to={`/${dataM.path}`} onClick={() => goToPage(`/${dataM.path}`)}>
                     {dataM.text}
                   </Link>
                 </li>

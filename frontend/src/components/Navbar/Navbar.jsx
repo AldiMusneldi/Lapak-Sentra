@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import ReactLogo from '../../assets/logo.svg';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import menu from '../Menu/Menu';
 
-const Navbar = () => {
-
+const Navbar = ({ navigate }) => {
   useEffect(() => {
     window.onscroll = function () {
       const header = document.querySelector('header');
@@ -18,8 +17,6 @@ const Navbar = () => {
       }
     };
   });
-
-  const navigate = useNavigate();
 
   const goToPage = (path) => {
     navigate(path);
@@ -38,9 +35,7 @@ const Navbar = () => {
             <ul className="flex justify-center gap-10 ">
               {menu.map((m) => (
                 <li key={m.id}>
-                  <Link className="text-Neutral_90 hover:text-primary_70 font-medium"
-                    onClick={() => goToPage(`/${m.path}`)}
-                    style={{ cursor: 'pointer' }}>
+                  <Link to={`/${m.path}`} onClick={() => goToPage(`/${m.path}`)} className="text-Neutral_90 hover:text-primary_70 font-medium" style={{ cursor: 'pointer' }}>
                     {m.text}
                   </Link>
                 </li>
