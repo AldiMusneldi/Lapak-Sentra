@@ -4,7 +4,7 @@ const Search = () => {
   return (
     <>
       <a href="">
-        <div className="search font-medium p-2 flex justify-between shadow-lg border  rounded-[16px]">
+        <div className="search font-medium p-2 bg-slate-50 flex justify-between shadow-lg border  rounded-[16px]">
           <span className=" text-3xl flex items-center">
             <i class="fa-solid fa-magnifying-glass"></i>
           </span>
