@@ -19,9 +19,9 @@ const DataTesti = [
   },
   {
     id: 3,
-    nama: 'Bapak Bapak Facebook',
+    nama: 'Andi',
     gambar: Gambar3,
-    keterangan: 'Kontrakan , alacumak palkun Bogor ',
+    keterangan: 'Kontrakan Putra, Bogor ',
     deskripsi:
       'Dengan LapakSentra, sebagai pemilik kontrakan, saya lebih mudah mempromosikan dan mencari penyewa. Situs ini memberikan fitur unggulan untuk pembelian fasilitas rumah, menjadikannya solusi praktis untuk kebutuhan properti saya.',
   },

@@ -13,9 +13,11 @@ import Lihatsemua from './pages/Lihat-semua/Lihatsemua';
 import Login from './pages/Login/Login';
 import Tenant from './components/Tenant/Tenant';
 import Register from './components/Tenant/Register';
+import SemuaData from './data/SemuaData';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
+  const [katagoris, setKatagoris] = useState(SemuaData);
 
   return (
     <Routes>
@@ -31,7 +33,7 @@ function App() {
         path="/hunian"
         element={
           <Layout>
-            <Hunian />
+            <Hunian katagoris={katagoris} />
           </Layout>
         }
       />
@@ -39,7 +41,7 @@ function App() {
         path="/fasilitas-rumah"
         element={
           <Layout>
-            <FasilitasRumah />
+            <FasilitasRumah katagoris={katagoris} setKatagoris={setKatagoris} />
           </Layout>
         }
       />
@@ -63,7 +65,7 @@ function App() {
         path="/lihat-semua"
         element={
           <Layout>
-            <Lihatsemua />
+            <Lihatsemua katagoris={katagoris} setKatagoris={setKatagoris} />
           </Layout>
         }
       />

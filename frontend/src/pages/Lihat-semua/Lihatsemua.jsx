@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 // import Cards from '../../components/Cards/Cards';
 import SemuaData from '../../data/SemuaData';
 import CardSemua from '../../components/Cards/CardSemua';
-function Lihatsemua() {
-  const [katagori, setKatagori] = useState(SemuaData);
+function Lihatsemua({ katagoris, setKatagoris }) {
   function filtered(KatagoriFilter) {
     const filteredData = KatagoriFilter ? SemuaData.filter((kat) => kat.katagori === KatagoriFilter) : SemuaData;
-    setKatagori(filteredData);
+    setKatagoris(filteredData);
   }
   return (
     <>
@@ -25,9 +24,7 @@ function Lihatsemua() {
                     <button onClick={() => filtered()}>Semua Katagori</button>
                   </li>
                   <li className=" p-2 ">
-                    <NavLink onClick={() => filtered('kost')} className={({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'active' : '')}>
-                      Kost
-                    </NavLink>
+                    <NavLink onClick={() => filtered('kost')}>Kost</NavLink>
                   </li>
                   <li className=" p-2">
                     <NavLink onClick={() => filtered('kontrakan')}>Kontrakan</NavLink>
@@ -42,7 +39,7 @@ function Lihatsemua() {
               </div>
             </div>
             <div className="content-card font-Poppins flex justify-center gap-4 flex-wrap">
-              {katagori.map((kost, index) => {
+              {katagoris.map((kost, index) => {
                 return <CardSemua kost={kost} index={index} />;
               })}
             </div>
