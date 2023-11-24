@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../pages/Detail-kos/detailkos.css';
 import kost1 from '../../assets/fasilitas/sample1.svg';
 import iconWifi from '../../assets/icons/wifi.svg';
 import iconCar from '../../assets/icons/car.svg';
@@ -23,14 +22,14 @@ function DetailKos() {
   return (
     <div>
         <div className="flex">
-          <img src={kost1} alt="" className="w-box" />
+          <img src={kost1} alt="" className="w-[1400px] ml-[50px] pt-[85px]" />
         </div>
         <div>
             <div>
                 <h1 className="pl-10 font-bold text-5xl pt-10">Olive Paragon Mall Tipe A</h1>
             </div>
             <div className="pr-10 pl-10 mt-10">
-                <div className="pl-5 border border-black rounded-md w-border">
+                <div className="pl-5 border border-black rounded-md w-[850px]">
                     <p className="mb-2 mt-3">Olive Paragon Mall Tipe A adalah kost yang memiliki area strategis. Semua fasilitas sudah lengkap. Kamar mandi di dalam. Termasuk layanan bersih bersih kamar gratis serta sampo dan sabun free refill. Hubungi kami segera untuk info kelengkapan layanan kos lainnya. </p>
                     <ul className="list-disc pl-5 mb-3">
                         <li>Kost Putra</li>
@@ -38,11 +37,11 @@ function DetailKos() {
                         <li>Kamar mandi dalam</li>
                     </ul>
                 </div>
-                <div className="pl-5 border border-black rounded-md w-border mt-8">
+                <div className="pl-5 border border-black rounded-md w-[850px] mt-8">
                     <h2 className="text-2xl mt-3">Alamat lengkap</h2>
                     <p className="mb-3">Kost Area Gajah Mada, Hayam Wuruk, Olive Paragon Mall Tipe A, Jakarta Pusat Kota</p>
                 </div>
-                <div className="pl-5 border border-black rounded-md w-border mt-8">
+                <div className="pl-5 border border-black rounded-md w-[850px] mt-8">
                     <h2 className="text-2xl pl-10 mb-5 mt-3">Fasilitas</h2>
                     <div className="pl-10 flex-wrap flex-col grid grid-cols-4 grid-rows-2">
                         <div className="flex items-center">
@@ -87,7 +86,7 @@ function DetailKos() {
                         </div>
                     </div>
                 </div>
-                <div className="pl-5 border border-black rounded-md w-border mt-8 mb-10">
+                <div className="pl-5 border border-black rounded-md w-[850px] mt-8 mb-10">
                     <h2 className="text-2xl pl-10 mb-5 mt-3">Tempat terdekat</h2>
                     <div className="pl-10 flex-wrap flex-col grid grid-cols-4 grid-rows-2">
                         <div className="flex items-center">

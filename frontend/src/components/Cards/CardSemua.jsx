@@ -5,7 +5,7 @@ const CardSemua = ({ kost }) => {
   return (
     <>
       <div className="card-contents rounded-[9px] border bg-white border-Neutral_30 basis-[24%]">
-        <Link>
+        <Link to="/detailkos">
           <div className="card-img w-full">
             <img src={kost.gambar} alt="" className="w-[100%]" />
           </div>

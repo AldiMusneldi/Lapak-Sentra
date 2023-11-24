@@ -14,6 +14,7 @@ import Login from './pages/Login/Login';
 import Tenant from './components/Tenant/Tenant';
 import Register from './components/Tenant/Register';
 import SemuaData from './data/SemuaData';
+import DetailKos from './pages/Detail-kos/DetailKos';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -66,6 +67,14 @@ function App() {
         element={
           <Layout>
             <Lihatsemua katagoris={katagoris} setKatagoris={setKatagoris} />
+          </Layout>
+        }
+      />
+      <Route
+        path="/detailkos"
+        element={
+          <Layout>
+            <DetailKos />
           </Layout>
         }
       />
