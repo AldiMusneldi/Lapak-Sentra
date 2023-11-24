@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Cards = ({ kost }) => {
+  // const [clik, setClick] = useState();
+  // function Clicksan(haledek) {
+  //   setClick(clik);
+  // }
   return (
     <>
       <div className="card-contents rounded-[9px] border bg-white border-Neutral_30 basis-[24%]">
@@ -12,8 +16,9 @@ const Cards = ({ kost }) => {
           <div className="card-content">
             <div className="rating justify-end mt-1 w-[90%] mx-auto flex gap-2">
               <div className="hati">
-                <span className="text-Eror_70">
-                  <i class="fa-solid fa-heart"></i>
+                <span className="">
+                  <i class="fa-regular fa-heart"></i>
+                  {/* <i class="fa-solid fa-heart"></i> */}
                 </span>
               </div>
               <div className="bintang flex text-Neutral_70">
