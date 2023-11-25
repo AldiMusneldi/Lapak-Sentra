@@ -5,13 +5,13 @@ import FootMenu from '../Foot-menu/FootMenu';
 import FootKebijakan from '../Foot-kebijakan/FootKebijakan';
 import FootKontak from '../Foot-kontak/FootKontak';
 
-const Footer = () => {
+const Footer = ({ navigate }) => {
   return (
     <>
       <footer className="bg-Neutral_90 p-[2rem]">
         <div className="container mx-auto p-1 text-Neutral_10 flex justify-between items-start font-Poppins">
           <FootLog />
-          <FootMenu />
+          <FootMenu navigate={navigate} />
           <FootKebijakan />
           <FootKontak />
         </div>

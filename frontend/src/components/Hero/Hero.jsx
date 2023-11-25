@@ -5,7 +5,7 @@ import Search from '../Search/Search';
 const Hero = () => {
   return (
     <>
-      <section className="p-[2rem] font-worksans" id="hero">
+      <section className="pt-[10rem] font-worksans" id="hero">
         <div className="container mx-auto flex items-center ">
           <div className="hero_left flex flex-col  basis-[50%]">
             <div className="left_title mb-[18px] ">

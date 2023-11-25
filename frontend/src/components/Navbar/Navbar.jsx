@@ -1,36 +1,52 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactLogo from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
 import menu from '../Menu/Menu';
 
-const Navbar = () => {
+const Navbar = ({ navigate }) => {
+  useEffect(() => {
+    window.onscroll = function () {
+      const header = document.querySelector('header');
+      const e = header.offsetTop;
+      if (window.pageYOffset > e) {
+        header.classList.add('navbar-fixed');
+        header.classList.remove('navbar');
+      } else {
+        header.classList.remove('navbar-fixed');
+        header.classList.add('navbar');
+      }
+    };
+  });
+
+  const goToPage = (path) => {
+    navigate(path);
+  };
+
   return (
     <>
-      <header>
+      <header className="navbar">
         <nav className="container mx-auto flex justify-between p-1 items-center font-Poppins">
-          <div className="nav-title scale-100  w-[10%]">
+          <div className="nav-title scale-100 w-[10%]">
             <Link to="/">
               <img src={ReactLogo} alt="React Logo" />
             </Link>
           </div>
           <div className="nav-link w-[40%] text-sm">
-            <ul className="flex justify-between ">
-              {menu.map((m) => {
-                return (
-                  <>
-                    <li key={m.id}>
-                      <Link to={m.path}>{m.text}</Link>
-                    </li>
-                  </>
-                );
-              })}
+            <ul className="flex justify-center gap-10 ">
+              {menu.map((m) => (
+                <li key={m.id}>
+                  <Link to={`/${m.path}`} onClick={() => goToPage(`/${m.path}`)} className="text-Neutral_90 hover:text-primary_70 font-medium" style={{ cursor: 'pointer' }}>
+                    {m.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="nav-profile w-[15%] flex justify-between items-center">
-            <div className=" rounded-md border-2 border-primary_70 py-[10px] px-[17px]">
-              <a href="">
+            <div className=" rounded-md border-2 bg-neutral-50 border-primary_70 py-[10px] px-[17px]">
+              <Link to="/login">
                 <span className="font-semibold text-Neutral_70">Masuk</span>
-              </a>
+              </Link>
             </div>
             <div className="rounded-md bg-primary_70 border-2 border-primary_70 py-[10px] px-[17px]">
               <a href="">

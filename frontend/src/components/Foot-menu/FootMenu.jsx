@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import menu from '../Menu/Menu';
+import { Link } from 'react-router-dom';
 
-const FootMenu = () => {
+const FootMenu = ({ navigate }) => {
+  const goToPage = (path) => {
+    navigate(path);
+  };
   return (
     <>
       <div className="foot-menu  basis-[20%] ">
@@ -12,13 +15,13 @@ const FootMenu = () => {
         </div>
         <div className="nav-link">
           <ul className="text-sm ">
-            {menu.map((m) => {
+            {menu.map((dataM) => {
               return (
-                <>
-                  <li key={m.id} className="mb-[1rem]">
-                    <Link to={m.path}>{m.text}</Link>
-                  </li>
-                </>
+                <li key={dataM.id} className="mb-[1rem]">
+                  <Link className=" hover:text-primary_70" to={`/${dataM.path}`} onClick={() => goToPage(`/${dataM.path}`)}>
+                    {dataM.text}
+                  </Link>
+                </li>
               );
             })}
           </ul>
