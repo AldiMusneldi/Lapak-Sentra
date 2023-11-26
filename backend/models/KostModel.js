@@ -41,13 +41,6 @@ const Kosts = db.define('kosts', {
             notEmpty:true
         }
     },
-    wc : {
-        type: DataTypes.INTEGER,
-        allowNull:false,
-        validate:{
-            notEmpty:true
-        }
-    },
     address : {
         type: DataTypes.TEXT,
         allowNull:false,
