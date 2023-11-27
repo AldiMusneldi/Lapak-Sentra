@@ -24,7 +24,7 @@ function TentangKami() {
       height: 300px;
       background-color: #695cff;
       opacity: 0.4;
-      z-index: 2;
+      z-index: -2;
     }
   `;
 

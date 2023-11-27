@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import AnimateContact from '../../assets/animasi/animasi-contact.svg';
 import BgHubungikami from '../../assets/animasi/bg-hubungikami.svg';
 import iconPone from '../../assets/icons/Phone.svg';
+import { Link } from 'react-router-dom';
 
 function HubungiKami() {
   const BgHubungi = styled.div`
@@ -18,6 +19,7 @@ function HubungiKami() {
     width: 100%;
     height: 300px;
     background-color: rgba(105, 92, 255, 0.4);
+    z-index: -2;
   }
   
   h1 {
@@ -66,13 +68,15 @@ function HubungiKami() {
                 <h1 className="font-bold text-2xl pb-6">Info Kontak</h1>
                 <div className="flex my-3 ">
                   <img src={iconPone} />
-                  <h1 className="pl-3">+62851-5652-7939</h1>
+                  <Link to=""><h1 className="pl-3 hover:text-primary_70 text-Neutral_70">+62851-5652-7939</h1></Link>
                 </div>
-                <div className="flex">
+                <div className="group">
+                  <div className="flex group-hover:text-primary_70 text-Neutral_70">
                   <div>
-                    <i class="fa-solid fa-envelope text-indigo-700"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <Link to=""><button className="pl-3">Lapaksentra@gmail.com</button></Link>
                   </div>
-                  <h1 className="pl-3 text-indigo-700">Lapaksentra@gmail.com</h1>
                 </div>
               </div>
               <div className="my-16">
