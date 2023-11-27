@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import kost1 from '../../assets/fasilitas/sample1.svg';
 import iconWifi from '../../assets/icons/wifi.svg';
 import iconCar from '../../assets/icons/car.svg';
@@ -16,9 +16,11 @@ import iconRumahsakit from '../../assets/icons/rumahsakit.svg';
 import iconSupermarket from '../../assets/icons/supermarket.svg';
 import iconTempatmakan from '../../assets/icons/tempatmakan.svg';
 import iconHalte from '../../assets/icons/halte.svg';
+import CardSemua from '../../components/Cards/CardSemua';
 
 
-function DetailKos() {
+const DetailKos = () => {
+    const {semua_data} = useContext(CardSemua)
   return (
     <div>
         <div className="flex">
