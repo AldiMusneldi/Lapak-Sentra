@@ -94,10 +94,10 @@ function DetailKos() {
         <img src={kost1} alt="" className="w-[1400px] ml-[50px] pt-[85px]" />
       </div>
       <div>
-        <div className="flex">
-          <h1 className="pl-10 font-bold text-5xl pt-10">Olive Paragon Mall Tipe A</h1>
-          <div className="absolute">
-            <div>
+        <div className="flex relative ">
+          <h1 className="pl-10  font-bold text-5xl pt-10">Olive Paragon Mall Tipe A</h1>
+          <div className=" absolute ">
+            <div className="">
               <section className="w-[390px] pl-6 py-5 mt-10 ml-[62rem] shadow-2xl bg-white rounded-md">
                 <div className="flex items-center">
                   <img src={iconDiskon} alt="" className="w-[20px] h-[20px]" />
