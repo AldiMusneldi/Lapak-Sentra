@@ -1,13 +1,20 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-// import Cards from '../../components/Cards/Cards';
-import SemuaData from '../../data/SemuaData';
+import React, { useEffect, useState } from 'react';
 import CardSemua from '../../components/Cards/CardSemua';
-function Lihatsemua({ katagoris, setKatagoris }) {
-  function filtered(KatagoriFilter) {
-    const filteredData = KatagoriFilter ? SemuaData.filter((kat) => kat.katagori === KatagoriFilter) : SemuaData;
-    setKatagoris(filteredData);
+import { useDispatch, useSelector } from 'react-redux';
+import { lihatS } from '../../features/katagoriSlice';
+function Lihatsemua() {
+  const [isActive, setisActive] = useState('1');
+  function aktive(satu) {
+    const angka = satu;
+    setisActive(angka);
   }
+
+  const dispatch = useDispatch();
+  const katagoris = useSelector((state) => state.Skatagori.lihatSemua);
+  useEffect(() => {
+    dispatch(lihatS({ katagoriFilter: '' }));
+  }, [dispatch]);
+
   return (
     <>
       <section className="pt-[10rem] mb-[2rem]" id="lihatsemua">
@@ -20,27 +27,27 @@ function Lihatsemua({ katagoris, setKatagoris }) {
             <div className="content-menu font-Poppins font-medium text-2xl mb-[1rem]">
               <div className=" ">
                 <ul className="menu-cont border-b-2 border-Neutral_30 justify-between flex">
-                  <li className="border-b-4 border-primary_70  p-2 ">
-                    <button onClick={() => filtered()}>Semua Katagori</button>
+                  <li onClick={() => aktive('1')} className={`p-2 ${isActive === '1' ? 'border-b-4 border-primary_70' : ''}`}>
+                    <button onClick={() => dispatch(lihatS({ katagoris }))}>Semua Katagori</button>
                   </li>
-                  <li className=" p-2 ">
-                    <NavLink onClick={() => filtered('kost')}>Kost</NavLink>
+                  <li onClick={() => aktive('2')} className={`p-2 ${isActive === '2' ? 'border-b-4 border-primary_70' : ''}`}>
+                    <button onClick={() => dispatch(lihatS({ katagoriFilter: 'kost' }))}>Kost</button>
+                  </li>
+                  <li onClick={() => aktive('3')} className={`p-2 ${isActive === '3' ? 'border-b-4 border-primary_70' : ''}`}>
+                    <button onClick={() => dispatch(lihatS({ katagoriFilter: 'kontrakan' }))}>Kontrakan</button>
+                  </li>
+                  <li onClick={() => aktive('4')} className={`p-2 ${isActive === '4' ? 'border-b-4 border-primary_70' : ''}`}>
+                    <button onClick={() => dispatch(lihatS({ katagoriFilter: 'fasilitas rumah' }))}>Fasilitas rumah</button>
                   </li>
                   <li className=" p-2">
-                    <NavLink onClick={() => filtered('kontrakan')}>Kontrakan</NavLink>
-                  </li>
-                  <li className=" p-2">
-                    <NavLink onClick={() => filtered('fasilitas rumah')}>Fasilitas rumah</NavLink>
-                  </li>
-                  <li className=" p-2">
-                    <NavLink onClick={() => filtered()}>Kerjasama Mitra</NavLink>
+                    <button onClick={() => lihatS()}>Kerjasama Mitra</button>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="content-card font-Poppins flex justify-center gap-4 flex-wrap">
               {katagoris.map((kost, index) => {
-                return <CardSemua kost={kost} index={index} />;
+                return <CardSemua kost={kost} key={index} />;
               })}
             </div>
           </div>

@@ -45,7 +45,7 @@ const Navbar = ({ navigate }) => {
           <div className="nav-profile w-[15%] flex justify-between items-center">
             <div className=" rounded-md border-2 bg-neutral-50 border-primary_70 py-[10px] px-[17px]">
               <Link to="/login">
-                <span className="font-semibold text-Neutral_70">Masuk</span>
+                <span className="font-semibold text-primary_70">Masuk</span>
               </Link>
             </div>
             <div className="rounded-md bg-primary_70 border-2 border-primary_70 py-[10px] px-[17px]">

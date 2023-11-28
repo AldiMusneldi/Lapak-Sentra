@@ -13,12 +13,12 @@ import Lihatsemua from './pages/Lihat-semua/Lihatsemua';
 import Login from './pages/Login/Login';
 import Tenant from './components/Tenant/Tenant';
 import Register from './components/Tenant/Register';
-import SemuaData from './data/SemuaData';
+// import SemuaData from './data/SemuaData';
 import DetailKos from './pages/Detail-kos/DetailKos';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
-  const [katagoris, setKatagoris] = useState(SemuaData);
+  // const [katagoris, setKatagoris] = useState(SemuaData);
 
   return (
     <Routes>
@@ -26,7 +26,7 @@ function App() {
         path="/"
         element={
           <Layout>
-            <Home katagori={katagori} setKatagori={setKatagori} />{' '}
+            <Home katagori={katagori} setKatagori={setKatagori} />
           </Layout>
         }
       />
@@ -34,7 +34,7 @@ function App() {
         path="/hunian"
         element={
           <Layout>
-            <Hunian katagoris={katagoris} />
+            <Hunian />
           </Layout>
         }
       />
@@ -42,7 +42,7 @@ function App() {
         path="/fasilitas-rumah"
         element={
           <Layout>
-            <FasilitasRumah katagoris={katagoris} setKatagoris={setKatagoris} />
+            <FasilitasRumah />
           </Layout>
         }
       />
@@ -66,7 +66,7 @@ function App() {
         path="/lihat-semua"
         element={
           <Layout>
-            <Lihatsemua katagoris={katagoris} setKatagoris={setKatagoris} />
+            <Lihatsemua />
           </Layout>
         }
       />

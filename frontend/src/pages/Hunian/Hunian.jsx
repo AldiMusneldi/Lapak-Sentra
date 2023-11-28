@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TipeP from '../../components/Dropdown/TipeP';
 import FasilitasH from '../../components/Dropdown/FasilitasH';
 import PilihH from '../../components/Dropdown/PilihH';
 import CardSemua from '../../components/Cards/CardSemua';
+import { useDispatch, useSelector } from 'react-redux';
+import { filteredK } from '../../features/katagoriSlice';
+// import { store } from '../../app/store';
 
-function Hunian({ katagoris }) {
-  const filtered = katagoris.filter((filtr) => filtr.katagori === 'kost' || filtr.katagori === 'kontrakan');
+function Hunian() {
+  const dispatch = useDispatch();
+  const katagoris = useSelector((state) => state.Skatagori.filteredDataK);
+  useEffect(() => {
+    dispatch(filteredK({ kost: 'kost', kontrakan: 'kontrakan' }));
+  }, []);
 
   return (
     <>
@@ -34,7 +41,7 @@ function Hunian({ katagoris }) {
             </form>
           </div>
           <div className="pt-[5rem] content-card font-Poppins flex justify-center gap-4 flex-wrap">
-            {filtered.map((kost, index) => {
+            {katagoris.map((kost, index) => {
               return <CardSemua kost={kost} key={index} />;
             })}
           </div>

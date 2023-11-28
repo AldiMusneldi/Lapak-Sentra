@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FasilitasJ from '../../components/Dropdown/FasilitasJ';
 import FasilitasH from '../../components/Dropdown/FasilitasH';
 import CardSemua from '../../components/Cards/CardSemua';
+import { useDispatch, useSelector } from 'react-redux';
+import { filteredF } from '../../features/katagoriSlice';
 
-function FasilitasRumah({ katagoris }) {
-  const filtered = katagoris.filter((kat) => kat.katagori === 'fasilitas rumah');
-
+function FasilitasRumah() {
+  const dispatch = useDispatch();
+  const katagoris = useSelector((state) => state.Skatagori.filteredDataF);
+  useEffect(() => {
+    dispatch(filteredF('fasilitas rumah'));
+  }, [dispatch]);
   return (
     <>
       <section className="pt-[10rem] mb-[2rem] font-worksans" id="fasilitasrumah">
@@ -32,7 +37,7 @@ function FasilitasRumah({ katagoris }) {
             </form>
           </div>
           <div className="pt-[5rem] content-card font-Poppins flex justify-center gap-4 flex-wrap">
-            {filtered.map((kost, index) => {
+            {katagoris.map((kost, index) => {
               return <CardSemua kost={kost} key={index} />;
             })}
           </div>
