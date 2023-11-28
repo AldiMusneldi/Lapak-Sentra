@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import kost1 from '../../assets/fasilitas/sample1.svg';
+import kost1 from '../../assets/gambar-kost&kontrakan/kost1.svg';
+import dkost1 from '../../assets/detail-kos/dkost1.svg';
+import dkost2 from '../../assets/detail-kos/dkost1,1.svg';
 import iconWifi from '../../assets/icons/wifi.svg';
 import iconCar from '../../assets/icons/car.svg';
 import iconTv from '../../assets/icons/tv.svg';
@@ -18,8 +20,6 @@ import iconTempatmakan from '../../assets/icons/tempatmakan.svg';
 import iconHalte from '../../assets/icons/halte.svg';
 import iconDiskon from '../../assets/icons/diskon.svg';
 import iconChat from '../../assets/icons/chat.svg';
-import { useDisclosure } from '@chakra-ui/react';
-import Modalpemilik from '../../components/Modals/Modalpemilik';
 
 function DetailKos() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -61,28 +61,28 @@ function DetailKos() {
       case 'Per 3 Bulan':
         setStates({
           null: '',
-          dp: 1080000,
-          pelunasan: 3045000,
-          penuh: 4125000,
-          total: 4125000,
+          dp: 3240000,
+          pelunasan: 8835000,
+          penuh: 11575000,
+          total: 11575000,
         });
         break;
       case 'Per 6 Bulan':
         setStates({
           null: '',
-          dp: 1080000,
-          pelunasan: 3045000,
-          penuh: 4125000,
-          total: 4125000,
+          dp: 6480000,
+          pelunasan: 15970000,
+          penuh: 22450000,
+          total: 22450000,
         });
         break;
       case 'Per Tahun':
         setStates({
           null: '',
-          dp: 1080000,
-          pelunasan: 3045000,
-          penuh: 4125000,
-          total: 4125000,
+          dp: 12960000,
+          pelunasan: 31240000,
+          penuh: 44200000,
+          total: 44200000,
         });
         break;
       default:
@@ -94,7 +94,13 @@ function DetailKos() {
   return (
     <div>
       <div className="flex">
-        <img src={kost1} alt="" className="w-[1400px] ml-[50px] pt-[85px]" />
+        <section>
+          <img src={kost1} alt="" className="w-[900px] h-[700px] ml-12 pt-6" />
+        </section>
+        <section>
+          <img src={dkost1} alt="" className="w-[390px] h-[290px] ml-[25px] mt-[70px]" />
+          <img src={dkost2} alt="" className="w-[390px] h-[290px] ml-[25px]" />
+        </section>
       </div>
       <div>
         <div className="flex relative ">
@@ -145,7 +151,14 @@ function DetailKos() {
                                 Pelunasan :<div className="pl-40">Rp. {states.pelunasan}</div>
                               </div>
                             )}
-                            <span className="mt-2" style={{ borderTop: '1px solid grey', display: 'block', width: '100%' }}></span>
+                            <span
+                              className="mt-2"
+                              style={{
+                                borderTop: '1px solid grey',
+                                display: 'block',
+                                width: '100%',
+                              }}
+                            ></span>
                             <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
                             {states.penuh && (
                               <div className="container mt-4 flex">
@@ -153,7 +166,14 @@ function DetailKos() {
                               </div>
                             )}
                           </div>
-                          <span className="mt-5" style={{ borderTop: '1px solid grey', display: 'block', width: '100%' }}></span>
+                          <span
+                            className="mt-5"
+                            style={{
+                              borderTop: '1px solid grey',
+                              display: 'block',
+                              width: '100%',
+                            }}
+                          ></span>
                           <div className="mt-3">
                             {states.total && (
                               <div className="container mt-4 flex">
@@ -167,34 +187,148 @@ function DetailKos() {
 
                     {pakets === 'Per 3 Bulan' && (
                       <>
-                        <div className="container mt-4">Jika kamu bayar pakai DP :</div>
-                        {states.dp && <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>}
-                        {states.pelunasan && <div className="container mt-4">Pelunasan :{states.pelunasan}</div>}
-                        <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
-                        {states.penuh && <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>}
-                        {states.total && <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>}
+                        <div className="w-[388px] p-4 mb-3 mt-[-15px] ml-[-24px]">
+                          <div className="rounded-md border border-black p-3">
+                            <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+                            {states.dp && (
+                              <div className="container mt-4 flex">
+                                Uang Muka (DP) :<div className="pl-28">Rp. {states.dp}</div>
+                              </div>
+                            )}
+                            {states.pelunasan && (
+                              <div className="container mt-4 flex">
+                                Pelunasan :<div className="pl-40">Rp. {states.pelunasan}</div>
+                              </div>
+                            )}
+                            <span
+                              className="mt-2"
+                              style={{
+                                borderTop: '1px solid grey',
+                                display: 'block',
+                                width: '100%',
+                              }}
+                            ></span>
+                            <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+                            {states.penuh && (
+                              <div className="container mt-4 flex">
+                                Pembayaran penuh :<div className="pl-[87px]">Rp. {states.penuh}</div>
+                              </div>
+                            )}
+                          </div>
+                          <span
+                            className="mt-5"
+                            style={{
+                              borderTop: '1px solid grey',
+                              display: 'block',
+                              width: '100%',
+                            }}
+                          ></span>
+                          <div className="mt-3">
+                            {states.total && (
+                              <div className="container mt-4 flex">
+                                Total Pembayaran Pertama :<div className="pl-14">Rp. {states.total}</div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
                       </>
                     )}
 
                     {pakets === 'Per 6 Bulan' && (
                       <>
-                        <div className="container mt-4">Jika kamu bayar pakai DP :</div>
-                        {states.dp && <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>}
-                        {states.pelunasan && <div className="container mt-4">Pelunasan :{states.pelunasan}</div>}
-                        <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
-                        {states.penuh && <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>}
-                        {states.total && <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>}
+                        <div className="w-[388px] p-4 mb-3 mt-[-15px] ml-[-24px]">
+                          <div className="rounded-md border border-black p-3">
+                            <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+                            {states.dp && (
+                              <div className="container mt-4 flex">
+                                Uang Muka (DP) :<div className="pl-28">Rp. {states.dp}</div>
+                              </div>
+                            )}
+                            {states.pelunasan && (
+                              <div className="container mt-4 flex">
+                                Pelunasan :<div className="pl-[148px]">Rp. {states.pelunasan}</div>
+                              </div>
+                            )}
+                            <span
+                              className="mt-2"
+                              style={{
+                                borderTop: '1px solid grey',
+                                display: 'block',
+                                width: '100%',
+                              }}
+                            ></span>
+                            <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+                            {states.penuh && (
+                              <div className="container mt-4 flex">
+                                Pembayaran penuh :<div className="pl-[86px]">Rp. {states.penuh}</div>
+                              </div>
+                            )}
+                          </div>
+                          <span
+                            className="mt-5"
+                            style={{
+                              borderTop: '1px solid grey',
+                              display: 'block',
+                              width: '100%',
+                            }}
+                          ></span>
+                          <div className="mt-3">
+                            {states.total && (
+                              <div className="container mt-4 flex">
+                                Total Pembayaran Pertama :<div className="pl-14">Rp. {states.total}</div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
                       </>
                     )}
 
                     {pakets === 'Per Tahun' && (
                       <>
-                        <div className="container mt-4">Jika kamu bayar pakai DP :</div>
-                        {states.dp && <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>}
-                        {states.pelunasan && <div className="container mt-4">Pelunasan :{states.pelunasan}</div>}
-                        <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
-                        {states.penuh && <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>}
-                        {states.total && <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>}
+                        <div className="w-[388px] p-4 mb-3 mt-[-15px] ml-[-24px]">
+                          <div className="rounded-md border border-black p-3">
+                            <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+                            {states.dp && (
+                              <div className="container mt-4 flex">
+                                Uang Muka (DP) :<div className="pl-[105px]">Rp. {states.dp}</div>
+                              </div>
+                            )}
+                            {states.pelunasan && (
+                              <div className="container mt-4 flex">
+                                Pelunasan :<div className="pl-[150px]">Rp. {states.pelunasan}</div>
+                              </div>
+                            )}
+                            <span
+                              className="mt-2"
+                              style={{
+                                borderTop: '1px solid grey',
+                                display: 'block',
+                                width: '100%',
+                              }}
+                            ></span>
+                            <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+                            {states.penuh && (
+                              <div className="container mt-4 flex">
+                                Pembayaran penuh :<div className="pl-[88px]">Rp. {states.penuh}</div>
+                              </div>
+                            )}
+                          </div>
+                          <span
+                            className="mt-5"
+                            style={{
+                              borderTop: '1px solid grey',
+                              display: 'block',
+                              width: '100%',
+                            }}
+                          ></span>
+                          <div className="mt-3">
+                            {states.total && (
+                              <div className="container mt-4 flex">
+                                Total Pembayaran Pertama :<div className="pl-14">Rp. {states.total}</div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
                       </>
                     )}
                   </>
@@ -210,60 +344,6 @@ function DetailKos() {
               {/* modal ajukan sewa */}
               <Modalpemilik onClose={onClose} isOpen={isOpen} />
             </div>
-            {/* {states.message && (
-              <div className="container mt-4">{states.message}</div>
-            )} */}
-            {/* {states && (
-          <div className="container mt-4">Jika kamu bayar pakai DP :</div>
-        )}
-            {states.dp && (
-          <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>
-        )}
-            {states.pelunasan && (
-          <div className="container mt-4">Pelunasan :{states.pelunasan}</div>
-        )}
-        {states && (
-          <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
-        )}
-        {states.penuh && (
-          <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>
-        )} */}
-            {/* {states && pakets === "Per Bulan" && (
-          <>
-            <div className="container mt-4">Jika kamu bayar pakai DP :</div>
-            {states.dp && (
-              <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>
-            )}
-            {states.pelunasan && (
-              <div className="container mt-4">Pelunasan :{states.pelunasan}</div>
-            )}
-            <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
-            {states.penuh && (
-              <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>
-            )}
-            {states.total && (
-              <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>
-            )}
-          </>
-        )}
-        {states && pakets === "Per 3 Bulan" && (
-          <>
-            <div className="container mt-4">Jika kamu bayar pakai DP :</div>
-            {states.dp && (
-              <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>
-            )}
-            {states.pelunasan && (
-              <div className="container mt-4">Pelunasan :{states.pelunasan}</div>
-            )}
-            <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
-            {states.penuh && (
-              <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>
-            )}
-            {states.total && (
-              <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>
-            )}
-          </>
-        )} */}
           </div>
         </div>
         <div className="pr-10 pl-10 mt-10">
