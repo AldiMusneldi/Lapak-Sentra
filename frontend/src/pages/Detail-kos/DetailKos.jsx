@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import kost1 from '../../assets/fasilitas/sample1.svg';
 import iconWifi from '../../assets/icons/wifi.svg';
 import iconCar from '../../assets/icons/car.svg';
@@ -16,24 +16,256 @@ import iconRumahsakit from '../../assets/icons/rumahsakit.svg';
 import iconSupermarket from '../../assets/icons/supermarket.svg';
 import iconTempatmakan from '../../assets/icons/tempatmakan.svg';
 import iconHalte from '../../assets/icons/halte.svg';
-// import CardSemua from '../../components/Cards/CardSemua';
+import iconDiskon from '../../assets/icons/diskon.svg';
+import iconChat from '../../assets/icons/chat.svg';
 
-const DetailKos = () => {
-  // const {semua_data} = useContext(CardSemua)
+function DetailKos() {
+  const paket = [
+    {
+      name: 'Per Bulan',
+    },
+    {
+      name: 'Per 3 Bulan',
+    },
+    {
+      name: 'Per 6 Bulan',
+    },
+    {
+      name: 'Per Tahun',
+    },
+  ];
+
+  const [pakets, setPakets] = useState('');
+  const [states, setStates] = useState({});
+  //   const changePakets = (event) => {
+  //     setPakets(event.target.value);
+  //     setStates(paket.find((ctr) => ctr.name === event.target.value));
+  //   };
+  const changePakets = (event) => {
+    setPakets(event.target.value);
+
+    // Tambahkan pengecekan untuk menetapkan states berdasarkan opsi yang dipilih
+    switch (event.target.value) {
+      case 'Per Bulan':
+        setStates({
+          null: '',
+          dp: 1080000,
+          pelunasan: 3045000,
+          penuh: 4125000,
+          total: 4125000,
+        });
+        break;
+      case 'Per 3 Bulan':
+        setStates({
+          null: '',
+          dp: 1080000,
+          pelunasan: 3045000,
+          penuh: 4125000,
+          total: 4125000,
+        });
+        break;
+      case 'Per 6 Bulan':
+        setStates({
+          null: '',
+          dp: 1080000,
+          pelunasan: 3045000,
+          penuh: 4125000,
+          total: 4125000,
+        });
+        break;
+      case 'Per Tahun':
+        setStates({
+          null: '',
+          dp: 1080000,
+          pelunasan: 3045000,
+          penuh: 4125000,
+          total: 4125000,
+        });
+        break;
+      default:
+        setStates({});
+        break;
+    }
+  };
+
   return (
     <div>
       <div className="flex">
         <img src={kost1} alt="" className="w-[1400px] ml-[50px] pt-[85px]" />
       </div>
       <div>
-        <div>
+        <div className="flex">
           <h1 className="pl-10 font-bold text-5xl pt-10">Olive Paragon Mall Tipe A</h1>
+          <div className="absolute">
+            <div>
+              <section className="w-[390px] pl-6 py-5 mt-10 ml-[62rem] shadow-2xl bg-white rounded-md">
+                <div className="flex items-center">
+                  <img src={iconDiskon} alt="" className="w-[20px] h-[20px]" />
+                  <p className="text-red-500 pl-1">Diskon 70rb</p>
+                  <p className="pl-3 text-gray-400">
+                    <strike>Rp700.000</strike>
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <h1 className="text-3xl">
+                    <b>Rp630.000</b>
+                  </h1>
+                  <p className="pl-2 text-gray-400">(Bulan Pertama)</p>
+                </div>
+                <div className="pt-4 flex">
+                  <input type="date" className="rounded-sm w-[160px] h-[36px] text-lg p-2 border border-black" />
+                  <select name="" className="rounded-sm w-[160px] h-[38px] text-lg ml-5 p-1 border border-black" value={pakets} onChange={changePakets}>
+                    <option value="" disabled>
+                      Per Bulan
+                    </option>
+                    {paket.map((ctr) => (
+                      <option value={ctr.name}>{ctr.name}</option>
+                    ))}
+                  </select>
+                </div>
+              </section>
+              <section className="w-[390px] mt-[-6px] pl-6 ml-[62rem] shadow-2xl bg-white rounded-md p-3">
+                {states && (
+                  <>
+                    {pakets === 'Per Bulan' && (
+                      <>
+                        <div className="w-[388px] p-4 mb-3 mt-[-15px] ml-[-24px]">
+                          <div className="rounded-md border border-black p-3">
+                            <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+                            {states.dp && (
+                              <div className="container mt-4 flex">
+                                Uang Muka (DP) :<div className="pl-28">Rp. {states.dp}</div>
+                              </div>
+                            )}
+                            {states.pelunasan && (
+                              <div className="container mt-4 flex">
+                                Pelunasan :<div className="pl-40">Rp. {states.pelunasan}</div>
+                              </div>
+                            )}
+                            <span className="mt-2" style={{ borderTop: '1px solid grey', display: 'block', width: '100%' }}></span>
+                            <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+                            {states.penuh && (
+                              <div className="container mt-4 flex">
+                                Pembayaran penuh :<div className="pl-24">Rp. {states.penuh}</div>
+                              </div>
+                            )}
+                          </div>
+                          <span className="mt-5" style={{ borderTop: '1px solid grey', display: 'block', width: '100%' }}></span>
+                          <div className="mt-3">
+                            {states.total && (
+                              <div className="container mt-4 flex">
+                                Total Pembayaran Pertama :<div className="pl-14">Rp. {states.total}</div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </>
+                    )}
+
+                    {pakets === 'Per 3 Bulan' && (
+                      <>
+                        <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+                        {states.dp && <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>}
+                        {states.pelunasan && <div className="container mt-4">Pelunasan :{states.pelunasan}</div>}
+                        <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+                        {states.penuh && <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>}
+                        {states.total && <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>}
+                      </>
+                    )}
+
+                    {pakets === 'Per 6 Bulan' && (
+                      <>
+                        <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+                        {states.dp && <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>}
+                        {states.pelunasan && <div className="container mt-4">Pelunasan :{states.pelunasan}</div>}
+                        <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+                        {states.penuh && <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>}
+                        {states.total && <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>}
+                      </>
+                    )}
+
+                    {pakets === 'Per Tahun' && (
+                      <>
+                        <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+                        {states.dp && <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>}
+                        {states.pelunasan && <div className="container mt-4">Pelunasan :{states.pelunasan}</div>}
+                        <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+                        {states.penuh && <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>}
+                        {states.total && <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>}
+                      </>
+                    )}
+                  </>
+                )}
+                <button className="flex border items-center border-black w-[340px] h-[36px] mb-2">
+                  <img src={iconChat} alt="" className="ml-24 w-[20px] h-[20px]" />
+                  <h1 className="pl-4">Tanya Pemilik</h1>
+                </button>
+                <button className="flex border items-center w-[340px] h-[36px] bg-primary_70">
+                  <h1 className="pl-[126px] text-white">Ajukan Sewa</h1>
+                </button>
+              </section>
+            </div>
+            {/* {states.message && (
+              <div className="container mt-4">{states.message}</div>
+            )} */}
+            {/* {states && (
+          <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+        )}
+            {states.dp && (
+          <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>
+        )}
+            {states.pelunasan && (
+          <div className="container mt-4">Pelunasan :{states.pelunasan}</div>
+        )}
+        {states && (
+          <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+        )}
+        {states.penuh && (
+          <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>
+        )} */}
+            {/* {states && pakets === "Per Bulan" && (
+          <>
+            <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+            {states.dp && (
+              <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>
+            )}
+            {states.pelunasan && (
+              <div className="container mt-4">Pelunasan :{states.pelunasan}</div>
+            )}
+            <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+            {states.penuh && (
+              <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>
+            )}
+            {states.total && (
+              <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>
+            )}
+          </>
+        )}
+        {states && pakets === "Per 3 Bulan" && (
+          <>
+            <div className="container mt-4">Jika kamu bayar pakai DP :</div>
+            {states.dp && (
+              <div className="container mt-4">Uang Muka (DP) :{states.dp}</div>
+            )}
+            {states.pelunasan && (
+              <div className="container mt-4">Pelunasan :{states.pelunasan}</div>
+            )}
+            <div className="container mt-4">Jika kamu pakai pembayaran penuh :</div>
+            {states.penuh && (
+              <div className="container mt-4">Pembayaran penuh :{states.penuh}</div>
+            )}
+            {states.total && (
+              <div className="container mt-4">Total Pembayaran Pertama :{states.total}</div>
+            )}
+          </>
+        )} */}
+          </div>
         </div>
         <div className="pr-10 pl-10 mt-10">
           <div className="pl-5 border border-black rounded-md w-[850px]">
             <p className="mb-2 mt-3">
               Olive Paragon Mall Tipe A adalah kost yang memiliki area strategis. Semua fasilitas sudah lengkap. Kamar mandi di dalam. Termasuk layanan bersih bersih kamar gratis serta sampo dan sabun free refill. Hubungi kami segera untuk
-              info kelengkapan layanan kos lainnya.{' '}
+              info kelengkapan layanan kos lainnya.
             </p>
             <ul className="list-disc pl-5 mb-3">
               <li>Kost Putra</li>
@@ -129,6 +361,6 @@ const DetailKos = () => {
       </div>
     </div>
   );
-};
+}
 
 export default DetailKos;
