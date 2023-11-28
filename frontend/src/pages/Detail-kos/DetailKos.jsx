@@ -60,28 +60,28 @@ function DetailKos() {
       case "Per 3 Bulan":
         setStates({
           null: "",
-          dp: 1080000,
-          pelunasan: 3045000,
-          penuh: 4125000,
-          total: 4125000,
+          dp: 3240000,
+          pelunasan: 8835000,
+          penuh: 11575000,
+          total: 11575000,
         });
         break;
       case "Per 6 Bulan":
         setStates({
           null: "",
-          dp: 1080000,
-          pelunasan: 3045000,
-          penuh: 4125000,
-          total: 4125000,
+          dp: 6480000,
+          pelunasan: 15970000,
+          penuh: 22450000,
+          total: 22450000,
         });
         break;
       case "Per Tahun":
         setStates({
           null: "",
-          dp: 1080000,
-          pelunasan: 3045000,
-          penuh: 4125000,
-          total: 4125000,
+          dp: 12960000,
+          pelunasan: 31240000,
+          penuh: 44200000,
+          total: 44200000,
         });
         break;
       default:
@@ -97,13 +97,19 @@ function DetailKos() {
           <img src={kost1} alt="" className="w-[900px] h-[700px] ml-12 pt-6" />
         </section>
         <section>
-          <img src={dkost1} alt="" className="w-[390px] h-[290px] ml-[25px] mt-[70px]"/>
-          <img src={dkost2} alt="" className="w-[390px] h-[290px] ml-[25px]"/>
+          <img
+            src={dkost1}
+            alt=""
+            className="w-[390px] h-[290px] ml-[25px] mt-[70px]"
+          />
+          <img src={dkost2} alt="" className="w-[390px] h-[290px] ml-[25px]" />
         </section>
       </div>
       <div>
         <div className="flex relative ">
-          <h1 className="pl-10  font-bold text-5xl pt-10">Olive Paragon Mall Tipe A</h1>
+          <h1 className="pl-10  font-bold text-5xl pt-10">
+            Olive Paragon Mall Tipe A
+          </h1>
           <div className=" absolute ">
             <div className="">
               <section className="w-[390px] pl-6 py-5 mt-10 ml-[62rem] shadow-2xl bg-white rounded-md">
@@ -237,7 +243,9 @@ function DetailKos() {
                             {states.penuh && (
                               <div className="container mt-4 flex">
                                 Pembayaran penuh :
-                                <div className="pl-24">Rp. {states.penuh}</div>
+                                <div className="pl-[87px]">
+                                  Rp. {states.penuh}
+                                </div>
                               </div>
                             )}
                           </div>
@@ -277,7 +285,7 @@ function DetailKos() {
                             {states.pelunasan && (
                               <div className="container mt-4 flex">
                                 Pelunasan :
-                                <div className="pl-40">
+                                <div className="pl-[148px]">
                                   Rp. {states.pelunasan}
                                 </div>
                               </div>
@@ -296,7 +304,9 @@ function DetailKos() {
                             {states.penuh && (
                               <div className="container mt-4 flex">
                                 Pembayaran penuh :
-                                <div className="pl-24">Rp. {states.penuh}</div>
+                                <div className="pl-[86px]">
+                                  Rp. {states.penuh}
+                                </div>
                               </div>
                             )}
                           </div>
@@ -330,13 +340,15 @@ function DetailKos() {
                             {states.dp && (
                               <div className="container mt-4 flex">
                                 Uang Muka (DP) :
-                                <div className="pl-28">Rp. {states.dp}</div>
+                                <div className="pl-[105px]">
+                                  Rp. {states.dp}
+                                </div>
                               </div>
                             )}
                             {states.pelunasan && (
                               <div className="container mt-4 flex">
                                 Pelunasan :
-                                <div className="pl-40">
+                                <div className="pl-[150px]">
                                   Rp. {states.pelunasan}
                                 </div>
                               </div>
@@ -355,7 +367,9 @@ function DetailKos() {
                             {states.penuh && (
                               <div className="container mt-4 flex">
                                 Pembayaran penuh :
-                                <div className="pl-24">Rp. {states.penuh}</div>
+                                <div className="pl-[88px]">
+                                  Rp. {states.penuh}
+                                </div>
                               </div>
                             )}
                           </div>
