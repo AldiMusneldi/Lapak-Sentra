@@ -18,8 +18,11 @@ import iconTempatmakan from '../../assets/icons/tempatmakan.svg';
 import iconHalte from '../../assets/icons/halte.svg';
 import iconDiskon from '../../assets/icons/diskon.svg';
 import iconChat from '../../assets/icons/chat.svg';
+import { useDisclosure } from '@chakra-ui/react';
+import Modalpemilik from '../../components/Modals/Modalpemilik';
 
 function DetailKos() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const paket = [
     {
       name: 'Per Bulan',
@@ -200,10 +203,12 @@ function DetailKos() {
                   <img src={iconChat} alt="" className="ml-24 w-[20px] h-[20px]" />
                   <h1 className="pl-4">Tanya Pemilik</h1>
                 </button>
-                <button className="flex border items-center w-[340px] h-[36px] bg-primary_70">
+                <button onClick={onOpen} className="flex border items-center w-[340px] h-[36px] bg-primary_70">
                   <h1 className="pl-[126px] text-white">Ajukan Sewa</h1>
                 </button>
               </section>
+              {/* modal ajukan sewa */}
+              <Modalpemilik onClose={onClose} isOpen={isOpen} />
             </div>
             {/* {states.message && (
               <div className="container mt-4">{states.message}</div>
