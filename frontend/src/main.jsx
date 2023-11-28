@@ -7,6 +7,7 @@ import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
 import { ChakraProvider } from '@chakra-ui/react';
+
 axios.defaults.withCredentials = true;
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -20,7 +20,8 @@ import iconTempatmakan from '../../assets/icons/tempatmakan.svg';
 import iconHalte from '../../assets/icons/halte.svg';
 import iconDiskon from '../../assets/icons/diskon.svg';
 import iconChat from '../../assets/icons/chat.svg';
-
+import { useDisclosure } from '@chakra-ui/react';
+import Modalpemilik from '../../components/Modals/Modalpemilik';
 function DetailKos() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const paket = [

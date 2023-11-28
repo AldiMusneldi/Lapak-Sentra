@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 import ReactLogo from '../../assets/logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import menu from '../Menu/Menu';
+import { useDisclosure } from '@chakra-ui/react';
+import Role from '../Role/Role';
 
 const Navbar = ({ navigate }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   useEffect(() => {
     window.onscroll = function () {
       const header = document.querySelector('header');
@@ -43,19 +47,20 @@ const Navbar = ({ navigate }) => {
             </ul>
           </div>
           <div className="nav-profile w-[15%] flex justify-between items-center">
-            <div className=" rounded-md border-2 bg-neutral-50 border-primary_70 py-[10px] px-[17px]">
-              <Link to="/login">
+            <div className=" rounded-md border-2  border-primary_70 py-[10px] px-[17px]">
+              <NavLink onClick={onOpen}>
                 <span className="font-semibold text-primary_70">Masuk</span>
-              </Link>
+              </NavLink>
             </div>
             <div className="rounded-md bg-primary_70 border-2 border-primary_70 py-[10px] px-[17px]">
-              <a href="">
+              <NavLink>
                 <span className="font-semibold text-Neutral_10">Daftar</span>
-              </a>
+              </NavLink>
             </div>
           </div>
         </nav>
       </header>
+      <Role isOpen={isOpen} onClose={onClose} />
     </>
   );
 };

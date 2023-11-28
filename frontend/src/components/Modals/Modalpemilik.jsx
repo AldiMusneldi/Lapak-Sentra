@@ -1,6 +1,7 @@
 import React from 'react';
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react';
+import { Modal, ModalOverlay, ModalContent, ModalFooter, ModalBody, ModalCloseButton, Button } from '@chakra-ui/react';
 import pitak from '../../assets/gambar-testimoni/pitak.png';
+import WA from '../../assets/icons/wa.svg';
 
 const Modalpemilik = ({ onClose, isOpen }) => {
   return (
@@ -25,12 +26,14 @@ const Modalpemilik = ({ onClose, isOpen }) => {
                 <h2 className="text-2xl font-normal text-Neutral_30">+62851-5652-7939</h2>
               </div>
               <div className="icon">
-                <img src="" alt="" />
+                <img src={WA} alt="" />
               </div>
             </div>
           </ModalBody>
           <ModalFooter>
-            <Button onClick={onClose}>Close</Button>
+            <Button onClick={onClose} colorScheme="blue">
+              Close
+            </Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
