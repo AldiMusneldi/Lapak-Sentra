@@ -5,11 +5,11 @@ import BgTentangkami from '../../assets/animasi/bg-tentangkami.svg';
 
 function TentangKami() {
   const BgAbout = styled.div`
-  position: relative;
-  background: url(${BgTentangkami}) center/cover no-repeat;
-  height: 300px;
+    position: relative;
+    background: url(${BgTentangkami}) center/cover no-repeat;
+    height: 300px;
 
-  h1 {
+    h1 {
       position: relative;
       z-index: 1;
       font-size: 50px;
@@ -41,9 +41,7 @@ function TentangKami() {
           <div className="w-cols p-6 my-8 ml-20 flex flex-col rounded-md mb-20">
             <h1 className="font-title text-4xl text-primary_70 font-semibold">Tentang Platform kami</h1>
             <div className="w-[15%] h-[6px] rounded-full bg-secondary_70 my-2"></div>
-            <P className="2 mb-4">
-              Platform “Pencarian Lapak Sentra” ini adalah solusi kreatif untuk pemilik kosan atau kontrakan untuk mengelola dan memasarkan properti mereka, serta pedagang UMKM lokal dalam mempromosikan dagangannya.
-            </P>
+            <P className="2 mb-4">Platform “Pencarian Lapak Sentra” ini adalah solusi kreatif untuk pemilik kosan atau kontrakan untuk mengelola dan memasarkan properti mereka, serta pedagang UMKM lokal dalam mempromosikan dagangannya.</P>
             <P className="2 mb-20">
               Maka dari itu platform “Lapak Sentra” ini memberikan fitur” yg menarik seperti pembelian fasilitas rumah, sehingga penyewa kost atau kontrakan bisa dengan mudah membeli fasilitas rumah yg diperlukan secara online melalui
               platform ini.
