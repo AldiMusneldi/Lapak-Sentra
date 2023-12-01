@@ -16,6 +16,7 @@ import Register from './components/Tenant/Register';
 // import SemuaData from './data/SemuaData';
 import DetailKos from './pages/Detail-kos/DetailKos';
 import Layout1 from './layout/Layout1';
+import Profile from './pagesPenyewa/Profile';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -79,7 +80,9 @@ function App() {
           </Layout>
         }
       />
+      
       <Route path="/login" element={<Login />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/tenant" element={<Tenant />} />
       <Route path="/register" element={<Register />} />
       <Route path="*" element={<Navigate to="/" />} />
