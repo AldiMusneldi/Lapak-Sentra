@@ -3,7 +3,7 @@ import ReactLogo from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
 import menu from '../Menu/Menu';
 import Search from '../Search/Search';
-import Profile from '../../assets/gambar-testimoni/rfiq.png';
+import MenuProfile from '../Dropdown/MenuProfile';
 
 const Navbar1 = ({ navigate }) => {
   useEffect(() => {
@@ -49,11 +49,7 @@ const Navbar1 = ({ navigate }) => {
             </ul>
           </div>
           <div className="nav-profile basis-[4%] ">
-            <a href="">
-              <div className="rounded-[50%] overflow-hidden border-2 border-Neutral_70">
-                <img src={Profile} alt="" className="w-[100%]" />
-              </div>
-            </a>
+            <MenuProfile navigate={navigate} />
           </div>
         </nav>
       </header>

@@ -1,23 +1,23 @@
-import React from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import { useState } from "react";
-import "./App.css";
-import Home from "./pages/Home/Home";
-import Layout from "./layout/Layout";
-import TentangKami from "./pages/Tentang-kami/TentangKami";
-import HubungiKami from "./pages/Hubungi-kami/HubungiKami";
-import FasilitasRumah from "./pages/Fasilitas-rumah/FasilitasRumah";
-import Hunian from "./pages/Hunian/Hunian";
-import SemDat from "./data/DataBaru";
-import Lihatsemua from "./pages/Lihat-semua/Lihatsemua";
-import Login from "./pages/Login/Login";
-import Tenant from "./components/Tenant/Tenant";
-import Register from "./components/Tenant/Register";
+import React from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { useState } from 'react';
+import './App.css';
+import Home from './pages/Home/Home';
+import Layout from './layout/Layout';
+import TentangKami from './pages/Tentang-kami/TentangKami';
+import HubungiKami from './pages/Hubungi-kami/HubungiKami';
+import FasilitasRumah from './pages/Fasilitas-rumah/FasilitasRumah';
+import Hunian from './pages/Hunian/Hunian';
+import SemDat from './data/DataBaru';
+import Lihatsemua from './pages/Lihat-semua/Lihatsemua';
+import Login from './pages/Login/Login';
+import Tenant from './components/Tenant/Tenant';
+import Register from './components/Tenant/Register';
 // import SemuaData from './data/SemuaData';
-import DetailKos from "./pages/Detail-kos/DetailKos";
-import Layout1 from "./layout/Layout1";
-import KosSaya from "./pagesPenyewa/KosSaya";
-import LihatProfile from "./pagesPenyewa/LihatProfil";
+import DetailKos from './pages/Detail-kos/DetailKos';
+import Layout1 from './layout/Layout1';
+import KosSaya from './pagesPenyewa/KosSaya';
+import LihatProfile from './pagesPenyewa/LihatProfil';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -90,7 +90,7 @@ function App() {
         }
       />
       <Route
-        path="/lihatprofile"
+        path="/user/acount"
         element={
           <Layout1>
             <LihatProfile />
