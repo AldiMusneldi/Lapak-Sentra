@@ -5,7 +5,7 @@ import menu from '../Menu/Menu';
 import Search from '../Search/Search';
 import Profile from '../../assets/gambar-testimoni/rfiq.png';
 
-const Navbar1 = ({navigate}) => {
+const Navbar1 = ({ navigate }) => {
   useEffect(() => {
     window.onscroll = function () {
       const header = document.querySelector('header');
@@ -20,9 +20,9 @@ const Navbar1 = ({navigate}) => {
     };
   });
 
-  const page =(path) => {
-    navigate (path);
-  } 
+  const page = (path) => {
+    navigate(path);
+  };
   return (
     <>
       <header className="navbar">
@@ -40,8 +40,7 @@ const Navbar1 = ({navigate}) => {
               {menu.map((m) => {
                 return (
                   <li key={m.id}>
-                    <Link className="text-Neutral_90 hover:text-primary_70 font-medium" to={`/${m.path}`}
-                    onClick={()=> page(`/${m.path}`)}>
+                    <Link className="text-Neutral_90 hover:text-primary_70 font-medium" to={`/${m.path}`} onClick={() => page(`/${m.path}`)}>
                       {m.text}
                     </Link>
                   </li>

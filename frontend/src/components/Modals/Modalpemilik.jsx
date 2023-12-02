@@ -6,7 +6,7 @@ import WA from '../../assets/icons/wa.svg';
 const Modalpemilik = ({ onClose, isOpen }) => {
   return (
     <>
-      <Modal onClose={onClose} isOpen={isOpen} isCentered>
+      <Modal onClose={onClose} isOpen={isOpen} isCentered size="sm">
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton />
@@ -16,14 +16,14 @@ const Modalpemilik = ({ onClose, isOpen }) => {
             </div>
           </div>
           <ModalBody className="border">
-            <div className="flex justify-center gap-3 items-center flex-col">
+            <div className="flex justify-center gap-3 items-center text-Neutral_70 flex-col">
               <div className="nama-pengelola text-center ">
-                <h1 className="font-semibold ">Nama Pengelola :</h1>
-                <h2 className="text-2xl font-normal text-Neutral_30">Sepuh Aldi Tua</h2>
+                <h1 className="font-bold ">Nama Pengelola :</h1>
+                <h2 className="text-2xl font-normal">Sepuh Aldi Tua</h2>
               </div>
               <div className="no-pengelola text-center">
-                <h1 className="font-semibold ">No Telpon :</h1>
-                <h2 className="text-2xl font-normal text-Neutral_30">+62851-5652-7939</h2>
+                <h1 className="font-bold ">No Telpon :</h1>
+                <h2 className="text-2xl font-normal">+62851-5652-7939</h2>
               </div>
               <div className="icon">
                 <img src={WA} alt="" />
