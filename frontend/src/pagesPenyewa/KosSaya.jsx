@@ -57,10 +57,12 @@ const KosSaya = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={transaction} />
-              <p className="pl-3">Riwayat Transaksi</p>
-            </div>
+            <Link to="/riwayat">
+              <button className="mt-4 flex items-center">
+                <img src={transaction} />
+                <p className="pl-3">Riwayat Transaksi</p>
+              </button>
+            </Link>
             <hr
               className="mt-2"
               style={{

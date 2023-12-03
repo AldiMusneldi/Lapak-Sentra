@@ -71,10 +71,12 @@ const ItemFavorit = () => {
             </div>
           </div>
           <div className="mt-6">
-            <div className="flex items-center">
-              <img src={home} />
-              <p className="pl-3">Kos/Kontrakan Saya</p>
-            </div>
+            <Link to="/kossaya">
+              <button className="flex items-center">
+                <img src={home} />
+                <p className="pl-3">Kos/Kontrakan Saya</p>
+              </button>
+            </Link>
             <hr
               className="mt-2"
               style={{
@@ -83,10 +85,12 @@ const ItemFavorit = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={love} />
-              <p className="pl-3">Item Favorit</p>
-            </div>
+            <Link to="/itemfavorit">
+              <button className="mt-4 flex items-center">
+                <img src={love} />
+                <p className="pl-3">Item Favorit</p>
+              </button>
+            </Link>
             <hr
               className="mt-2"
               style={{
@@ -95,10 +99,12 @@ const ItemFavorit = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={transaction} />
-              <p className="pl-3">Riwayat Transaksi</p>
-            </div>
+            <Link to="/riwayat">
+              <button className="mt-4 flex items-center">
+                <img src={transaction} />
+                <p className="pl-3">Riwayat Transaksi</p>
+              </button>
+            </Link>
             <hr
               className="mt-2"
               style={{

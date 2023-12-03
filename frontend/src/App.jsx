@@ -20,6 +20,7 @@ import KosSaya from './pagesPenyewa/KosSaya';
 import LihatProfile from './pagesPenyewa/LihatProfil';
 import EditProfile from './pagesPenyewa/EditProfile';
 import ItemFavorit from './pagesPenyewa/itemFavorit';
+import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -96,6 +97,14 @@ function App() {
         element={
           <Layout1>
             <ItemFavorit />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/riwayat"
+        element={
+          <Layout1>
+            <RiwayatTransaksi />
           </Layout1>
         }
       />
