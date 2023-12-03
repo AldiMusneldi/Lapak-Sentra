@@ -18,6 +18,7 @@ import DetailKos from './pages/Detail-kos/DetailKos';
 import Layout1 from './layout/Layout1';
 import KosSaya from './pagesPenyewa/KosSaya';
 import LihatProfile from './pagesPenyewa/LihatProfil';
+import EditProfile from './pagesPenyewa/EditProfile';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -94,6 +95,14 @@ function App() {
         element={
           <Layout1>
             <LihatProfile />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/user/acount/editprofile"
+        element={
+          <Layout1>
+            <EditProfile />
           </Layout1>
         }
       />

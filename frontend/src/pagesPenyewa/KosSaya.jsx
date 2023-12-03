@@ -23,7 +23,7 @@ const KosSaya = () => {
           <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
             <div>
               <h1 className="text-2xl font-bold pt-4">Aldi Musneldi</h1>
-              <Link to="/lihatprofile">
+              <Link to="/user/acount">
                 <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
                   Lihat Profile
                 </button>
@@ -31,10 +31,10 @@ const KosSaya = () => {
             </div>
           </div>
           <div className="mt-6">
-            <div className="flex items-center">
+            <button className="flex items-center">
               <img src={home} />
               <p className="pl-3">Kos/Kontrakan Saya</p>
-            </div>
+            </button>
             <hr
               className="mt-2"
               style={{
@@ -43,10 +43,10 @@ const KosSaya = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
+            <button className="mt-4 flex items-center">
               <img src={love} />
               <p className="pl-3">Item Favorit</p>
-            </div>
+            </button>
             <hr
               className="mt-2"
               style={{
@@ -99,7 +99,7 @@ const KosSaya = () => {
                     <br />
                     <div className="flex">
                       <img src={kost1} alt="" className="w-[450px]" />
-                      <div className="flex-col ml-6">
+                      <div className="flex-col ml-6 w-56">
                         <img src={dkost1} alt="" className="w-[200px] pb-3" />
                         <img src={dkost2} alt="" className="w-[200px]" />
                       </div>
