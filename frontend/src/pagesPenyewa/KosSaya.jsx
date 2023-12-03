@@ -43,10 +43,12 @@ const KosSaya = () => {
                 width: "100%",
               }}
             />
-            <button className="mt-4 flex items-center">
-              <img src={love} />
-              <p className="pl-3">Item Favorit</p>
-            </button>
+            <Link to="/itemfavorit">
+              <button className="mt-4 flex items-center">
+                <img src={love} />
+                <p className="pl-3">Item Favorit</p>
+              </button>
+            </Link>
             <hr
               className="mt-2"
               style={{

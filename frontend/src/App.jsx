@@ -19,6 +19,7 @@ import Layout1 from './layout/Layout1';
 import KosSaya from './pagesPenyewa/KosSaya';
 import LihatProfile from './pagesPenyewa/LihatProfil';
 import EditProfile from './pagesPenyewa/EditProfile';
+import ItemFavorit from './pagesPenyewa/itemFavorit';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -87,6 +88,14 @@ function App() {
         element={
           <Layout1>
             <KosSaya />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/itemfavorit"
+        element={
+          <Layout1>
+            <ItemFavorit />
           </Layout1>
         }
       />
