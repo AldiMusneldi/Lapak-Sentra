@@ -18,6 +18,10 @@ import DetailKos from './pages/Detail-kos/DetailKos';
 import Layout1 from './layout/Layout1';
 import KosSaya from './pagesPenyewa/KosSaya';
 import LihatProfile from './pagesPenyewa/LihatProfil';
+
+import EditProfile from './pagesPenyewa/EditProfile';
+import ItemFavorit from './pagesPenyewa/itemFavorit';
+import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
 import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
 
 function App() {
@@ -99,10 +103,34 @@ function App() {
         }
       />
       <Route
+        path="/itemfavorit"
+        element={
+          <Layout1>
+            <ItemFavorit />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/riwayat"
+        element={
+          <Layout1>
+            <RiwayatTransaksi />
+          </Layout1>
+        }
+      />
+      <Route
         path="/user/acount"
         element={
           <Layout1>
             <LihatProfile />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/user/acount/editprofile"
+        element={
+          <Layout1>
+            <EditProfile />
           </Layout1>
         }
       />

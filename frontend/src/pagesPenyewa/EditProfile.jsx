@@ -6,11 +6,11 @@ import love from "../assets/icons/love.svg";
 import transaction from "../assets/icons/refresh.svg";
 import exit from "../assets/icons/exit.svg";
 
-const LihatProfil = () => {
+const EditProfile = () => {
   return (
     <>
       <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[275px]">
+        <div className="flex flex-col relative mb-[294px]">
           <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
             <img
               src={profile}
@@ -87,9 +87,6 @@ const LihatProfil = () => {
             <div className="ml-4 mt-3 flex justify-center items-center">
               <div>
                 <img src={profile} alt="" />
-                <h1 className="font-bold text-3xl flex justify-center items-center">
-                  Aldi Musneldi
-                </h1>
                 <br />
                 <br />
               </div>
@@ -97,58 +94,82 @@ const LihatProfil = () => {
             <div>
               <div className="pl-28">
                 <div className="flex text-lg">
+                  <p>Nama Lengkap :</p>
+                  <input
+                    type="text"
+                    className="ml-[115px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Masukkan Nama Anda"
+                  />
+                </div>
+                <div className="flex text-lg">
                   <p>Jenis Kelamin :</p>
-                  <p className="pl-56">Pria</p>
-                  <br />
-                  <br />
+                  <input
+                    type="text"
+                    className="ml-32 border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Pilih Jenis Kelamin L/P"
+                  />
                 </div>
                 <div className="flex text-lg">
                   <p>Tanggal Lahir :</p>
-                  <p className="pl-56">21 Januari 2000</p>
-                  <br />
-                  <br />
+                  <input
+                    type="text"
+                    className="ml-[130px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Masukkan Tanggal Lahir"
+                  />
                 </div>
                 <div className="flex text-lg">
                   <p>Pekerjaan :</p>
-                  <p className="pl-[254px]">Mahasiswa</p>
-                  <br />
-                  <br />
+                  <input
+                    type="text"
+                    className="ml-[159px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Pilih Pekerjaan"
+                  />
                 </div>
                 <div className="flex text-lg">
                   <p>Nama Kantor/Sekolah : </p>
-                  <p className="pl-[156px]">Universitas Indonesia</p>
-                  <br />
-                  <br />
+                  <input
+                    type="text"
+                    className="ml-[61px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Contoh : Universitas Negeri Malang"
+                  />
                 </div>
                 <div className="flex text-lg">
                   <p>Kota Asal : </p>
-                  <p className="pl-64">Padang</p>
-                  <br />
-                  <br />
+                  <input
+                    type="text"
+                    className="ml-[162px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Masukkan Kota Asal"
+                  />
                 </div>
                 <div className="flex text-lg">
                   <p>Status :</p>
-                  <p className="pl-[281px]">Sedang menyewa Kost</p>
-                  <br />
-                  <br />
+                  <input
+                    type="text"
+                    className="ml-[187px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Pilih Status"
+                  />
                 </div>
                 <div className="flex text-lg">
                   <p>Pendidikan terakhir :</p>
-                  <p className="pl-44">SMK</p>
-                  <br />
-                  <br />
+                  <input
+                    type="text"
+                    className="ml-[82px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Pilih Pendidikan Terakhir"
+                  />
                 </div>
                 <div className="flex text-lg">
                   <p>Kontak Darurat : </p>
-                  <p className="pl-52">+62 820-0292-9201</p>
-                  <br />
-                  <br />
+                  <input
+                    type="text"
+                    className="ml-[116px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Masukkan Kontak Anda"
+                  />
                 </div>
               </div>
               <div className="flex justify-center items-center">
-                <Link to="/user/acount/editprofile">
+                <Link to="/kossaya">
                   <button className="mb-10 px-4 py-2 bg-primary_70 text-white rounded">
-                    Edit Profil
+                    Simpan
                   </button>
                 </Link>
               </div>
@@ -160,4 +181,4 @@ const LihatProfil = () => {
   );
 };
 
-export default LihatProfil;
+export default EditProfile;
