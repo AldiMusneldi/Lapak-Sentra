@@ -20,9 +20,9 @@ import KosSaya from './pagesPenyewa/KosSaya';
 import LihatProfile from './pagesPenyewa/LihatProfil';
 
 import EditProfile from './pagesPenyewa/EditProfile';
-import ItemFavorit from './pagesPenyewa/itemFavorit';
 import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
 import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
+import ItemFavorit from './pagesPenyewa/ItemFavorit';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);

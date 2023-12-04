@@ -48,8 +48,13 @@ const Navbar1 = ({ navigate }) => {
               })}
             </ul>
           </div>
-          <div className="nav-profile basis-[4%] ">
-            <MenuProfile navigate={navigate} />
+          <div className="nav-profile basis-[10%] flex justify-center items-center ">
+            <Link className="text-xl font-bold flex justify-center basis-[50%]">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </Link>
+            <span className="basis-[40%]">
+              <MenuProfile navigate={navigate} />
+            </span>
           </div>
         </nav>
       </header>
