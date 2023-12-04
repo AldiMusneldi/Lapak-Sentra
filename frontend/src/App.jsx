@@ -23,6 +23,10 @@ import EditProfile from './pagesPenyewa/EditProfile';
 import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
 import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
 import ItemFavorit from './pagesPenyewa/ItemFavorit';
+import ProfilPemilik from './dashboardPemilikKos/ProfilPemilik';
+import EditPemilik from './dashboardPemilikKos/EditPemilik';
+import DashboardHunian from './dashboardPemilikKos/DashboardHunian';
+import SewakanKos from './dashboardPemilikKos/SewakanKos';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -139,6 +143,38 @@ function App() {
         element={
           <Layout1>
             <EditProfile />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/pemilik/account"
+        element={
+          <Layout1>
+            <ProfilPemilik />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/pemilik/account/edit"
+        element={
+          <Layout1>
+            <EditPemilik />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/dashboardhunian"
+        element={
+          <Layout1>
+            <DashboardHunian />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/sewakankos"
+        element={
+          <Layout1>
+            <SewakanKos />
           </Layout1>
         }
       />
