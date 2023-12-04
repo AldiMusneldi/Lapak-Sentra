@@ -18,6 +18,7 @@ import DetailKos from './pages/Detail-kos/DetailKos';
 import Layout1 from './layout/Layout1';
 import KosSaya from './pagesPenyewa/KosSaya';
 import LihatProfile from './pagesPenyewa/LihatProfil';
+import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -82,6 +83,14 @@ function App() {
         }
       />
       <Route
+        path="/detailfasilitas"
+        element={
+          <Layout>
+            <DetailFasilitas />
+          </Layout>
+        }
+      />
+      <Route
         path="/kossaya"
         element={
           <Layout1>
@@ -99,7 +108,7 @@ function App() {
       />
 
       <Route path="/login" element={<Login />} />
-      <Route path="/tenant" element={<Tenant />} />
+      <Route path="/masuk/penyewa" element={<Tenant />} />
       <Route path="/register" element={<Register />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>

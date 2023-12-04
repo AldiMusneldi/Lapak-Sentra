@@ -31,7 +31,7 @@ const Role = ({ onClose, isOpen }) => {
                     <img className="mt-2 mr-8 mb-2 ml-4 h-25 w-25 object-cover" src={penyewa} alt="Gambar" />
                   </div>
                   <div>
-                    <Link to="/tenant">
+                    <Link to="/masuk/penyewa">
                       <button className="mt-7 mr-6 rounded-md bg-indigo-700 text-white w-48 py-[10px] px-[17px]">Penyewa</button>
                     </Link>
                   </div>

@@ -4,11 +4,23 @@ const FasilitasH = () => {
   const KatagoriHarga = [
     {
       id: 1,
-      nama: 'Harga Tertinggi',
+      nama: 'Jakarta Pusat',
     },
     {
       id: 2,
-      nama: 'Harga Terendah',
+      nama: 'Jakarta Utara',
+    },
+    {
+      id: 3,
+      nama: 'Jakarta Selatan',
+    },
+    {
+      id: 4,
+      nama: 'Jakarta Timur',
+    },
+    {
+      id: 5,
+      nama: 'Jakarta Barat',
     },
   ];
 
@@ -19,11 +31,11 @@ const FasilitasH = () => {
       <div className="w-[20%] ">
         <div className="filter-jenis font-medium relative">
           <div className="label">
-            <label className="text-lg">Urutkan Berdasarkan</label>
+            <label className="text-base">Cari Berdasarkan Lokasi</label>
           </div>
           <div className="input text-primary_70 h-50 w-[100%] absolute">
             <div onClick={() => setOpenh(!openh)} className="border bg-slate-50 border-primary_70 w-full p-2 flex items-center justify-between rounded">
-              {selectedh ? selectedh : 'Rekomendasi'}
+              {selectedh ? selectedh : 'Pilih Lokasi'}
               <span>
                 <i class="fa-solid fa-chevron-down"></i>
               </span>
