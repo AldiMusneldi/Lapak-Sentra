@@ -45,7 +45,7 @@ const DashboardHunian = () => {
                 width: "100%",
               }}
             />
-            <Link to="">
+            <Link to="/sewakankos">
               <button className="mt-4 flex items-center">
                 <img src={hunian} />
                 <p className="pl-3">Sewakan Kost/Kontrakan saya</p>

@@ -26,6 +26,7 @@ import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
 import ProfilPemilik from './dashboardPemilikKos/ProfilPemilik';
 import EditPemilik from './dashboardPemilikKos/EditPemilik';
 import DashboardHunian from './dashboardPemilikKos/DashboardHunian';
+import SewakanKos from './dashboardPemilikKos/SewakanKos';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -166,6 +167,14 @@ function App() {
         element={
           <Layout1>
             <DashboardHunian />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/sewakankos"
+        element={
+          <Layout1>
+            <SewakanKos />
           </Layout1>
         }
       />
