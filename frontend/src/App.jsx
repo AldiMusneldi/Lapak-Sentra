@@ -39,35 +39,43 @@ function App() {
         }
       />
       <Route
+        path="/home"
+        element={
+          <Layout1>
+            <Home katagori={katagori} setKatagori={setKatagori} />
+          </Layout1>
+        }
+      />
+      <Route
         path="/hunian"
         element={
-          <Layout>
+          <Layout1>
             <Hunian />
-          </Layout>
+          </Layout1>
         }
       />
       <Route
         path="/fasilitas-rumah"
         element={
-          <Layout>
+          <Layout1>
             <FasilitasRumah />
-          </Layout>
+          </Layout1>
         }
       />
       <Route
         path="/tentang-kami"
         element={
-          <Layout>
+          <Layout1>
             <TentangKami />
-          </Layout>
+          </Layout1>
         }
       />
       <Route
         path="/hubungi-kami"
         element={
-          <Layout>
+          <Layout1>
             <HubungiKami />
-          </Layout>
+          </Layout1>
         }
       />
       <Route
@@ -81,17 +89,17 @@ function App() {
       <Route
         path="/detailkos"
         element={
-          <Layout>
+          <Layout1>
             <DetailKos />
-          </Layout>
+          </Layout1>
         }
       />
       <Route
         path="/detailfasilitas"
         element={
-          <Layout>
+          <Layout1>
             <DetailFasilitas />
-          </Layout>
+          </Layout1>
         }
       />
       <Route

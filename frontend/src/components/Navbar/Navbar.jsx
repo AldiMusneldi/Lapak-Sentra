@@ -31,7 +31,7 @@ const Navbar = ({ navigate }) => {
       <header className="navbar">
         <nav className="container mx-auto flex justify-between p-1 items-center font-Poppins">
           <div className="nav-title scale-100 w-[10%]">
-            <Link to="/">
+            <Link to="/home">
               <img src={ReactLogo} alt="React Logo" />
             </Link>
           </div>

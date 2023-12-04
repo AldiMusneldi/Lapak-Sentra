@@ -23,7 +23,9 @@ const MenuProfile = ({ navigate }) => {
           </Link>
           <Link>
             <MenuItem _hover={{ bg: '#695CFF', textColor: '#EFEFEF' }}>
-              <li className=" font-medium list-none">Keluar</li>
+              <Link to={`/`} onClick={() => page(`/`)} className=" font-medium list-none">
+                Keluar
+              </Link>
             </MenuItem>
           </Link>
         </MenuList>

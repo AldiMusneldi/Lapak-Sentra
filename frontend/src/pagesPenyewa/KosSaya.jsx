@@ -20,15 +20,9 @@ const KosSaya = () => {
           <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
             <div>
               <h1 className="text-2xl font-bold pt-4">Aldi Musneldi</h1>
-<<<<<<< HEAD
-              <Link to="/lihatprofile">
-                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">Lihat Profile</button>
-=======
+
               <Link to="/user/acount">
-                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
-                  Lihat Profile
-                </button>
->>>>>>> f52667008c421e2261069311a428d2d93870417b
+                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">Lihat Profile</button>
               </Link>
             </div>
           </div>
