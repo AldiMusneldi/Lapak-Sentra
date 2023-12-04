@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 import profile from "../assets/gambar-testimoni/aldi.svg";
 import home from "../assets/icons/home.svg";
@@ -11,7 +11,7 @@ const ProfilPemilik = () => {
   return (
     <>
       <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[275px]">
+        <div className="flex flex-col relative mb-[198px]">
           <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
             <img
               src={profile}
@@ -20,7 +20,7 @@ const ProfilPemilik = () => {
           </div>
           <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
             <div>
-              <h1 className="text-2xl font-bold pt-4">Aldi Musneldi</h1>
+              <h1 className="text-2xl font-bold pt-4">Bevin Stevanius</h1>
             </div>
           </div>
           <div className="mt-6">
@@ -38,7 +38,7 @@ const ProfilPemilik = () => {
                 width: "100%",
               }}
             />
-            <Link to="">
+            <Link to="/sewakankos">
               <button className="mt-4 flex items-center">
                 <img src={hunian} />
                 <p className="pl-3">Sewakan Kost/Kontrakan saya</p>
@@ -80,10 +80,12 @@ const ProfilPemilik = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={exit} className="w-[35px]" />
-              <p className="pl-3">Keluar</p>
-            </div>
+            <Link to="/">
+              <div className="mt-4 flex items-center">
+                <img src={exit} className="w-[35px]" />
+                <p className="pl-3">Keluar</p>
+              </div>
+            </Link>
             <hr
               className="mt-2"
               style={{
@@ -103,7 +105,7 @@ const ProfilPemilik = () => {
               <div>
                 <img src={profile} alt="" />
                 <h1 className="font-bold text-3xl flex justify-center items-center">
-                  Aldi Musneldi
+                  Bevin Stevanius
                 </h1>
                 <br />
                 <br />
@@ -119,43 +121,43 @@ const ProfilPemilik = () => {
                 </div>
                 <div className="flex text-lg">
                   <p>Tanggal Lahir :</p>
-                  <p className="pl-56">21 Januari 2000</p>
+                  <p className="pl-56">21 Maret 1993</p>
                   <br />
                   <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Pekerjaan :</p>
-                  <p className="pl-[254px]">Mahasiswa</p>
+                  <p className="pl-[254px]">Pengusaha</p>
                   <br />
                   <br />
                 </div>
                 <div className="flex text-lg">
-                  <p>Nama Kantor/Sekolah : </p>
-                  <p className="pl-[156px]">Universitas Indonesia</p>
+                  <p>Nama Kantor : </p>
+                  <p className="pl-[222px]">Anugrah Kharisma</p>
                   <br />
                   <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Kota Asal : </p>
-                  <p className="pl-64">Padang</p>
+                  <p className="pl-64">Jakarta</p>
                   <br />
                   <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Status :</p>
-                  <p className="pl-[281px]">Sedang menyewa Kost</p>
+                  <p className="pl-[281px]">Pemilik Kost</p>
                   <br />
                   <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Pendidikan terakhir :</p>
-                  <p className="pl-44">SMK</p>
+                  <p className="pl-44">S1</p>
                   <br />
                   <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Kontak Darurat : </p>
-                  <p className="pl-52">+62 820-0292-9201</p>
+                  <p className="pl-52">+62 820-0242-1201</p>
                   <br />
                   <br />
                 </div>

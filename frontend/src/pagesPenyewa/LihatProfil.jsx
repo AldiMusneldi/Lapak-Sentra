@@ -65,10 +65,12 @@ const LihatProfil = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={exit} className="w-[35px]" />
-              <p className="pl-3">Keluar</p>
-            </div>
+            <Link to="/">
+              <div className="mt-4 flex items-center">
+                <img src={exit} className="w-[35px]" />
+                <p className="pl-3">Keluar</p>
+              </div>
+            </Link>
             <hr
               className="mt-2"
               style={{

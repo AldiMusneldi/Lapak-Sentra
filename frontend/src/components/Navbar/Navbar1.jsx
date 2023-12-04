@@ -52,7 +52,7 @@ const Navbar1 = ({ navigate }) => {
             <Link className="text-xl font-bold flex justify-center basis-[50%]">
               <i class="fa-solid fa-cart-shopping"></i>
             </Link>
-            <span className="basis-[40%]">
+            <span className="basis-[40%] z-10">
               <MenuProfile navigate={navigate} />
             </span>
           </div>

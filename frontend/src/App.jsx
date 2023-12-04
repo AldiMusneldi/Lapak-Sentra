@@ -27,6 +27,8 @@ import ProfilPemilik from './dashboardPemilikKos/ProfilPemilik';
 import EditPemilik from './dashboardPemilikKos/EditPemilik';
 import DashboardHunian from './dashboardPemilikKos/DashboardHunian';
 import SewakanKos from './dashboardPemilikKos/SewakanKos';
+import PemilikHunian from './dashboardPemilikKos/PemilikHunian';
+import DaftarPemilik from './dashboardPemilikKos/DaftarPemilik';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -181,6 +183,8 @@ function App() {
 
       <Route path="/login" element={<Login />} />
       <Route path="/masuk/penyewa" element={<Tenant />} />
+      <Route path="/masuk/pemilik" element={<PemilikHunian />} />
+      <Route path="/register/pemilik" element={<DaftarPemilik />} />
       <Route path="/register" element={<Register />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>

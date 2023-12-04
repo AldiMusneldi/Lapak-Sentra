@@ -11,7 +11,7 @@ const EditPemilik = () => {
   return (
     <>
       <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[294px]">
+        <div className="flex flex-col relative mb-[218px]">
           <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
             <img
               src={profile}
@@ -20,11 +20,11 @@ const EditPemilik = () => {
           </div>
           <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
             <div>
-              <h1 className="text-2xl font-bold pt-4">Aldi Musneldi</h1>
+              <h1 className="text-2xl font-bold pt-4">Bevin Stevanius</h1>
             </div>
           </div>
           <div className="mt-6">
-            <Link to="">
+            <Link to="/dashboardhunian">
               <button className="flex items-center">
                 <img src={home} />
                 <p className="pl-3">Dashboard Pemilik Hunian</p>
@@ -38,7 +38,7 @@ const EditPemilik = () => {
                 width: "100%",
               }}
             />
-            <Link to="">
+            <Link to="/sewakankos">
               <button className="mt-4 flex items-center">
                 <img src={hunian} />
                 <p className="pl-3">Sewakan Kost/Kontrakan saya</p>
@@ -80,10 +80,12 @@ const EditPemilik = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={exit} className="w-[35px]" />
-              <p className="pl-3">Keluar</p>
-            </div>
+            <Link to="/">
+              <div className="mt-4 flex items-center">
+                <img src={exit} className="w-[35px]" />
+                <p className="pl-3">Keluar</p>
+              </div>
+            </Link>
             <hr
               className="mt-2"
               style={{
@@ -141,11 +143,11 @@ const EditPemilik = () => {
                   />
                 </div>
                 <div className="flex text-lg">
-                  <p>Nama Kantor/Sekolah : </p>
+                  <p>Nama Kantor : </p>
                   <input
                     type="text"
-                    className="ml-[61px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Contoh : Universitas Negeri Malang"
+                    className="ml-[129px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Contoh : PT Kreative Multimedia"
                   />
                 </div>
                 <div className="flex text-lg">
