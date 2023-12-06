@@ -45,7 +45,7 @@ const DashboardUMKM = () => {
                 width: "100%",
               }}
             />
-            <Link to="">
+            <Link to="/umkm/registerproduk">
               <button className="mt-4 flex items-center">
                 <img src={hunian} />
                 <p className="pl-3">Daftarkan Produk</p>
@@ -110,7 +110,7 @@ const DashboardUMKM = () => {
             </p>
           </div>
           <div className="">
-            <div className=" border-gray-300 ml-4 mt-3">
+            <div className="border-gray-300 ml-4 mt-3">
               <div className="flex mb-3">
                 <h1>Nama UMKM</h1>
                 <p className="pl-[70px]">MEGAH JAYA ELEKTRONIK</p>

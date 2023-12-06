@@ -45,7 +45,7 @@ const DashboardUmkmEdit = () => {
                 width: "100%",
               }}
             />
-            <Link to="">
+            <Link to="/umkm/registerproduk">
               <button className="mt-4 flex items-center">
                 <img src={hunian} />
                 <p className="pl-3">Daftarkan Produk</p>
