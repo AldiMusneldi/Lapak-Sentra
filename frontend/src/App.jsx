@@ -31,6 +31,7 @@ import DaftarPemilik from "./dashboardPemilikKos/DaftarPemilik";
 import ProfileUMKM from "./dashboardUMKM/ProfileUMKM";
 import EditUMKM from "./dashboardUMKM/EditUMKM";
 import DashboardUMKM from "./dashboardUMKM/DashboardUMKM";
+import DashboardUmkmEdit from "./dashboardUMKM/DashboardUmkmEdit";
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -199,10 +200,18 @@ function App() {
         }
       />
       <Route
-        path="/dashboardumkm"
+        path="/umkm/dashboardumkm"
         element={
           <Layout1>
             <DashboardUMKM />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/umkm/dashboard/edit"
+        element={
+          <Layout1>
+            <DashboardUmkmEdit />
           </Layout1>
         }
       />

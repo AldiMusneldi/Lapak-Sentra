@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Link } from "react-router-dom";
 import profile from "../assets/gambar-testimoni/aldi.svg";
 import home from "../assets/icons/home.svg";
@@ -7,8 +7,8 @@ import promotion from "../assets/icons/ceklist.svg";
 import statistic from "../assets/icons/statistic.svg";
 import exit from "../assets/icons/exit.svg";
 import logo from "../assets/icons/logo.svg";
-// clear
-const DashboardUMKM = () => {
+
+const DashboardUmkmEdit = () => {
   return (
     <>
       <div className="flex container ml-24">
@@ -113,13 +113,19 @@ const DashboardUMKM = () => {
             <div className=" border-gray-300 ml-4 mt-3">
               <div className="flex mb-3">
                 <h1>Nama UMKM</h1>
-                <p className="pl-[70px]">MEGAH JAYA ELEKTRONIK</p>
+                <input
+                    type="text"
+                    className="ml-[115px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Masukkan Nama UMKM Anda"
+                  />
               </div>
               <div className="flex mb-3">
                 <h1>Logo UMKM</h1>
-                <span>
-                  <img src={logo} className="pl-20" />
-                </span>
+                <input
+                    type="text"
+                    className="ml-[115px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Masukkan Nama Anda"
+                  />
               </div>
               <div className="flex mb-3">
                 <h1>Alamat</h1>
@@ -142,9 +148,9 @@ const DashboardUMKM = () => {
                 </span>
               </div>
               <div className="flex justify-end">
-                <Link to="/umkm/dashboard/edit">
+                <Link to="/umkm/dashboardumkm">
                   <button className="px-4 py-2 bg-primary_70 text-white rounded">
-                    Edit Deskripsi
+                    Simpan Deskripsi
                   </button>
                 </Link>
               </div>
@@ -160,4 +166,4 @@ const DashboardUMKM = () => {
   );
 };
 
-export default DashboardUMKM;
+export default DashboardUmkmEdit;

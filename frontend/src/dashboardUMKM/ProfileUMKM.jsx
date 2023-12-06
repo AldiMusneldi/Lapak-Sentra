@@ -24,7 +24,7 @@ const ProfileUMKM = () => {
             </div>
           </div>
           <div className="mt-6">
-            <Link to="/dashboardumkm">
+            <Link to="/umkm/dashboardumkm">
               <button className="flex items-center">
                 <img src={home} />
                 <p className="pl-3">Dashboard Pemilik UMKM</p>

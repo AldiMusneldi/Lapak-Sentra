@@ -24,7 +24,7 @@ const EditUMKM = () => {
             </div>
           </div>
           <div className="mt-6">
-            <Link to="/dashboardumkm">
+            <Link to="/umkm/dashboardumkm">
               <button className="flex items-center">
                 <img src={home} />
                 <p className="pl-3">Dashboard Pemilik UMKM</p>
@@ -184,7 +184,7 @@ const EditUMKM = () => {
                 </div>
               </div>
               <div className="flex justify-center items-center">
-                <Link to="/pemilik/account">
+                <Link to="/umkm/account">
                   <button className="mb-10 px-4 py-2 bg-primary_70 text-white rounded">
                     Simpan
                   </button>
