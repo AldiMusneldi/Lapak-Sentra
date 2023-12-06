@@ -1,34 +1,36 @@
-import React from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
-import { useState } from 'react';
-import './App.css';
-import Home from './pages/Home/Home';
-import Layout from './layout/Layout';
-import TentangKami from './pages/Tentang-kami/TentangKami';
-import HubungiKami from './pages/Hubungi-kami/HubungiKami';
-import FasilitasRumah from './pages/Fasilitas-rumah/FasilitasRumah';
-import Hunian from './pages/Hunian/Hunian';
-import SemDat from './data/DataBaru';
-import Lihatsemua from './pages/Lihat-semua/Lihatsemua';
-import Login from './pages/Login/Login';
-import Tenant from './components/Tenant/Tenant';
-import Register from './components/Tenant/Register';
+import React from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
+import { useState } from "react";
+import "./App.css";
+import Home from "./pages/Home/Home";
+import Layout from "./layout/Layout";
+import TentangKami from "./pages/Tentang-kami/TentangKami";
+import HubungiKami from "./pages/Hubungi-kami/HubungiKami";
+import FasilitasRumah from "./pages/Fasilitas-rumah/FasilitasRumah";
+import Hunian from "./pages/Hunian/Hunian";
+import SemDat from "./data/DataBaru";
+import Lihatsemua from "./pages/Lihat-semua/Lihatsemua";
+import Login from "./pages/Login/Login";
+import Tenant from "./components/Tenant/Tenant";
+import Register from "./components/Tenant/Register";
 // import SemuaData from './data/SemuaData';
-import DetailKos from './pages/Detail-kos/DetailKos';
-import Layout1 from './layout/Layout1';
-import KosSaya from './pagesPenyewa/KosSaya';
-import LihatProfile from './pagesPenyewa/LihatProfil';
-
-import EditProfile from './pagesPenyewa/EditProfile';
-import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
-import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
-import ItemFavorit from './pagesPenyewa/ItemFavorit';
-import ProfilPemilik from './dashboardPemilikKos/ProfilPemilik';
-import EditPemilik from './dashboardPemilikKos/EditPemilik';
-import DashboardHunian from './dashboardPemilikKos/DashboardHunian';
-import SewakanKos from './dashboardPemilikKos/SewakanKos';
-import PemilikHunian from './dashboardPemilikKos/PemilikHunian';
-import DaftarPemilik from './dashboardPemilikKos/DaftarPemilik';
+import DetailKos from "./pages/Detail-kos/DetailKos";
+import Layout1 from "./layout/Layout1";
+import KosSaya from "./pagesPenyewa/KosSaya";
+import LihatProfile from "./pagesPenyewa/LihatProfil";
+import EditProfile from "./pagesPenyewa/EditProfile";
+import RiwayatTransaksi from "./pagesPenyewa/RiwayatTransaksi";
+import DetailFasilitas from "./pages/Detail-fasilitas/DetailFasilitas";
+import ItemFavorit from "./pagesPenyewa/ItemFavorit";
+import ProfilPemilik from "./dashboardPemilikKos/ProfilPemilik";
+import EditPemilik from "./dashboardPemilikKos/EditPemilik";
+import DashboardHunian from "./dashboardPemilikKos/DashboardHunian";
+import SewakanKos from "./dashboardPemilikKos/SewakanKos";
+import PemilikHunian from "./dashboardPemilikKos/PemilikHunian";
+import DaftarPemilik from "./dashboardPemilikKos/DaftarPemilik";
+import ProfileUMKM from "./dashboardUMKM/ProfileUMKM";
+import EditUMKM from "./dashboardUMKM/EditUMKM";
+import DashboardUMKM from "./dashboardUMKM/DashboardUMKM";
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -177,6 +179,30 @@ function App() {
         element={
           <Layout1>
             <SewakanKos />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/umkm/account"
+        element={
+          <Layout1>
+            <ProfileUMKM />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/umkm/account/edit"
+        element={
+          <Layout1>
+            <EditUMKM />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/dashboardumkm"
+        element={
+          <Layout1>
+            <DashboardUMKM />
           </Layout1>
         }
       />
