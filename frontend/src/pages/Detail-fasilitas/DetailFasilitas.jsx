@@ -51,7 +51,7 @@ function DetailFasilitas() {
   };
   return (
     <>
-      <section id="detail-kos" className="pt-[10rem] font-worksans text-Neutral_70">
+      <section id="detail-fasilitas" className="pt-[10rem] font-worksans text-Neutral_70">
         <div className="container mx-auto">
           <div className=" mb-5">
             <div className="flex items-center justify-center p-2 gap-3">
