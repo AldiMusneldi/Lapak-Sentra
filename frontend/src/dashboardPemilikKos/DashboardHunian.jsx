@@ -11,9 +11,9 @@ import fthunian from "../assets/gambar-kost&kontrakan/hunian.svg";
 const DashboardHunian = () => {
   return (
     <>
-      <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[114px]">
-          <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
+      <div className="flex container ml-24">
+        <div className="flex flex-col relative mt-24">
+          <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center">
             <img
               src={profile}
               className="mt-12 rounded-full w-[150px] h-[150px] absolute"
@@ -73,20 +73,6 @@ const DashboardHunian = () => {
                 width: "100%",
               }}
             />
-            <Link to="">
-              <button className="mt-4 flex items-center">
-                <img src={statistic} />
-                <p className="pl-3">Laporan Statistik</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
             <Link to="/">
               <div className="mt-4 flex items-center">
                 <img src={exit} className="w-[35px]" />
@@ -103,8 +89,8 @@ const DashboardHunian = () => {
             />
           </div>
         </div>
-        <div className="mt-24">
-          <div className="ml-8 bg-primary_70 rounded-md w-[900px] h-[60px] flex justify-center items-center">
+        <div className="pl-6 container relative mt-24">
+          <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">
             <p className="text-[30px] text-white text font-bold">
               Dashboard Pemilik Hunian
             </p>

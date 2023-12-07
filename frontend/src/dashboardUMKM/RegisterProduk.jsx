@@ -51,10 +51,10 @@ const RegisterProduk = () => {
             </div>
           </div>
           <div className="mt-6">
-            <Link to="/dashboardhunian">
+            <Link to="/umkm/dashboardumkm">
               <button className="flex items-center">
                 <img src={home} />
-                <p className="pl-3">Dashboard Pemilik Hunian</p>
+                <p className="pl-3">Dashboard Pemilik UMKM</p>
               </button>
             </Link>
             <hr
@@ -68,7 +68,7 @@ const RegisterProduk = () => {
             <Link to="">
               <button className="mt-4 flex items-center">
                 <img src={hunian} />
-                <p className="pl-3">Sewakan Kost/Kontrakan saya</p>
+                <p className="pl-3">Daftarkan Produk</p>
               </button>
             </Link>
             <hr
@@ -79,24 +79,10 @@ const RegisterProduk = () => {
                 width: "100%",
               }}
             />
-            <Link to="">
+            <Link to="/umkm/promosi">
               <button className="mt-4 flex items-center">
                 <img src={promotion} />
                 <p className="pl-3">Fitur Promosi</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="">
-              <button className="mt-4 flex items-center">
-                <img src={statistic} />
-                <p className="pl-3">Laporan Statistik</p>
               </button>
             </Link>
             <hr

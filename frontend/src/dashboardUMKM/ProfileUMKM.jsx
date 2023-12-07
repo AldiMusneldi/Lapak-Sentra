@@ -10,9 +10,9 @@ import exit from "../assets/icons/exit.svg";
 const ProfileUMKM = () => {
   return (
     <>
-      <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[198px]">
-          <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
+      <div className="flex container ml-24">
+        <div className="flex flex-col relative mt-24">
+          <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center">
             <img
               src={profile}
               className="mt-12 rounded-full w-[150px] h-[150px] absolute"
@@ -52,24 +52,10 @@ const ProfileUMKM = () => {
                 width: "100%",
               }}
             />
-            <Link to="">
+            <Link to="/umkm/promosi">
               <button className="mt-4 flex items-center">
                 <img src={promotion} />
                 <p className="pl-3">Fitur Promosi</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="">
-              <button className="mt-4 flex items-center">
-                <img src={statistic} />
-                <p className="pl-3">Laporan Statistik</p>
               </button>
             </Link>
             <hr
@@ -96,8 +82,8 @@ const ProfileUMKM = () => {
             />
           </div>
         </div>
-        <div className="mt-24">
-          <div className="ml-4 bg-primary_70 rounded-md w-[900px] h-[60px] flex justify-center items-center">
+        <div className="pl-6 container relative mt-24">
+          <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">
             <p className="text-[30px] text-white text font-bold">Profile</p>
           </div>
           <div className="mb-6 ml-4 mt-3 rounded-lg shadow-xl">

@@ -33,6 +33,8 @@ import EditUMKM from "./dashboardUMKM/EditUMKM";
 import DashboardUMKM from "./dashboardUMKM/DashboardUMKM";
 import DashboardUmkmEdit from "./dashboardUMKM/DashboardUmkmEdit";
 import RegisterProduk from "./dashboardUMKM/RegisterProduk";
+import PromosiUMKM from "./dashboardUMKM/PromosiUMKM";
+import Layout2 from "./layout/Layout2";
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -155,73 +157,81 @@ function App() {
       <Route
         path="/pemilik/account"
         element={
-          <Layout1>
+          <Layout2>
             <ProfilPemilik />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/pemilik/account/edit"
         element={
-          <Layout1>
+          <Layout2>
             <EditPemilik />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/dashboardhunian"
         element={
-          <Layout1>
+          <Layout2>
             <DashboardHunian />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/sewakankos"
         element={
-          <Layout1>
+          <Layout2>
             <SewakanKos />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/umkm/account"
         element={
-          <Layout1>
+          <Layout2>
             <ProfileUMKM />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/umkm/account/edit"
         element={
-          <Layout1>
+          <Layout2>
             <EditUMKM />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/umkm/dashboardumkm"
         element={
-          <Layout1>
+          <Layout2>
             <DashboardUMKM />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/umkm/dashboard/edit"
         element={
-          <Layout1>
+          <Layout2>
             <DashboardUmkmEdit />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/umkm/registerproduk"
         element={
-          <Layout1>
+          <Layout2>
             <RegisterProduk />
-          </Layout1>
+          </Layout2>
+        }
+      />
+      <Route
+        path="/umkm/promosi"
+        element={
+          <Layout2>
+            <PromosiUMKM />
+          </Layout2>
         }
       />
 

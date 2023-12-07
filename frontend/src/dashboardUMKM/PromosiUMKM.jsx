@@ -7,8 +7,8 @@ import promotion from "../assets/icons/ceklist.svg";
 import statistic from "../assets/icons/statistic.svg";
 import exit from "../assets/icons/exit.svg";
 import logo from "../assets/icons/logo.svg";
-// clear
-const DashboardUMKM = () => {
+
+const PromosiUMKM = () => {
   return (
     <>
       <div className="flex container ml-24">
@@ -95,48 +95,78 @@ const DashboardUMKM = () => {
               Dashboard Pemilik UMKM
             </p>
           </div>
-          <div className="">
-            <div className="border-gray-300 ml-4 mt-3">
-              <div className="flex mb-3">
-                <h1>Nama UMKM</h1>
-                <p className="pl-[70px]">MEGAH JAYA ELEKTRONIK</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Logo UMKM</h1>
-                <span>
-                  <img src={logo} className="pl-20" />
-                </span>
-              </div>
-              <div className="flex mb-3">
-                <h1>Alamat</h1>
-                <p className="pl-[116px]">Jakarta Barat</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Deskripsi</h1>
-                <span className="border border-gray-400 rounded-md ml-24 px-2 py-2">
+          <div className="mt-3 border border-gray-400 rounded-md px-2 py-2 bg-slate-500">
+            <h1>Rekomendasi Fitur Promosi Untukmu!</h1>
+            <p>
+              Jumlah pengunjung tokomu datap ditingkatkan. Tingkatkan Jumlah
+              Pengunjung dengan menggunakan 3 fitur ini.
+            </p>
+            <div className="flex">
+              <div className="flex-col">
+                <div className="mt-3 border border-gray-400 rounded-md px-2 py-2 bg-white">
+                  <h1 className="text-xl font-bold">Promo toko</h1>
                   <p>
-                    HAI PARA Lapak Sentra SELAMAT DATANG DI TOKO MEGAH JAYA
-                    ELEKTRONIK :) <br /> TOKO YANG MENJUAL BERBAGAI MACAM
-                    KEBUTUHAN ELEKTRONIK RUMAH ANDA :) <br /> SEBELUM BERBELANJA
-                    YUK DI SIMAK KENAPA BELANJA DI TOKO KAMI. <br />
-                    1. PRODUK JAMINAN ORIGINAL DAN BERGARANSI RESMI. <br /> 
-                    2. PRODUK DI QUALITY CONTROL SEBELUM DI KIRIM. <br /> 
-                    3. PENGIRIMAN DI JAMIN AMAN KARENA ADA ASURANSI DARI PIHAK EKSPEDISI. <br /> 
-                    4. RESPON TANGGAP SERTA AFTERSALE YANG SIAP MEMBANTU KENDALA ANDA. <br />
-                    JADI JANGAN RAGU YA BELANJA DI TOKO KAMI :)
+                    Rata-rata peningkatan{" "}
+                    <span className="text-green-400">
+                      Jumlah Pengunjung +52%
+                    </span>
                   </p>
-                </span>
+                  <Link to="">
+                    <button className="px-4 py-2 mt-2 bg-primary_70 text-white rounded">
+                      Buat
+                    </button>
+                  </Link>
+                </div>
+                <div className="mt-3 border border-gray-400 rounded-md px-2 py-2 bg-white">
+                  <h1 className="text-xl font-bold">Flash Sale Toko Kami</h1>
+                  <p>
+                    Rata-rata peningkatan{" "}
+                    <span className="text-green-400">
+                      Jumlah Pengunjung +45%
+                    </span>
+                  </p>
+                  <Link to="">
+                    <button className="px-4 py-2 mt-2 bg-primary_70 text-white rounded">
+                      Buat
+                    </button>
+                  </Link>
+                </div>
               </div>
-              <div className="flex container ml-12 justify-center">
-                <Link to="/umkm/dashboard/edit">
-                  <button className="px-4 py-2 bg-primary_70 text-white rounded">
-                    Edit Deskripsi
+              <div className="mt-3 ml-10 border h-[116px] border-gray-400 rounded-md px-2 py-2 bg-white">
+                <h1 className="text-xl font-bold">Voucher Toko Kami</h1>
+                <p>
+                  Rata-rata peningkatan{" "}
+                  <span className="text-green-400">Jumlah Pengunjung +33%</span>
+                </p>
+                <Link to="">
+                  <button className="px-4 py-2 mt-2 bg-primary_70 text-white rounded">
+                    Buat
                   </button>
                 </Link>
               </div>
-              <div className="text-2xl">
-                <h1>List Produk Yang Didaftarkan</h1>
-                {/*Panggil Cards */}
+            </div>
+          </div>
+          <h1 className="text-2xl my-4 font-bold">
+            Tingkatkan Pesanan dengan Promo
+          </h1>
+          <div>
+            <div className="flex">
+              <div className="flex-col">
+                <div>
+                  <h1>Voucher Toko Kami</h1>
+                </div>
+                <div>Kombo Hemat</div>
+                <div>Promo Ongkir</div>
+              </div>
+              <div className="flex-col">
+                <div>
+                  <h1>Paket Diskon</h1>
+                </div>
+                <div>Koin Penjual</div>
+              </div>
+              <div className="flex-col">
+                <div>Promo Toko</div>
+                <div>Flash Sale Toko Kami</div>
               </div>
             </div>
           </div>
@@ -146,4 +176,4 @@ const DashboardUMKM = () => {
   );
 };
 
-export default DashboardUMKM;
+export default PromosiUMKM;
