@@ -1,11 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CardSemua = ({ kost }) => {
+  const navigate = useNavigate();
+  const [data, setData] = useState(kost);
+  function Sans(katagori) {
+    if (data.katagori === 'kost' || data.katagori === 'kontrakan') {
+      navigate('/detailkos');
+    } else if (data.katagori === 'fasilitas rumah') {
+      navigate('/detailfasilitas');
+    } else {
+      alert('eror cuy');
+    }
+  }
+
   return (
     <>
       <div className="card-contents rounded-[9px] border bg-white border-Neutral_30 basis-[24%]">
-        <Link to="/detailkos">
+        <div className="cursor-pointer" onClick={() => Sans(`/${kost.katagori}`)}>
           <div className="card-img w-full">
             <img src={kost.gambar} alt="" className="w-[100%]" />
           </div>
@@ -32,7 +44,7 @@ const CardSemua = ({ kost }) => {
               </div>
             </div>
             <div className="title px-2 text-Neutral_70 mb-2 flex flex-col gap-y-2">
-              <h1 className="font-medium ">{kost.title}</h1>
+              <h1 className="font-medium line-clamp-1">{kost.title}</h1>
               <h2 className="font-bold">{kost.kecamatan}</h2>
               <p className="text-Neutral_30 text-xs">{kost.fasilitas}</p>
             </div>
@@ -41,7 +53,7 @@ const CardSemua = ({ kost }) => {
               <span>{kost.satuan}</span>
             </div>
           </div>
-        </Link>
+        </div>
       </div>
     </>
   );

@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { filterFavorit } from "../features/katagoriSlice";
 const ItemFavorit = () => {
   const dispatch = useDispatch();
+  // ambil data dari Slice
   const favorit = useSelector((state) => state.Skatagori.filterFavorit);
   useEffect(() => {
     dispatch(filterFavorit(true));
