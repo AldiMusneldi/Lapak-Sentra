@@ -3,6 +3,7 @@ import gambarutama from '../../assets/gambar-barang/ricecooker1.svg';
 import gambar2 from '../../assets/gambar-barang/ricecooker2.svg';
 import gambar3 from '../../assets/gambar-barang/ricecooker3.svg';
 import gambar4 from '../../assets/gambar-barang/ricecooker4.svg';
+import gambarPemilik from '../../assets/icons/logo.svg';
 import { Link } from 'react-router-dom';
 
 function DetailFasilitas() {
@@ -52,7 +53,7 @@ function DetailFasilitas() {
     <>
       <section id="detail-kos" className="pt-[10rem] font-worksans text-Neutral_70">
         <div className="container mx-auto">
-          <div className="border rounded-md">
+          <div className=" mb-5">
             <div className="flex items-center justify-center p-2 gap-3">
               <div className="detail-img basis-[50%]">
                 <img src={gambarutama} alt="" />
@@ -227,9 +228,79 @@ function DetailFasilitas() {
               </div>
             </div>
           </div>
-          <div className="border rounded-md">
-            <div className="chat-pemilik">
-              <div></div>
+          <div className="border rounded-md mb-5">
+            <div className="chat-pemilik p-2 flex items-center gap-2">
+              <div className="img">
+                <img src={gambarPemilik} alt="" />
+              </div>
+              <div className="title">
+                <h2 className="mb-2">MEGAH JAYA ELEKTRONIK</h2>
+                <button className="p-2 flex border gap-2">
+                  <span>
+                    <i class="fa-regular fa-comments"></i>
+                  </span>
+                  <span>Chat Penjual</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="border rounded-md mb-5">
+            <div className="spesifikasi p-3">
+              <h2 className="font-medium text-xl">Spesifikasi Produk</h2>
+              <div className="flex">
+                <div className="info flex flex-col gap-2 w-[15%] my-3">
+                  <div className="info-item">
+                    <span>Jenis Fasilitas Rumah</span>
+                  </div>
+                  <div className="info-item">
+                    <span>Merk</span>
+                  </div>
+                  <div className="info-item">
+                    <span>Tipe Barang</span>
+                  </div>
+                  <div className="info-item">
+                    <span>Stok</span>
+                  </div>
+                  <div className="info-item">
+                    <span>Dikirim dari</span>
+                  </div>
+                </div>
+                <div className="info flex flex-col gap-2 w-[30%] my-3">
+                  <div className="info-item">
+                    <span>Barang Elektronik</span>
+                  </div>
+                  <div className="info-item">
+                    <span>Sharp</span>
+                  </div>
+                  <div className="info-item">
+                    <span>Lainnya</span>
+                  </div>
+                  <div className="info-item">
+                    <span>13</span>
+                  </div>
+                  <div className="info-item">
+                    <span>Jakarta Selatan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="border rounded-md mb-5">
+            <div className="deskripsi p-3">
+              <h2 className="font-medium text-xl">Deskripsi Produk</h2>
+              <div className="deskripsi-content my-2">
+                <p>HAI PARA Lapak Sentra SELAMAT DATANG DI TOKO MEGAH JAYA ELEKTRONIK :)</p>
+                <p> TOKO YANG MENJUAL BERBAGAI MACAM KEBUTUHAN ELEKTRONIK RUMAH ANDA :)</p>
+                <p>
+                  SEBELUM BERBELANJA YUK DI SIMAK KENAPA BELANJA DI TOKO KAMI. 1. PRODUK JAMINAN ORIGINAL DAN BERGARANSI RESMI. 2. PRODUK DI QUALITY CONTROL SEBELUM DI KIRIM. 3. PENGIRIMAN DI JAMIN AMAN KARENA ADA ASURANSI DARI PIHAK
+                  EKSPEDISI. 4. RESPON TANGGAP SERTA AFTERSALE YANG SIAP MEMBANTU KENDALA ANDA. JADI JANGAN RAGU YA BELANJA DI TOKO KAMI :) SPESIFIKASI: SHARP KSN18MG Rice Cooker [1.8 Liter], rice cooker dengan desainnya yang modern dan
+                  elegan membuat nuansa di dapur anda semakin lebih stylish. Dengan Anda pun dapat membuat kukusan kue serta menghangatkan makanan kembali dengan mudah. Mechanical Type Penanak nasi dengan tipe panel mekanikal yang
+                  memudahkan pengguna saat memasak nasi. Thick & Non-Sticking Inner Pot Dengan panci tebal berukuran 1.0mm, tidak lengket dan sehat. 3D Keep Warm Fungsi penghangat yang berbeda dari rice cooker pada umumnya dengan
+                  penghangatan melalui 3 sisi yaitu penghangat atas, samping dan bawah. Indication Lights Dilengkapi dengan 2 lampu indicator yang berguna untuk menunjukan proses memasak dan menghangatkan, kuning untuk memasak dan hijau
+                  untuk menghangatkan. Spesifikasi: Nama Produk : Sharp Rice Cooker Tipe : KS-N18MG-RD Bahan Material : Plastik Panjang Kabel : 1 Meter Kapasitas : 1.8 Liter Daya : Memasak : 400 Watt Menghangatkan : 60 Watt Tegangan : 220
+                  Volt / 50 Hz Dimensi (P x L x T) : 28.2 cm x 28.9 cm x 29 cm Berat : 4 Kg Warna : Red Aksesoris : plastic steam tray rice paddle measuring cup rice scoop #RICECOOKER #MAGICCOM #SHARP
+                </p>
+              </div>
             </div>
           </div>
         </div>
