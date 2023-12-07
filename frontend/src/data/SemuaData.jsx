@@ -251,7 +251,9 @@ const SemuaData = [
   },
   {
     id: 21,
-    title: 'Rice Cooker',
+    title: `SHARP RICE COOKER / MAGIC COM KS-N18MG
+    -RD / KSN 18 MG SL / KSN 18MG RD (1,8 LITER) 
+    GARANSI RESMI`,
     katagori: 'fasilitas rumah',
     katagoriFas: 'eletronik',
     kecamatan: 'Kecamatan Lewiliang',

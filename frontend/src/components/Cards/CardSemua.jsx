@@ -32,7 +32,7 @@ const CardSemua = ({ kost }) => {
               </div>
             </div>
             <div className="title px-2 text-Neutral_70 mb-2 flex flex-col gap-y-2">
-              <h1 className="font-medium ">{kost.title}</h1>
+              <h1 className="font-medium line-clamp-1">{kost.title}</h1>
               <h2 className="font-bold">{kost.kecamatan}</h2>
               <p className="text-Neutral_30 text-xs">{kost.fasilitas}</p>
             </div>
