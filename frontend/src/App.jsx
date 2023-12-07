@@ -14,6 +14,28 @@ import Login from './pages/Login/Login';
 import Tenant from './components/Tenant/Tenant';
 import Register from './components/Tenant/Register';
 // import SemuaData from './data/SemuaData';
+import DetailKos from './pages/Detail-kos/DetailKos';
+import Layout1 from './layout/Layout1';
+import KosSaya from './pagesPenyewa/KosSaya';
+import LihatProfile from './pagesPenyewa/LihatProfil';
+import EditProfile from './pagesPenyewa/EditProfile';
+import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
+import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
+import ItemFavorit from './pagesPenyewa/ItemFavorit';
+import ProfilPemilik from './dashboardPemilikKos/ProfilPemilik';
+import EditPemilik from './dashboardPemilikKos/EditPemilik';
+import DashboardHunian from './dashboardPemilikKos/DashboardHunian';
+import SewakanKos from './dashboardPemilikKos/SewakanKos';
+import PemilikHunian from './dashboardPemilikKos/PemilikHunian';
+import DaftarPemilik from './dashboardPemilikKos/DaftarPemilik';
+import ProfileUMKM from './dashboardUMKM/ProfileUMKM';
+import EditUMKM from './dashboardUMKM/EditUMKM';
+import DashboardUMKM from './dashboardUMKM/DashboardUMKM';
+import DashboardUmkmEdit from './dashboardUMKM/DashboardUmkmEdit';
+import RegisterProduk from './dashboardUMKM/RegisterProduk';
+import PromosiUMKM from './dashboardUMKM/PromosiUMKM';
+import Layout2 from './layout/Layout2';
+
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
   // const [katagoris, setKatagoris] = useState(SemuaData);
