@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import profile from "../assets/gambar-testimoni/aldi.svg";
 import home from "../assets/icons/home.svg";
-import hunian from "../assets/icons/hunian.svg";
+import shop from "../assets/icons/shop+.svg";
 import promotion from "../assets/icons/ceklist.svg";
 import statistic from "../assets/icons/statistic.svg";
 import exit from "../assets/icons/exit.svg";
 
-const EditPemilik = () => {
+const EditUMKM = () => {
   return (
     <>
       <div className="pl-12 items-center flex">
@@ -24,10 +24,10 @@ const EditPemilik = () => {
             </div>
           </div>
           <div className="mt-6">
-            <Link to="/dashboardhunian">
+            <Link to="/umkm/dashboardumkm">
               <button className="flex items-center">
                 <img src={home} />
-                <p className="pl-3">Dashboard Pemilik Hunian</p>
+                <p className="pl-3">Dashboard Pemilik UMKM</p>
               </button>
             </Link>
             <hr
@@ -38,10 +38,10 @@ const EditPemilik = () => {
                 width: "100%",
               }}
             />
-            <Link to="/sewakankos">
+            <Link to="/umkm/registerproduk">
               <button className="mt-4 flex items-center">
-                <img src={hunian} />
-                <p className="pl-3">Sewakan Kost/Kontrakan saya</p>
+                <img src={shop} />
+                <p className="pl-3">Daftarkan Produk</p>
               </button>
             </Link>
             <hr
@@ -184,7 +184,7 @@ const EditPemilik = () => {
                 </div>
               </div>
               <div className="flex justify-center items-center">
-                <Link to="/pemilik/account">
+                <Link to="/umkm/account">
                   <button className="mb-10 px-4 py-2 bg-primary_70 text-white rounded">
                     Simpan
                   </button>
@@ -198,4 +198,4 @@ const EditPemilik = () => {
   );
 };
 
-export default EditPemilik;
+export default EditUMKM;

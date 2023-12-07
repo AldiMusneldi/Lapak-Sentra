@@ -65,10 +65,12 @@ const EditProfile = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={exit} className="w-[35px]" />
-              <p className="pl-3">Keluar</p>
-            </div>
+            <Link to="/">
+              <div className="mt-4 flex items-center">
+                <img src={exit} className="w-[35px]" />
+                <p className="pl-3">Keluar</p>
+              </div>
+            </Link>
             <hr
               className="mt-2"
               style={{
@@ -167,7 +169,7 @@ const EditProfile = () => {
                 </div>
               </div>
               <div className="flex justify-center items-center">
-                <Link to="/kossaya">
+                <Link to="/user/acount">
                   <button className="mb-10 px-4 py-2 bg-primary_70 text-white rounded">
                     Simpan
                   </button>

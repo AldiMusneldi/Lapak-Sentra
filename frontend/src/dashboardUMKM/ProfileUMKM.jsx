@@ -2,16 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import profile from "../assets/gambar-testimoni/aldi.svg";
 import home from "../assets/icons/home.svg";
-import hunian from "../assets/icons/hunian.svg";
+import shop from "../assets/icons/shop+.svg";
 import promotion from "../assets/icons/ceklist.svg";
 import statistic from "../assets/icons/statistic.svg";
 import exit from "../assets/icons/exit.svg";
 
-const EditPemilik = () => {
+const ProfileUMKM = () => {
   return (
     <>
       <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[218px]">
+        <div className="flex flex-col relative mb-[198px]">
           <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
             <img
               src={profile}
@@ -24,10 +24,10 @@ const EditPemilik = () => {
             </div>
           </div>
           <div className="mt-6">
-            <Link to="/dashboardhunian">
+            <Link to="/umkm/dashboardumkm">
               <button className="flex items-center">
                 <img src={home} />
-                <p className="pl-3">Dashboard Pemilik Hunian</p>
+                <p className="pl-3">Dashboard Pemilik UMKM</p>
               </button>
             </Link>
             <hr
@@ -38,10 +38,10 @@ const EditPemilik = () => {
                 width: "100%",
               }}
             />
-            <Link to="/sewakankos">
+            <Link to="/umkm/registerproduk">
               <button className="mt-4 flex items-center">
-                <img src={hunian} />
-                <p className="pl-3">Sewakan Kost/Kontrakan saya</p>
+                <img src={shop} />
+                <p className="pl-3">Daftarkan Produk</p>
               </button>
             </Link>
             <hr
@@ -104,6 +104,9 @@ const EditPemilik = () => {
             <div className="ml-4 mt-3 flex justify-center items-center">
               <div>
                 <img src={profile} alt="" />
+                <h1 className="font-bold text-3xl flex justify-center items-center">
+                  Bevin Stevanius
+                </h1>
                 <br />
                 <br />
               </div>
@@ -111,82 +114,58 @@ const EditPemilik = () => {
             <div>
               <div className="pl-28">
                 <div className="flex text-lg">
-                  <p>Nama Lengkap :</p>
-                  <input
-                    type="text"
-                    className="ml-[115px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Masukkan Nama Anda"
-                  />
-                </div>
-                <div className="flex text-lg">
                   <p>Jenis Kelamin :</p>
-                  <input
-                    type="text"
-                    className="ml-32 border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Pilih Jenis Kelamin L/P"
-                  />
+                  <p className="pl-56">Pria</p>
+                  <br />
+                  <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Tanggal Lahir :</p>
-                  <input
-                    type="text"
-                    className="ml-[130px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Masukkan Tanggal Lahir"
-                  />
+                  <p className="pl-56">21 Maret 1993</p>
+                  <br />
+                  <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Pekerjaan :</p>
-                  <input
-                    type="text"
-                    className="ml-[159px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Pilih Pekerjaan"
-                  />
+                  <p className="pl-[254px]">Pengusaha</p>
+                  <br />
+                  <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Nama Kantor : </p>
-                  <input
-                    type="text"
-                    className="ml-[129px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Contoh : PT Kreative Multimedia"
-                  />
+                  <p className="pl-[222px]">Anugrah Kharisma</p>
+                  <br />
+                  <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Kota Asal : </p>
-                  <input
-                    type="text"
-                    className="ml-[162px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Masukkan Kota Asal"
-                  />
+                  <p className="pl-64">Jakarta</p>
+                  <br />
+                  <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Status :</p>
-                  <input
-                    type="text"
-                    className="ml-[187px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Pilih Status"
-                  />
+                  <p className="pl-[281px]">Pemilik Kost</p>
+                  <br />
+                  <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Pendidikan terakhir :</p>
-                  <input
-                    type="text"
-                    className="ml-[82px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Pilih Pendidikan Terakhir"
-                  />
+                  <p className="pl-44">S1</p>
+                  <br />
+                  <br />
                 </div>
                 <div className="flex text-lg">
                   <p>Kontak Darurat : </p>
-                  <input
-                    type="text"
-                    className="ml-[116px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
-                    placeholder="Masukkan Kontak Anda"
-                  />
+                  <p className="pl-52">+62 820-0242-1201</p>
+                  <br />
+                  <br />
                 </div>
               </div>
               <div className="flex justify-center items-center">
-                <Link to="/pemilik/account">
+                <Link to="/umkm/account/edit">
                   <button className="mb-10 px-4 py-2 bg-primary_70 text-white rounded">
-                    Simpan
+                    Edit Profil
                   </button>
                 </Link>
               </div>
@@ -198,4 +177,4 @@ const EditPemilik = () => {
   );
 };
 
-export default EditPemilik;
+export default ProfileUMKM;

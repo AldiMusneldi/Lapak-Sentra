@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Link } from "react-router-dom";
 import profile from "../assets/gambar-testimoni/aldi.svg";
 import home from "../assets/icons/home.svg";
@@ -6,35 +6,35 @@ import hunian from "../assets/icons/hunian.svg";
 import promotion from "../assets/icons/ceklist.svg";
 import statistic from "../assets/icons/statistic.svg";
 import exit from "../assets/icons/exit.svg";
-import fthunian from "../assets/gambar-kost&kontrakan/hunian.svg";
+import logo from "../assets/icons/logo.svg";
 
-const DashboardHunian = () => {
+const DashboardUmkmEdit = () => {
   return (
     <>
-      <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[114px]">
-          <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
+      <div className="flex container ml-24">
+        <div className="flex flex-col relative mt-24">
+          <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center">
             <img
               src={profile}
-              className="mt-12 rounded-full w-[150px] h-[150px] absolute"
+              className="mt-12 rounded-full w-[150px] h-[150px] z-10"
             />
           </div>
-          <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
+          <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center z-0">
             <div>
               <h1 className="text-2xl font-bold pt-4">Bevin Stevanius</h1>
 
-              <Link to="/pemilik/account">
+              <Link to="/umkm/account">
                 <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
                   Lihat Profile
                 </button>
               </Link>
             </div>
           </div>
-          <div className="mt-6">
-            <Link to="/dashboardhunian">
+          <div className="container mt-6">
+            <Link to="/umkm/dashboardumkm">
               <button className="flex items-center">
                 <img src={home} />
-                <p className="pl-3">Dashboard Pemilik Hunian</p>
+                <p className="pl-3">Dashboard Pemilik UMKM</p>
               </button>
             </Link>
             <hr
@@ -45,10 +45,10 @@ const DashboardHunian = () => {
                 width: "100%",
               }}
             />
-            <Link to="/sewakankos">
+            <Link to="/umkm/registerproduk">
               <button className="mt-4 flex items-center">
                 <img src={hunian} />
-                <p className="pl-3">Sewakan Kost/Kontrakan saya</p>
+                <p className="pl-3">Daftarkan Produk</p>
               </button>
             </Link>
             <hr
@@ -103,79 +103,59 @@ const DashboardHunian = () => {
             />
           </div>
         </div>
-        <div className="mt-24">
-          <div className="ml-8 bg-primary_70 rounded-md w-[900px] h-[60px] flex justify-center items-center">
+        <div className="pl-6 container relative mt-24">
+          <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">
             <p className="text-[30px] text-white text font-bold">
-              Dashboard Pemilik Hunian
+              Dashboard Pemilik UMKM
             </p>
           </div>
-          <div className="mb-6 ml-5">
+          <div className="">
             <div className=" border-gray-300 ml-4 mt-3">
               <div className="flex mb-3">
-                <h1>Nama Hunian</h1>
-                <p className="pl-[70px]">Kost Gedung Juang</p>
+                <h1>Nama UMKM</h1>
+                <input
+                    type="text"
+                    className="ml-[115px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Masukkan Nama UMKM Anda"
+                  />
               </div>
               <div className="flex mb-3">
-                <h1>Foto Hunian</h1>
-                <span>
-                  <img src={fthunian} className="pl-20"/>
+                <h1>Logo UMKM</h1>
+                <input
+                    type="text"
+                    className="ml-[115px] border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                    placeholder="Masukkan Nama Anda"
+                  />
+              </div>
+              <div className="flex mb-3">
+                <h1>Alamat</h1>
+                <p className="pl-[116px]">Jakarta Barat</p>
+              </div>
+              <div className="flex mb-3">
+                <h1>Deskripsi</h1>
+                <span className="border border-gray-400 rounded-md ml-24 px-2 py-2">
+                  <p>
+                    HAI PARA Lapak Sentra SELAMAT DATANG DI TOKO MEGAH JAYA
+                    ELEKTRONIK :) <br /> TOKO YANG MENJUAL BERBAGAI MACAM
+                    KEBUTUHAN ELEKTRONIK RUMAH ANDA :) <br /> SEBELUM BERBELANJA
+                    YUK DI SIMAK KENAPA BELANJA DI TOKO KAMI. <br />
+                    1. PRODUK JAMINAN ORIGINAL DAN BERGARANSI RESMI. <br /> 
+                    2. PRODUK DI QUALITY CONTROL SEBELUM DI KIRIM. <br /> 
+                    3. PENGIRIMAN DI JAMIN AMAN KARENA ADA ASURANSI DARI PIHAK EKSPEDISI. <br /> 
+                    4. RESPON TANGGAP SERTA AFTERSALE YANG SIAP MEMBANTU KENDALA ANDA. <br />
+                    JADI JANGAN RAGU YA BELANJA DI TOKO KAMI :)
+                  </p>
                 </span>
               </div>
-              <div className="flex mb-3">
-                <h1>Jenis Kamar</h1>
-                <p className="pl-[83px]">Campur</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Harga</h1>
-                <p className="pl-[124px]">Rp. 2.450.000. - Rp. 2.900.000.</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Jenis Sewa </h1>
-                <p className="pl-[92px]">Bulanan</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Jumlah Kamar</h1>
-                <p className="pl-[68px]">15 Kamar</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Parkir Mobil</h1>
-                <p className="pl-[84px]">Ada/Luas</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Parkir Motor</h1>
-                <p className="pl-20">Ada/Luas</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Fasilitas</h1>
-                <p className="pl-[114px]">K.Mandi Dalam, AC, Meja, Kasur, Kulkas Mini</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Tempat Terdekat</h1>
-                <ul className="pl-[70px]" style={{ listStyleType: "disc" }}>
-                  <li>Masjid</li>
-                  <li>Supermarket</li>
-                  <li>Tempat</li>
-                  <li>Makan</li>
-                  <li>Universitas</li>
-                  <li>Stasiun</li>
-                </ul>
-              </div>
-              <div className="flex mb-3">
-                <h1>Lokasi</h1>
-                <p className="pl-[123px]">Jakarta Pusat</p>
-              </div>
-              <div className="flex mb-3">
-                <h1>Keterangan</h1>
-                <ul className="pl-[106px]" style={{ listStyleType: "disc" }}>
-                  <li>
-                    Kamar Bisa Berdua Ada Tambahan Biaya Rp. 500.000./Bulan
-                  </li>
-                  <li>Parkir Mobil Bayar Rp. 150.000./Bulan</li>
-                  <li>Parkir Montor Free Parkir</li>
-                </ul>
+              <div className="flex justify-end">
+                <Link to="/umkm/dashboardumkm">
+                  <button className="px-4 py-2 bg-primary_70 text-white rounded">
+                    Simpan Deskripsi
+                  </button>
+                </Link>
               </div>
               <div className="text-2xl">
-                <h1>List Kamar Yang Didaftarkan</h1>
+                <h1>List Produk Yang Didaftarkan</h1>
                 {/*Panggil Cards */}
               </div>
             </div>
@@ -186,4 +166,4 @@ const DashboardHunian = () => {
   );
 };
 
-export default DashboardHunian;
+export default DashboardUmkmEdit;

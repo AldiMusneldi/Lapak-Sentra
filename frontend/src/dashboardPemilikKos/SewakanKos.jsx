@@ -41,7 +41,7 @@ const SewakanKos = () => {
           </div>
           <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
             <div>
-              <h1 className="text-2xl font-bold pt-4">Aldi Musneldi</h1>
+              <h1 className="text-2xl font-bold pt-4">Bevin Stevanius</h1>
 
               <Link to="/pemilik/account">
                 <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
@@ -107,10 +107,12 @@ const SewakanKos = () => {
                 width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={exit} className="w-[35px]" />
-              <p className="pl-3">Keluar</p>
-            </div>
+            <Link to="/">
+              <div className="mt-4 flex items-center">
+                <img src={exit} className="w-[35px]" />
+                <p className="pl-3">Keluar</p>
+              </div>
+            </Link>
             <hr
               className="mt-2"
               style={{

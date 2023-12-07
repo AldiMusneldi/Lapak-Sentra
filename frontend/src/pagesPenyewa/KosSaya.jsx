@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import profile from '../assets/gambar-testimoni/aldi.svg';
-import home from '../assets/icons/home.svg';
-import love from '../assets/icons/love.svg';
-import transaction from '../assets/icons/refresh.svg';
-import exit from '../assets/icons/exit.svg';
-import kost1 from '../assets/gambar-kost&kontrakan/kost1.svg';
-import dkost1 from '../assets/detail-kos/dkost1.svg';
-import dkost2 from '../assets/detail-kos/dkost1,1.svg';
+import React from "react";
+import { Link } from "react-router-dom";
+import profile from "../assets/gambar-testimoni/aldi.svg";
+import home from "../assets/icons/home.svg";
+import love from "../assets/icons/love.svg";
+import transaction from "../assets/icons/refresh.svg";
+import exit from "../assets/icons/exit.svg";
+import kost1 from "../assets/gambar-kost&kontrakan/kost1.svg";
+import dkost1 from "../assets/detail-kos/dkost1.svg";
+import dkost2 from "../assets/detail-kos/dkost1,1.svg";
 
 const KosSaya = () => {
   return (
@@ -15,14 +15,19 @@ const KosSaya = () => {
       <div className="pl-12 items-center flex">
         <div className="flex flex-col relative mb-[76px]">
           <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
-            <img src={profile} className="mt-12 rounded-full w-[150px] h-[150px] absolute" />
+            <img
+              src={profile}
+              className="mt-12 rounded-full w-[150px] h-[150px] absolute"
+            />
           </div>
           <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
             <div>
               <h1 className="text-2xl font-bold pt-4">Aldi Musneldi</h1>
 
               <Link to="/user/acount">
-                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">Lihat Profile</button>
+                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
+                  Lihat Profile
+                </button>
               </Link>
             </div>
           </div>
@@ -34,9 +39,9 @@ const KosSaya = () => {
             <hr
               className="mt-2"
               style={{
-                borderTop: '1px solid grey',
-                display: 'block',
-                width: '100%',
+                borderTop: "1px solid grey",
+                display: "block",
+                width: "100%",
               }}
             />
             <Link to="/itemfavorit">
@@ -48,9 +53,9 @@ const KosSaya = () => {
             <hr
               className="mt-2"
               style={{
-                borderTop: '1px solid grey',
-                display: 'block',
-                width: '100%',
+                borderTop: "1px solid grey",
+                display: "block",
+                width: "100%",
               }}
             />
             <Link to="/riwayat">
@@ -62,34 +67,40 @@ const KosSaya = () => {
             <hr
               className="mt-2"
               style={{
-                borderTop: '1px solid grey',
-                display: 'block',
-                width: '100%',
+                borderTop: "1px solid grey",
+                display: "block",
+                width: "100%",
               }}
             />
-            <div className="mt-4 flex items-center">
-              <img src={exit} className="w-[35px]" />
-              <p className="pl-3">Keluar</p>
-            </div>
+            <Link to="/">
+              <div className="mt-4 flex items-center">
+                <img src={exit} className="w-[35px]" />
+                <p className="pl-3">Keluar</p>
+              </div>
+            </Link>
             <hr
               className="mt-2"
               style={{
-                borderTop: '1px solid grey',
-                display: 'block',
-                width: '100%',
+                borderTop: "1px solid grey",
+                display: "block",
+                width: "100%",
               }}
             />
           </div>
         </div>
         <div className="mt-24">
           <div className="ml-4 bg-primary_70 rounded-md w-[900px] h-[60px] flex justify-center items-center">
-            <p className="text-[30px] text-white text font-bold">Kos/Kontrakan Saya</p>
+            <p className="text-[30px] text-white text font-bold">
+              Kos/Kontrakan Saya
+            </p>
           </div>
           <div className="mb-6">
             <div className=" border-gray-300 ml-4 mt-3">
               <tbody>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2 rounded-tl-xl">Hunian</td>
+                  <td className="border border-gray-300 px-4 py-2 rounded-tl-xl">
+                    Hunian
+                  </td>
                   <td className="border border-gray-300 px-4 py-2 rounded-tr-xl">
                     Kos
                     <br />
@@ -105,33 +116,54 @@ const KosSaya = () => {
                 </tr>
                 <tr>
                   <td className="border border-gray-300 px-4 py-2">Alamat</td>
-                  <td className="border border-gray-300 px-4 py-2">Kost Area Gajah Mada, Hayam Wuruk, Olive Paragon Mall Tipe A, Jakarta Pusat Kota</td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    Kost Area Gajah Mada, Hayam Wuruk, Olive Paragon Mall Tipe
+                    A, Jakarta Pusat Kota
+                  </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2">Nama Pemilik Kost</td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    Nama Pemilik Kost
+                  </td>
                   <td className="border border-gray-300 px-4 py-2 flex">
                     Sepuh Aldi Tua
                     <p className="text-indigo-700 pl-[480px]">Hubungi</p>
                   </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2">No. Telp/HP</td>
-                  <td className="border border-gray-300 px-4 py-2">+62 852-5652-7939</td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    No. Telp/HP
+                  </td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    +62 852-5652-7939
+                  </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2">Harga Perbulan</td>
-                  <td className="border border-gray-300 px-4 py-2">Rp700.000</td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    Harga Perbulan
+                  </td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    Rp700.000
+                  </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2">Lama Sewa</td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    Lama Sewa
+                  </td>
                   <td className="border border-gray-300 px-4 py-2">3 Bulan</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2">Total Harga Sewa</td>
-                  <td className="border border-gray-300 px-4 py-2">Rp1.950.000</td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    Total Harga Sewa
+                  </td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    Rp1.950.000
+                  </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-300 px-4 py-2 rounded-bl-xl">Status Sewa</td>
+                  <td className="border border-gray-300 px-4 py-2 rounded-bl-xl">
+                    Status Sewa
+                  </td>
                   <td className="border border-gray-300 px-4 py-2 flex rounded-br-xl">
                     Aktif
                     <p className="pl-10">11/11/2023 - 11/01/2024</p>
