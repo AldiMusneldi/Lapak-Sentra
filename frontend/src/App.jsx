@@ -16,16 +16,19 @@ import Register from './components/Tenant/Register';
 // import SemuaData from './data/SemuaData';
 import DetailKos from './pages/Detail-kos/DetailKos';
 import Layout1 from './layout/Layout1';
+import Layout2 from './layout/Layout2';
 import KosSaya from './pagesPenyewa/KosSaya';
 import LihatProfile from './pagesPenyewa/LihatProfil';
 import EditProfile from './pagesPenyewa/EditProfile';
 import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
 import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
 import ItemFavorit from './pagesPenyewa/ItemFavorit';
-import ProfilPemilik from './dashboardPemilikKos/ProfilPemilik';
-import EditPemilik from './dashboardPemilikKos/EditPemilik';
+import ProfileHunian from './dashboardPemilikKos/ProfileHunian';
+import EditHunian from './dashboardPemilikKos/EditHunian';
 import DashboardHunian from './dashboardPemilikKos/DashboardHunian';
+import DashboardHunianEdit from './dashboardPemilikKos/DashboardHunianEdit';
 import SewakanKos from './dashboardPemilikKos/SewakanKos';
+import PromosiHunian from './dashboardPemilikKos/PromosiHunian';
 import PemilikHunian from './dashboardPemilikKos/PemilikHunian';
 import DaftarPemilik from './dashboardPemilikKos/DaftarPemilik';
 import ProfileUMKM from './dashboardUMKM/ProfileUMKM';
@@ -34,7 +37,6 @@ import DashboardUMKM from './dashboardUMKM/DashboardUMKM';
 import DashboardUmkmEdit from './dashboardUMKM/DashboardUmkmEdit';
 import RegisterProduk from './dashboardUMKM/RegisterProduk';
 import PromosiUMKM from './dashboardUMKM/PromosiUMKM';
-import Layout2 from './layout/Layout2';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -155,23 +157,23 @@ function App() {
         }
       />
       <Route
-        path="/pemilik/account"
+        path="/hunian/account"
         element={
           <Layout2>
-            <ProfilPemilik />
+            <ProfileHunian />
           </Layout2>
         }
       />
       <Route
-        path="/pemilik/account/edit"
+        path="/hunian/account/edit"
         element={
           <Layout2>
-            <EditPemilik />
+            <EditHunian />
           </Layout2>
         }
       />
       <Route
-        path="/dashboardhunian"
+        path="/hunian/dashboardhunian"
         element={
           <Layout2>
             <DashboardHunian />
@@ -179,10 +181,26 @@ function App() {
         }
       />
       <Route
-        path="/sewakankos"
+        path="/hunian/dashboardhunian/edit"
+        element={
+          <Layout2>
+            <DashboardHunianEdit />
+          </Layout2>
+        }
+      />
+      <Route
+        path="/hunian/registerhunian"
         element={
           <Layout2>
             <SewakanKos />
+          </Layout2>
+        }
+      />
+      <Route
+        path="/hunian/promosi"
+        element={
+          <Layout2>
+            <PromosiHunian />
           </Layout2>
         }
       />
@@ -211,7 +229,7 @@ function App() {
         }
       />
       <Route
-        path="/umkm/dashboard/edit"
+        path="/umkm/dashboardumkm/edit"
         element={
           <Layout2>
             <DashboardUmkmEdit />

@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../assets/gambar-testimoni/aldi.svg';
-import CardProfile1 from '../componentsUMKM/Card-profile/CardProfile1';
-import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
+import SideBarH from '../componentsHunian/SidebarH/SideBarH';
+import CardProfileH1 from '../componentsHunian/Card-profileH/CardProfileH1';
 
-const ProfileUMKM = () => {
+const ProfileHunian = () => {
   return (
     <>
       <div className="flex container ml-24">
         <div>
-          <CardProfile1 />
-          <SideNavbar />
+          <CardProfileH1 />
+          <SideBarH />
         </div>
         <div className="pl-6 container relative mt-24">
           <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">
             <p className="text-[30px] text-white text font-bold">Profile</p>
           </div>
           <div className="mb-6 mt-3 rounded-lg shadow-xl">
-            <div className="ml-4 mt-3 flex justify-center">
+            <div className="ml-4 mt-3 flex justify-center items-center">
               <div>
                 <img src={profile} alt="" />
-                <h1 className="font-bold text-3xl flex justify-center">
+                <h1 className="font-bold text-3xl flex justify-center items-center">
                   Bevin Stevanius
                 </h1>
                 <br />
@@ -78,8 +78,8 @@ const ProfileUMKM = () => {
                   <br />
                 </div>
               </div>
-              <div className="flex justify-center">
-                <Link to="/umkm/account/edit">
+              <div className="flex justify-center items-center">
+                <Link to="/hunian/account/edit">
                   <button className="mb-10 px-4 py-2 bg-primary_70 text-white rounded">
                     Edit Profil
                   </button>
@@ -93,4 +93,4 @@ const ProfileUMKM = () => {
   );
 };
 
-export default ProfileUMKM;
+export default ProfileHunian;

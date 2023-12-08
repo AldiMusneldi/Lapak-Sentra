@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import AnimateTenant from "../assets/icons/registerpemilik.svg";
-import iconUnhide from "../assets/icons/visibility.svg";
-import IconGoogle from "../assets/icons/google.svg";
-import iconFB from "../assets/icons/facebook.svg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import AnimateTenant from '../assets/icons/registerpemilik.svg';
+import iconUnhide from '../assets/icons/visibility.svg';
+import IconGoogle from '../assets/icons/google.svg';
+import iconFB from '../assets/icons/facebook.svg';
 
 const DaftarPemilik = () => {
   return (

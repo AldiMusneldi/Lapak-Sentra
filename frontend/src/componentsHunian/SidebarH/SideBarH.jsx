@@ -1,22 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MdOutlineStorefront } from "react-icons/md";
-import { FaBoxOpen } from 'react-icons/fa';
+import { PiHouseLineLight } from 'react-icons/pi';
+import { MdOutlineBed } from "react-icons/md";
 import { CiShoppingTag } from 'react-icons/ci';
 import { RiLogoutBoxLine } from 'react-icons/ri';
 
-const SideNavbar = () => {
-  const iconSize = 40;
-
+const SideBarH = () => {
+    const iconSize = 40;
   return (
     <>
       <div className="flex container">
         <div className="flex flex-col relative mb-4">
           <div className="mt-6 w-[400px]">
-            <Link to="/umkm/dashboardumkm">
+            <Link to="/hunian/dashboardhunian">
               <button className="flex items-center">
-                <MdOutlineStorefront size={iconSize} />
-                <p className="pl-3">Dashboard Pemilik UMKM</p>
+                <PiHouseLineLight size={iconSize} />
+                <p className="pl-3">Dashboard Pemilik Hunian</p>
               </button>
             </Link>
             <hr
@@ -27,10 +26,10 @@ const SideNavbar = () => {
                 width: "100%",
               }}
             />
-            <Link to="/umkm/registerproduk">
+            <Link to="/hunian/registerhunian">
               <button className="mt-4 flex items-center">
-                <FaBoxOpen size={iconSize} />
-                <p className="pl-3">Daftarkan Produk</p>
+              <MdOutlineBed size={iconSize}/>
+                <p className="pl-3">Sewakan Kos/Kontrakan</p>
               </button>
             </Link>
             <hr
@@ -41,7 +40,7 @@ const SideNavbar = () => {
                 width: "100%",
               }}
             />
-            <Link to="/umkm/promosi">
+            <Link to="/hunian/promosi">
               <button className="mt-4 flex items-center">
                 <CiShoppingTag size={iconSize} />
                 <p className="pl-3">Fitur Promosi</p>
@@ -76,4 +75,4 @@ const SideNavbar = () => {
   );
 };
 
-export default SideNavbar;
+export default SideBarH;

@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import CardProfile from "../componentsUMKM/Card-profile/CardProfile";
-import SideNavbar from "../componentsUMKM/Side-navbar/SideNavbar";
-import UploadImage from "../componentsUMKM/Upload-image/UploadImage";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CardProfile from '../componentsUMKM/Card-profile/CardProfile';
+import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
+import UploadImage from '../componentsUMKM/Upload-image/UploadImage';
 
 function DashboardUmkmEdit() {
   return (
