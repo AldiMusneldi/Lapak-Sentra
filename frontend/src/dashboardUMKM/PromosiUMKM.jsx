@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import CardProfileU from "../componentsUMKM/Card-profileU/CardProfileU";
-import SideNavbar from "../componentsUMKM/Side-navbar/SideNavbar";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CardProfileU from '../componentsUMKM/Card-profileU/CardProfileU';
+import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
 
 const PromosiUMKM = () => {
   return (
