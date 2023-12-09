@@ -1,5 +1,5 @@
 import React from 'react';
-import profile from '../../assets/gambar-testimoni/aldi.svg';
+import profile from '../../../assets/gambar-testimoni/aldi.svg';
 
 function CardProfileU1() {
   return (

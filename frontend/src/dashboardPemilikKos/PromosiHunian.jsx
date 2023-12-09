@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CardProfileH from '../componentsHunian/Card-profileH/CardProfileH';
-import SideBarH from '../componentsHunian/SidebarH/SideBarH';
+import CardProfileH from '../components/Hunian/Card-profileH/CardProfileH';
+import SideBarH from '../components/Hunian/SidebarH/SideBarH';
 
 function PromosiHunian() {
   return (

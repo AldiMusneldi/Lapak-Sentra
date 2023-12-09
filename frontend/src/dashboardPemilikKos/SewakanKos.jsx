@@ -21,9 +21,9 @@ import iconRumahsakit from '../assets/icons/rumahsakit.svg';
 import iconSupermarket from '../assets/icons/supermarket.svg';
 import iconTempatmakan from '../assets/icons/tempatmakan.svg';
 import iconHalte from '../assets/icons/halte.svg';
-import CardProfileH from '../componentsHunian/Card-profileH/CardProfileH';
-import SideBarH from '../componentsHunian/SidebarH/SideBarH';
-import UploadImage from '../componentsUMKM/Upload-image/UploadImage';
+import CardProfileH from '../components/Hunian/Card-profileH/CardProfileH';
+import SideBarH from '../components/Hunian/SidebarH/SideBarH';
+import UploadImage from '../components/UMKM/Upload-image/UploadImage';
 
 const SewakanKos = () => {
   return (

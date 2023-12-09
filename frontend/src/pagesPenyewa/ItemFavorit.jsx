@@ -5,8 +5,8 @@ import Modalpemilik from '../components/Modals/Modalpemilik';
 import CardsFavorit from '../components/Cards/CardsFavorit';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterFavorit } from '../features/katagoriSlice';
-import CardProfile1 from '../componentsUsers/Card-profile/CardProfile1';
-import Sidebar from '../componentsUsers/Sidebar/Sidebar';
+import CardProfile1 from '../components/Users/Card-profile/CardProfile1';
+import Sidebar from '../components/Users/Sidebar/Sidebar';
 const ItemFavorit = () => {
   const dispatch = useDispatch();
   // ambil data dari Slice

@@ -1,8 +1,8 @@
 import React from 'react';
-import profile from '../../assets/gambar-testimoni/aldi.svg';
+import { Link } from 'react-router-dom';
+import profile from '../../../assets/gambar-testimoni/aldi.svg';
 
-
-function CardProfileH1() {
+function CardProfile() {
   return (
     <>
       <div className="flex container">
@@ -24,4 +24,4 @@ function CardProfileH1() {
   );
 }
 
-export default CardProfileH1;
+export default CardProfile;

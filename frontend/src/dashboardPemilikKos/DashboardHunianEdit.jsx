@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CardProfileH from '../componentsHunian/Card-profileH/CardProfileH';
-import SideBarH from '../componentsHunian/SidebarH/SideBarH';
-import UploadImage from '../componentsUMKM/Upload-image/UploadImage';
+import CardProfileH from '../components/Hunian/Card-profileH/CardProfileH';
+import SideBarH from '../components/Hunian/SidebarH/SideBarH';
+import UploadImage from '../components/UMKM/Upload-image/UploadImage';
 
 function DashboardHunianEdit() {
   return (

@@ -2,8 +2,8 @@ import React from 'react';
 import kost1 from '../assets/gambar-kost&kontrakan/kost1.svg';
 import dkost1 from '../assets/detail-kos/dkost1.svg';
 import dkost2 from '../assets/detail-kos/dkost1,1.svg';
-import CardProfile1 from '../componentsUsers/Card-profile/CardProfile1';
-import Sidebar from '../componentsUsers/Sidebar/Sidebar';
+import CardProfile1 from '../components/Users/Card-profile/CardProfile1';
+import Sidebar from '../components/Users/Sidebar/Sidebar';
 
 const KosSaya = () => {
   return (

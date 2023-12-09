@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../assets/gambar-testimoni/aldi.svg';
-import SideBarH from '../componentsHunian/SidebarH/SideBarH';
-import CardProfileH1 from '../componentsHunian/Card-profileH/CardProfileH1';
+import SideBarH from '../components/Hunian/SidebarH/SideBarH';
+import CardProfileH1 from '../components/Hunian/Card-profileH/CardProfileH1';
 
 const ProfileHunian = () => {
   return (

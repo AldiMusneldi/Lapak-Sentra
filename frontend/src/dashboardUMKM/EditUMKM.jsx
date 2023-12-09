@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../assets/gambar-testimoni/aldi.svg';
-import CardProfileU1 from '../componentsUMKM/Card-profileU/CardProfileU1';
-import SidebarU from '../componentsUMKM/SidebarU/SidebarU';
+import CardProfileU1 from '../components/UMKM/Card-profileU/CardProfileU1';
+import SidebarU from '../components/UMKM/SidebarU/SidebarU';
 
 const EditUMKM = () => {
   return (

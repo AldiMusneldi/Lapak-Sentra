@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CardProfileU from '../componentsUMKM/Card-profileU/CardProfileU';
-import SidebarU from '../componentsUMKM/SidebarU/SidebarU';
-import UploadImage from '../componentsUMKM/Upload-image/UploadImage';
+import CardProfileU from '../components/UMKM/Card-profileU/CardProfileU';
+import SidebarU from '../components/UMKM/SidebarU/SidebarU';
+import UploadImage from '../components/UMKM/Upload-image/UploadImage';
 
 const RegisterProduk = () => {
   return (

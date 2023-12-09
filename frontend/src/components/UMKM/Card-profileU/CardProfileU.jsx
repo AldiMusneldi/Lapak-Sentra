@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import profile from '../../assets/gambar-testimoni/aldi.svg';
+import profile from '../../../assets/gambar-testimoni/aldi.svg';
 
-function CardProfile() {
+const CardProfileU = () => {
   return (
     <>
       <div className="flex container">
@@ -16,12 +16,18 @@ function CardProfile() {
           <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center z-0">
             <div>
               <h1 className="text-2xl font-bold pt-4">Bevin Stevanius</h1>
+
+              <Link to="/umkm/account">
+                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
+                  Lihat Profile
+                </button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default CardProfile;
+export default CardProfileU;
