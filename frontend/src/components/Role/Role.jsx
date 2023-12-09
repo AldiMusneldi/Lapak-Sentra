@@ -77,9 +77,11 @@ const Role = ({ onClose, isOpen }) => {
                     />
                   </div>
                   <div>
-                    <button className="mt-7 mr-6 rounded-md bg-indigo-700 text-white w-48 py-[10px] px-[17px]">
-                      Pemilik UMKM
-                    </button>
+                    <Link to="/masuk/umkm">
+                      <button className="mt-7 mr-6 rounded-md bg-indigo-700 text-white w-48 py-[10px] px-[17px]">
+                        Pemilik UMKM
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
