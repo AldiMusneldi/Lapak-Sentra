@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import { useDisclosure } from "@chakra-ui/react";
-import Modalpemilik from "../components/Modals/Modalpemilik";
-import CardsFavorit from "../components/Cards/CardsFavorit";
-import { useDispatch, useSelector } from "react-redux";
-import { filterFavorit } from "../features/katagoriSlice";
-import CardProfile1 from "../componentsUsers/Card-profile/CardProfile1";
-import Sidebar from "../componentsUsers/Sidebar/Sidebar";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import { useDisclosure } from '@chakra-ui/react';
+import Modalpemilik from '../components/Modals/Modalpemilik';
+import CardsFavorit from '../components/Cards/CardsFavorit';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterFavorit } from '../features/katagoriSlice';
+import CardProfile1 from '../componentsUsers/Card-profile/CardProfile1';
+import Sidebar from '../componentsUsers/Sidebar/Sidebar';
 const ItemFavorit = () => {
   const dispatch = useDispatch();
   // ambil data dari Slice

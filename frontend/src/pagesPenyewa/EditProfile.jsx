@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import profile from "../assets/gambar-testimoni/aldi.svg";
-import CardProfile from "../componentsUsers/Card-profile/CardProfile";
-import Sidebar from "../componentsUsers/Sidebar/Sidebar";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import profile from '../assets/gambar-testimoni/aldi.svg';
+import CardProfile from '../componentsUsers/Card-profile/CardProfile';
+import Sidebar from '../componentsUsers/Sidebar/Sidebar';
 
 const EditProfile = () => {
   return (

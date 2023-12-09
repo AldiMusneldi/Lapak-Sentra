@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import AnimateTenant from "../../assets/icons/register.svg";
-import iconUnhide from "../../assets/icons/visibility.svg";
-import IconGoogle from "../../assets/icons/google.svg";
-import iconFB from "../../assets/icons/facebook.svg";
+import { Link } from 'react-router-dom';
+import AnimateTenant from '../../assets/icons/register.svg';
+import iconUnhide from '../../assets/icons/visibility.svg';
+import IconGoogle from '../../assets/icons/google.svg';
+import iconFB from '../../assets/icons/facebook.svg';
 
 function UserRegister() {
   return (

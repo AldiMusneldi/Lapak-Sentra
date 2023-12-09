@@ -1,7 +1,7 @@
-import React from "react";
-import ricecooker from "../assets/gambar-barang/ricecooker2.svg";
-import CardProfile1 from "../componentsUsers/Card-profile/CardProfile1";
-import Sidebar from "../componentsUsers/Sidebar/Sidebar";
+import React from 'react';
+import ricecooker from '../assets/gambar-barang/ricecooker2.svg';
+import CardProfile1 from '../componentsUsers/Card-profile/CardProfile1';
+import Sidebar from '../componentsUsers/Sidebar/Sidebar';
 
 const PesananSaya = () => {
   return (

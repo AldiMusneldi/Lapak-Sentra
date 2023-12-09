@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { LoginUser, reset } from "../../features/authSlice";
-import { Link, useNavigate } from "react-router-dom";
-import ReactLogo from "../../assets/logo.svg";
-import IconPerson from "../../assets/icons/user.svg";
-import iconLock from "../../assets/icons/lock.svg";
-import iconUnhide from "../../assets/icons/visibility.svg";
-import IconGoogle from "../../assets/icons/google.svg";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { LoginUser, reset } from '../../features/authSlice';
+import { Link, useNavigate } from 'react-router-dom';
+import ReactLogo from '../../assets/logo.svg';
+import IconPerson from '../../assets/icons/user.svg';
+import iconLock from '../../assets/icons/lock.svg';
+import iconUnhide from '../../assets/icons/visibility.svg';
+import IconGoogle from '../../assets/icons/google.svg';
 
 const UserLogin = () => {
   const [email, setEmail] = useState("");

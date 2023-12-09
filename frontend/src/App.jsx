@@ -32,6 +32,7 @@ import DashboardHunianEdit from './dashboardPemilikKos/DashboardHunianEdit';
 import SewakanKos from './dashboardPemilikKos/SewakanKos';
 import PromosiHunian from './dashboardPemilikKos/PromosiHunian';
 import UmkmLogin from './PagesValidation/Login/UmkmLogin';
+import UmkmRegister from './PagesValidation/Register/UmkmRegister';
 import ProfileUMKM from './dashboardUMKM/ProfileUMKM';
 import EditUMKM from './dashboardUMKM/EditUMKM';
 import DashboardUMKM from './dashboardUMKM/DashboardUMKM';
@@ -260,6 +261,7 @@ function App() {
       <Route path="/masuk/hunian" element={<HunianLogin />} />
       <Route path="/daftar/hunian" element={<HunianRegister />} />
       <Route path="/masuk/umkm" element={<UmkmLogin />} />
+      <Route path="/daftar/umkm" element={<UmkmRegister />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );

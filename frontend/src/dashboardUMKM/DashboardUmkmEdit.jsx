@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CardProfileU from '../componentsUMKM/Card-profileU/CardProfileU';
-import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
+import SidebarU from '../componentsUMKM/SidebarU/SidebarU';
 import UploadImage from '../componentsUMKM/Upload-image/UploadImage';
 
 function DashboardUmkmEdit() {
@@ -10,7 +10,7 @@ function DashboardUmkmEdit() {
       <div className="flex container ml-24">
         <div>
           <CardProfileU />
-          <SideNavbar />
+          <SidebarU />
         </div>
         <div className="pl-6 container relative mt-24">
           <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">

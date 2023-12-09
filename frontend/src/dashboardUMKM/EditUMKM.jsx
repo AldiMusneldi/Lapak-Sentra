@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../assets/gambar-testimoni/aldi.svg';
 import CardProfileU1 from '../componentsUMKM/Card-profileU/CardProfileU1';
-import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
+import SidebarU from '../componentsUMKM/SidebarU/SidebarU';
 
 const EditUMKM = () => {
   return (
@@ -10,7 +10,7 @@ const EditUMKM = () => {
       <div className="flex container ml-24">
         <div>
           <CardProfileU1 />
-          <SideNavbar />
+          <SidebarU />
         </div>
         <div className="pl-6 container relative mt-24">
           <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">

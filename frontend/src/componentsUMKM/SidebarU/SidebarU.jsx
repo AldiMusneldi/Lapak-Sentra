@@ -5,7 +5,7 @@ import { FaBoxOpen } from 'react-icons/fa';
 import { CiShoppingTag } from 'react-icons/ci';
 import { RiLogoutBoxLine } from 'react-icons/ri';
 
-const SideNavbar = () => {
+const SidebarU = () => {
   const iconSize = 40;
 
   return (
@@ -76,4 +76,4 @@ const SideNavbar = () => {
   );
 };
 
-export default SideNavbar;
+export default SidebarU;
