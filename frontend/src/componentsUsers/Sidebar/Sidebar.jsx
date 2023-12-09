@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import { Link } from 'react-router-dom';
-import { BsShop } from "react-icons/bs";
-import { FaBoxOpen } from 'react-icons/fa';
-import { CiShoppingTag } from 'react-icons/ci';
+import { PiHouseLineLight } from 'react-icons/pi';
+import { LuHeart } from "react-icons/lu";
+import { TbShoppingBag } from "react-icons/tb";
 import { RiLogoutBoxLine } from 'react-icons/ri';
 
-const SideNavbar = () => {
+function Sidebar() {
   const iconSize = 40;
 
   return (
@@ -13,10 +13,10 @@ const SideNavbar = () => {
       <div className="flex container">
         <div className="flex flex-col relative mb-4">
           <div className="mt-6 w-[400px]">
-            <Link to="/umkm/dashboardumkm">
+            <Link to="/user/kos">
               <button className="flex items-center">
-                <BsShop size={iconSize} />
-                <p className="pl-3">Dashboard Pemilik UMKM</p>
+                <PiHouseLineLight size={iconSize} />
+                <p className="pl-3">Kos/Kontrakan Saya</p>
               </button>
             </Link>
             <hr
@@ -27,10 +27,10 @@ const SideNavbar = () => {
                 width: "100%",
               }}
             />
-            <Link to="/umkm/registerproduk">
+            <Link to="/user/item">
               <button className="mt-4 flex items-center">
-                <FaBoxOpen size={iconSize} />
-                <p className="pl-3">Daftarkan Produk</p>
+                <LuHeart size={iconSize} />
+                <p className="pl-3">Item Favorite</p>
               </button>
             </Link>
             <hr
@@ -41,10 +41,10 @@ const SideNavbar = () => {
                 width: "100%",
               }}
             />
-            <Link to="/umkm/promosi">
+            <Link to="/user/pesanan">
               <button className="mt-4 flex items-center">
-                <CiShoppingTag size={iconSize} />
-                <p className="pl-3">Fitur Promosi</p>
+                <TbShoppingBag size={iconSize} />
+                <p className="pl-3">Pesanan Saya</p>
               </button>
             </Link>
             <hr
@@ -74,6 +74,6 @@ const SideNavbar = () => {
       </div>
     </>
   );
-};
+}
 
-export default SideNavbar;
+export default Sidebar;

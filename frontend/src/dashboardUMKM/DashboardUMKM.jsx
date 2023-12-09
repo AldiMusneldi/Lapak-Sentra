@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../assets/icons/logo.svg';
-import CardProfile from '../componentsUMKM/Card-profile/CardProfile';
-import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/icons/logo.svg";
+import CardProfileU from "../componentsUMKM/Card-profileU/CardProfileU";
+import SideNavbar from "../componentsUMKM/Side-navbar/SideNavbar";
 // clear
-function DashboardUMKM () {
+function DashboardUMKM() {
   return (
     <>
       <div className="flex container ml-24">
         <div>
-          <CardProfile />
+          <CardProfileU />
           <SideNavbar />
         </div>
         <div className="pl-6 container relative mt-24">
@@ -42,10 +42,12 @@ function DashboardUMKM () {
                     ELEKTRONIK :) <br /> TOKO YANG MENJUAL BERBAGAI MACAM
                     KEBUTUHAN ELEKTRONIK RUMAH ANDA :) <br /> SEBELUM BERBELANJA
                     YUK DI SIMAK KENAPA BELANJA DI TOKO KAMI. <br />
-                    1. PRODUK JAMINAN ORIGINAL DAN BERGARANSI RESMI. <br /> 
-                    2. PRODUK DI QUALITY CONTROL SEBELUM DI KIRIM. <br /> 
-                    3. PENGIRIMAN DI JAMIN AMAN KARENA ADA ASURANSI DARI PIHAK EKSPEDISI. <br /> 
-                    4. RESPON TANGGAP SERTA AFTERSALE YANG SIAP MEMBANTU KENDALA ANDA. <br />
+                    1. PRODUK JAMINAN ORIGINAL DAN BERGARANSI RESMI. <br />
+                    2. PRODUK DI QUALITY CONTROL SEBELUM DI KIRIM. <br />
+                    3. PENGIRIMAN DI JAMIN AMAN KARENA ADA ASURANSI DARI PIHAK
+                    EKSPEDISI. <br />
+                    4. RESPON TANGGAP SERTA AFTERSALE YANG SIAP MEMBANTU KENDALA
+                    ANDA. <br />
                     JADI JANGAN RAGU YA BELANJA DI TOKO KAMI :)
                   </p>
                 </span>

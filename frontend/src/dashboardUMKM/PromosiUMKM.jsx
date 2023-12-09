@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import CardProfile from '../componentsUMKM/Card-profile/CardProfile';
-import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
+import React from "react";
+import { Link } from "react-router-dom";
+import CardProfileU from "../componentsUMKM/Card-profileU/CardProfileU";
+import SideNavbar from "../componentsUMKM/Side-navbar/SideNavbar";
 
 const PromosiUMKM = () => {
   return (
     <>
       <div className="flex container ml-24">
         <div>
-          <CardProfile />
+          <CardProfileU />
           <SideNavbar />
         </div>
         <div className="pl-6 container relative mt-24">

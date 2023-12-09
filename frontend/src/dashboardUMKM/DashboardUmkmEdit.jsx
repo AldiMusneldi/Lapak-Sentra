@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import CardProfile from '../componentsUMKM/Card-profile/CardProfile';
-import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
-import UploadImage from '../componentsUMKM/Upload-image/UploadImage';
+import React from "react";
+import { Link } from "react-router-dom";
+import CardProfileU from "../componentsUMKM/Card-profileU/CardProfileU";
+import SideNavbar from "../componentsUMKM/Side-navbar/SideNavbar";
+import UploadImage from "../componentsUMKM/Upload-image/UploadImage";
 
 function DashboardUmkmEdit() {
   return (
     <>
       <div className="flex container ml-24">
         <div>
-          <CardProfile />
+          <CardProfileU />
           <SideNavbar />
         </div>
         <div className="pl-6 container relative mt-24">
@@ -31,7 +31,7 @@ function DashboardUmkmEdit() {
               <div className="flex mb-3">
                 <h1>Logo UMKM</h1>
                 <div className="pl-[63px]">
-                <UploadImage />
+                  <UploadImage />
                 </div>
               </div>
               <div className="flex mb-3">

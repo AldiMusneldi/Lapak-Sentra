@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import profile from '../assets/gambar-testimoni/aldi.svg';
-import CardProfile1 from '../componentsUMKM/Card-profile/CardProfile1';
-import SideNavbar from '../componentsUMKM/Side-navbar/SideNavbar';
+import React from "react";
+import { Link } from "react-router-dom";
+import profile from "../assets/gambar-testimoni/aldi.svg";
+import CardProfileU1 from "../componentsUMKM/Card-profileU/CardProfileU1";
+import SideNavbar from "../componentsUMKM/Side-navbar/SideNavbar";
 
 const EditUMKM = () => {
   return (
     <>
       <div className="flex container ml-24">
         <div>
-          <CardProfile1 />
+          <CardProfileU1 />
           <SideNavbar />
         </div>
         <div className="pl-6 container relative mt-24">

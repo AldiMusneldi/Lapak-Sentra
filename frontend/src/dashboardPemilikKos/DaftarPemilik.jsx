@@ -77,7 +77,7 @@ const DaftarPemilik = () => {
                 />
               </div>
               <div className="mt-3">
-                <Link to="/pemilik/account">
+                <Link to="/hunian/account">
                   <button className="h-10 pl-4 border w-full bg-primary_70 text-white border-black rounded-md">
                     Daftar
                   </button>

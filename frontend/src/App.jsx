@@ -18,9 +18,9 @@ import DetailKos from './pages/Detail-kos/DetailKos';
 import Layout1 from './layout/Layout1';
 import Layout2 from './layout/Layout2';
 import KosSaya from './pagesPenyewa/KosSaya';
-import LihatProfile from './pagesPenyewa/LihatProfil';
+import Profile from './pagesPenyewa/Profil';
 import EditProfile from './pagesPenyewa/EditProfile';
-import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
+import PesananSaya from './pagesPenyewa/PesananSaya';
 import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
 import ItemFavorit from './pagesPenyewa/ItemFavorit';
 import ProfileHunian from './dashboardPemilikKos/ProfileHunian';
@@ -117,45 +117,45 @@ function App() {
         }
       />
       <Route
-        path="/kossaya"
+        path="/user/account"
         element={
           <Layout1>
-            <KosSaya />
+            <Profile />
           </Layout1>
         }
       />
       <Route
-        path="/itemfavorit"
-        element={
-          <Layout1>
-            <ItemFavorit />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/riwayat"
-        element={
-          <Layout1>
-            <RiwayatTransaksi />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/user/acount"
-        element={
-          <Layout1>
-            <LihatProfile />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/user/acount/editprofile"
+        path="/user/account/edit"
         element={
           <Layout1>
             <EditProfile />
           </Layout1>
         }
       />
+        <Route
+          path="/user/kos"
+          element={
+            <Layout1>
+              <KosSaya />
+            </Layout1>
+          }
+        />
+        <Route
+          path="/user/item"
+          element={
+            <Layout1>
+              <ItemFavorit />
+            </Layout1>
+          }
+        />
+        <Route
+          path="/user/pesanan"
+          element={
+            <Layout1>
+              <PesananSaya />
+            </Layout1>
+          }
+        />
       <Route
         path="/hunian/account"
         element={
