@@ -23,20 +23,20 @@ import EditProfile from './pagesPenyewa/EditProfile';
 import PesananSaya from './pagesPenyewa/PesananSaya';
 import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
 import ItemFavorit from './pagesPenyewa/ItemFavorit';
+import HunianLogin from './PagesValidation/Login/HunianLogin';
+import HunianRegister from './PagesValidation/Register/HunianRegister';
 import ProfileHunian from './dashboardPemilikKos/ProfileHunian';
 import EditHunian from './dashboardPemilikKos/EditHunian';
 import DashboardHunian from './dashboardPemilikKos/DashboardHunian';
 import DashboardHunianEdit from './dashboardPemilikKos/DashboardHunianEdit';
 import SewakanKos from './dashboardPemilikKos/SewakanKos';
 import PromosiHunian from './dashboardPemilikKos/PromosiHunian';
-import DaftarPemilik from './dashboardPemilikKos/DaftarPemilik';
 import ProfileUMKM from './dashboardUMKM/ProfileUMKM';
 import EditUMKM from './dashboardUMKM/EditUMKM';
 import DashboardUMKM from './dashboardUMKM/DashboardUMKM';
 import DashboardUmkmEdit from './dashboardUMKM/DashboardUmkmEdit';
 import RegisterProduk from './dashboardUMKM/RegisterProduk';
 import PromosiUMKM from './dashboardUMKM/PromosiUMKM';
-import HunianLogin from './PagesValidation/Login/HunianLogin';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -255,9 +255,9 @@ function App() {
 
       <Route path="/login" element={<Login />} />
       <Route path="/masuk/penyewa" element={<UserLogin />} />
-      <Route path="/masuk/pemilik" element={<HunianLogin />} />
-      <Route path="/register/pemilik" element={<DaftarPemilik />} />
       <Route path="/daftar/penyewa" element={<UserRegister />} />
+      <Route path="/masuk/hunian" element={<HunianLogin />} />
+      <Route path="/daftar/hunian" element={<HunianRegister />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );

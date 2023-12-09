@@ -59,7 +59,7 @@ const HunianLogin = () => {
                             <button type='submit' className="py-2 w-72 text-center text-Neutral_10 rounded-xl bg-primary_70">{isLoading ? 'Loading...' : 'Masuk'}</button>
                         </div>
                         <div>
-                            <p className="text-center">Belum punya akun? <Link to="/register/pemilik"><span className="text-indigo-700">Daftar Sekarang</span></Link></p>
+                            <p className="text-center">Belum punya akun? <Link to="/daftar/hunian"><span className="text-indigo-700">Daftar Sekarang</span></Link></p>
                             <Link to=""><p className="text-center text-indigo-700">Lupa Password?</p></Link>
                         </div>
                     </div>
