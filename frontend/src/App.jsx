@@ -11,8 +11,8 @@ import Hunian from './pages/Hunian/Hunian';
 import SemDat from './data/DataBaru';
 import Lihatsemua from './pages/Lihat-semua/Lihatsemua';
 import Login from './pages/Login/Login';
-import Tenant from './components/Tenant/Tenant';
-import Register from './components/Tenant/Register';
+import UserLogin from './PagesValidation/Login/UserLogin';
+import UserRegister from './PagesValidation/Register/UserRegister';
 // import SemuaData from './data/SemuaData';
 import DetailKos from './pages/Detail-kos/DetailKos';
 import Layout1 from './layout/Layout1';
@@ -254,10 +254,10 @@ function App() {
       />
 
       <Route path="/login" element={<Login />} />
-      <Route path="/masuk/penyewa" element={<Tenant />} />
+      <Route path="/masuk/penyewa" element={<UserLogin />} />
       <Route path="/masuk/pemilik" element={<PemilikHunian />} />
       <Route path="/register/pemilik" element={<DaftarPemilik />} />
-      <Route path="/register" element={<Register />} />
+      <Route path="/daftar/penyewa" element={<UserRegister />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );

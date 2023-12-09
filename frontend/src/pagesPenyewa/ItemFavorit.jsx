@@ -1,17 +1,11 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import profile from "../assets/gambar-testimoni/aldi.svg";
-import home from "../assets/icons/home.svg";
-import love from "../assets/icons/love.svg";
-import transaction from "../assets/icons/refresh.svg";
-import exit from "../assets/icons/exit.svg";
 import { useDisclosure } from "@chakra-ui/react";
 import Modalpemilik from "../components/Modals/Modalpemilik";
 import CardsFavorit from "../components/Cards/CardsFavorit";
 import { useDispatch, useSelector } from "react-redux";
 import { filterFavorit } from "../features/katagoriSlice";
-import CardProfile from "../componentsUsers/Card-profile/CardProfile";
+import CardProfile1 from "../componentsUsers/Card-profile/CardProfile1";
 import Sidebar from "../componentsUsers/Sidebar/Sidebar";
 const ItemFavorit = () => {
   const dispatch = useDispatch();
@@ -67,7 +61,7 @@ const ItemFavorit = () => {
     <>
       <div className="flex container ml-24">
         <div>
-          <CardProfile />
+          <CardProfile1 />
           <Sidebar />
         </div>
         <div className="pl-6 container relative mt-24">

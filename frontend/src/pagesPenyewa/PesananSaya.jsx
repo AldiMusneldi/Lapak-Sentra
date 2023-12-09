@@ -1,6 +1,6 @@
 import React from "react";
 import ricecooker from "../assets/gambar-barang/ricecooker2.svg";
-import CardProfile from "../componentsUsers/Card-profile/CardProfile";
+import CardProfile1 from "../componentsUsers/Card-profile/CardProfile1";
 import Sidebar from "../componentsUsers/Sidebar/Sidebar";
 
 const PesananSaya = () => {
@@ -8,7 +8,7 @@ const PesananSaya = () => {
     <>
       <div className="flex container ml-24">
         <div>
-          <CardProfile />
+          <CardProfile1 />
           <Sidebar />
         </div>
         <div className="pl-6 container relative mt-24">

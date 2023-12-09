@@ -16,7 +16,7 @@ const MenuProfile = ({ navigate }) => {
           </div>
         </MenuButton>
         <MenuList>
-          <Link to={`/user/acount`} onClick={() => page(`/user/acount`)}>
+          <Link to={`/user/account`} onClick={() => page(`/user/acount`)}>
             <MenuItem _hover={{ bg: '#695CFF', textColor: '#EFEFEF' }}>
               <li className=" font-medium list-none">Profile</li>
             </MenuItem>
