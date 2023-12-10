@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 import {
   Modal,
   ModalOverlay,
   ModalContent,
   ModalBody,
   ModalCloseButton,
-} from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import ReactLogo from '../../assets/logo.svg';
-import penyewa from '../../assets/icons/penyewa.svg';
-import pemilik from '../../assets/icons/pemilik.svg';
-import umkm from '../../assets/icons/umkm.svg';
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import ReactLogo from "../../assets/logo.svg";
+import penyewa from "../../assets/icons/penyewa.svg";
+import pemilik from "../../assets/icons/pemilik.svg";
+import umkm from "../../assets/icons/umkm.svg";
 
-const Role = ({ onClose, isOpen }) => {
+const Role1 = ({ onClose, isOpen }) => {
   return (
     <>
       <Modal onClose={onClose} size="lg" isOpen={isOpen} isCentered>
@@ -30,10 +30,10 @@ const Role = ({ onClose, isOpen }) => {
                 </div>
                 <div>
                   <h1 className="font-title text-center font-semibold text-2xl mb-2">
-                    Masuk Ke Lapak Sentra
+                    Daftar Ke Lapak Sentra
                   </h1>
                   <p className="mb-4 text-center text-md">
-                    Saya Ingin Masuk Sebagai
+                    Saya Ingin Daftar Sebagai
                   </p>
                 </div>
                 <div className="mx-auto flex rounded-md card-testi border overflow-hidden mb-4">
@@ -45,7 +45,7 @@ const Role = ({ onClose, isOpen }) => {
                     />
                   </div>
                   <div>
-                    <Link to="/masuk/penyewa">
+                    <Link to="/daftar/penyewa">
                       <button className="mt-7 mr-6 rounded-md bg-indigo-700 text-white w-48 py-[10px] px-[17px]">
                         Penyewa
                       </button>
@@ -61,7 +61,7 @@ const Role = ({ onClose, isOpen }) => {
                     />
                   </div>
                   <div>
-                    <Link to="/masuk/hunian">
+                    <Link to="/daftar/hunian">
                       <button className="mt-7 mr-6 rounded-md bg-indigo-700 text-white w-48 py-[10px] px-[17px]">
                         Pemilik Hunian
                       </button>
@@ -77,7 +77,7 @@ const Role = ({ onClose, isOpen }) => {
                     />
                   </div>
                   <div>
-                    <Link to="/masuk/umkm">
+                    <Link to="/daftar/umkm">
                       <button className="mt-7 mr-6 rounded-md bg-indigo-700 text-white w-48 py-[10px] px-[17px]">
                         Pemilik UMKM
                       </button>
@@ -93,4 +93,4 @@ const Role = ({ onClose, isOpen }) => {
   );
 };
 
-export default Role;
+export default Role1;

@@ -36,7 +36,7 @@ const UmkmLogin = () => {
                     </Link>
                 </div>
                 <div className="mb-2">
-                <h1 className="font-title text-center font-semibold text-2xl">Masuk Sebagai Pemilik Hunian</h1>
+                <h1 className="font-title text-center font-semibold text-2xl">Masuk Sebagai Pemilik UMKM</h1>
                 </div>
 
                 <form onSubmit={Auth}>
