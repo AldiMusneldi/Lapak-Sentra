@@ -11,28 +11,34 @@ import Hunian from './pages/Hunian/Hunian';
 import SemDat from './data/DataBaru';
 import Lihatsemua from './pages/Lihat-semua/Lihatsemua';
 import Login from './pages/Login/Login';
-import Tenant from './components/Tenant/Tenant';
-import Register from './components/Tenant/Register';
+import UserLogin from './PagesValidation/Login/UserLogin';
+import UserRegister from './PagesValidation/Register/UserRegister';
 // import SemuaData from './data/SemuaData';
 import DetailKos from './pages/Detail-kos/DetailKos';
 import Layout1 from './layout/Layout1';
+import Layout2 from './layout/Layout2';
 import KosSaya from './pagesPenyewa/KosSaya';
-import LihatProfile from './pagesPenyewa/LihatProfil';
+import Profile from './pagesPenyewa/Profil';
 import EditProfile from './pagesPenyewa/EditProfile';
-import RiwayatTransaksi from './pagesPenyewa/RiwayatTransaksi';
+import PesananSaya from './pagesPenyewa/PesananSaya';
 import DetailFasilitas from './pages/Detail-fasilitas/DetailFasilitas';
 import ItemFavorit from './pagesPenyewa/ItemFavorit';
-import ProfilPemilik from './dashboardPemilikKos/ProfilPemilik';
-import EditPemilik from './dashboardPemilikKos/EditPemilik';
+import HunianLogin from './PagesValidation/Login/HunianLogin';
+import HunianRegister from './PagesValidation/Register/HunianRegister';
+import ProfileHunian from './dashboardPemilikKos/ProfileHunian';
+import EditHunian from './dashboardPemilikKos/EditHunian';
 import DashboardHunian from './dashboardPemilikKos/DashboardHunian';
+import DashboardHunianEdit from './dashboardPemilikKos/DashboardHunianEdit';
 import SewakanKos from './dashboardPemilikKos/SewakanKos';
-import PemilikHunian from './dashboardPemilikKos/PemilikHunian';
-import DaftarPemilik from './dashboardPemilikKos/DaftarPemilik';
+import PromosiHunian from './dashboardPemilikKos/PromosiHunian';
+import UmkmLogin from './PagesValidation/Login/UmkmLogin';
+import UmkmRegister from './PagesValidation/Register/UmkmRegister';
 import ProfileUMKM from './dashboardUMKM/ProfileUMKM';
 import EditUMKM from './dashboardUMKM/EditUMKM';
 import DashboardUMKM from './dashboardUMKM/DashboardUMKM';
 import DashboardUmkmEdit from './dashboardUMKM/DashboardUmkmEdit';
 import RegisterProduk from './dashboardUMKM/RegisterProduk';
+import PromosiUMKM from './dashboardUMKM/PromosiUMKM';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -113,123 +119,149 @@ function App() {
         }
       />
       <Route
-        path="/kossaya"
+        path="/user/account"
         element={
           <Layout1>
-            <KosSaya />
+            <Profile />
           </Layout1>
         }
       />
       <Route
-        path="/itemfavorit"
-        element={
-          <Layout1>
-            <ItemFavorit />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/riwayat"
-        element={
-          <Layout1>
-            <RiwayatTransaksi />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/user/acount"
-        element={
-          <Layout1>
-            <LihatProfile />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/user/acount/editprofile"
+        path="/user/account/edit"
         element={
           <Layout1>
             <EditProfile />
           </Layout1>
         }
       />
+        <Route
+          path="/user/kos"
+          element={
+            <Layout1>
+              <KosSaya />
+            </Layout1>
+          }
+        />
+        <Route
+          path="/user/item"
+          element={
+            <Layout1>
+              <ItemFavorit />
+            </Layout1>
+          }
+        />
+        <Route
+          path="/user/pesanan"
+          element={
+            <Layout1>
+              <PesananSaya />
+            </Layout1>
+          }
+        />
       <Route
-        path="/pemilik/account"
+        path="/hunian/account"
         element={
-          <Layout1>
-            <ProfilPemilik />
-          </Layout1>
+          <Layout2>
+            <ProfileHunian />
+          </Layout2>
         }
       />
       <Route
-        path="/pemilik/account/edit"
+        path="/hunian/account/edit"
         element={
-          <Layout1>
-            <EditPemilik />
-          </Layout1>
+          <Layout2>
+            <EditHunian />
+          </Layout2>
         }
       />
       <Route
-        path="/dashboardhunian"
+        path="/hunian/dashboardhunian"
         element={
-          <Layout1>
+          <Layout2>
             <DashboardHunian />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
-        path="/sewakankos"
+        path="/hunian/dashboardhunian/edit"
         element={
-          <Layout1>
+          <Layout2>
+            <DashboardHunianEdit />
+          </Layout2>
+        }
+      />
+      <Route
+        path="/hunian/registerhunian"
+        element={
+          <Layout2>
             <SewakanKos />
-          </Layout1>
+          </Layout2>
+        }
+      />
+      <Route
+        path="/hunian/promosi"
+        element={
+          <Layout2>
+            <PromosiHunian />
+          </Layout2>
         }
       />
       <Route
         path="/umkm/account"
         element={
-          <Layout1>
+          <Layout2>
             <ProfileUMKM />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/umkm/account/edit"
         element={
-          <Layout1>
+          <Layout2>
             <EditUMKM />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/umkm/dashboardumkm"
         element={
-          <Layout1>
+          <Layout2>
             <DashboardUMKM />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
-        path="/umkm/dashboard/edit"
+        path="/umkm/dashboardumkm/edit"
         element={
-          <Layout1>
+          <Layout2>
             <DashboardUmkmEdit />
-          </Layout1>
+          </Layout2>
         }
       />
       <Route
         path="/umkm/registerproduk"
         element={
-          <Layout1>
+          <Layout2>
             <RegisterProduk />
-          </Layout1>
+          </Layout2>
+        }
+      />
+      <Route
+        path="/umkm/promosi"
+        element={
+          <Layout2>
+            <PromosiUMKM />
+          </Layout2>
         }
       />
 
       <Route path="/login" element={<Login />} />
-      <Route path="/masuk/penyewa" element={<Tenant />} />
-      <Route path="/masuk/pemilik" element={<PemilikHunian />} />
-      <Route path="/register/pemilik" element={<DaftarPemilik />} />
-      <Route path="/register" element={<Register />} />
+      <Route path="/masuk/penyewa" element={<UserLogin />} />
+      <Route path="/daftar/penyewa" element={<UserRegister />} />
+      <Route path="/masuk/hunian" element={<HunianLogin />} />
+      <Route path="/daftar/hunian" element={<HunianRegister />} />
+      <Route path="/masuk/umkm" element={<UmkmLogin />} />
+      <Route path="/daftar/umkm" element={<UmkmRegister />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );

@@ -1,16 +1,12 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import profile from "../assets/gambar-testimoni/aldi.svg";
-import home from "../assets/icons/home.svg";
-import love from "../assets/icons/love.svg";
-import transaction from "../assets/icons/refresh.svg";
-import exit from "../assets/icons/exit.svg";
-import { useDisclosure } from "@chakra-ui/react";
-import Modalpemilik from "../components/Modals/Modalpemilik";
-import CardsFavorit from "../components/Cards/CardsFavorit";
-import { useDispatch, useSelector } from "react-redux";
-import { filterFavorit } from "../features/katagoriSlice";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import { useDisclosure } from '@chakra-ui/react';
+import Modalpemilik from '../components/Modals/Modalpemilik';
+import CardsFavorit from '../components/Cards/CardsFavorit';
+import { useDispatch, useSelector } from 'react-redux';
+import { filterFavorit } from '../features/katagoriSlice';
+import CardProfile1 from '../components/Users/Card-profile/CardProfile1';
+import Sidebar from '../components/Users/Sidebar/Sidebar';
 const ItemFavorit = () => {
   const dispatch = useDispatch();
   // ambil data dari Slice
@@ -63,90 +59,18 @@ const ItemFavorit = () => {
 
   return (
     <>
-      <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[275px]">
-          <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
-            <img
-              src={profile}
-              className="mt-12 rounded-full w-[150px] h-[150px] absolute"
-            />
-          </div>
-          <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
-            <div>
-              <h1 className="text-2xl font-bold pt-4">Aldi Musneldi</h1>
-              <Link to="/user/acount">
-                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
-                  Lihat Profile
-                </button>
-              </Link>
-            </div>
-          </div>
-          <div className="mt-6">
-            <Link to="/kossaya">
-              <button className="flex items-center">
-                <img src={home} />
-                <p className="pl-3">Kos/Kontrakan Saya</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="/itemfavorit">
-              <button className="mt-4 flex items-center">
-                <img src={love} />
-                <p className="pl-3">Item Favorit</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="/riwayat">
-              <button className="mt-4 flex items-center">
-                <img src={transaction} />
-                <p className="pl-3">Riwayat Transaksi</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="/">
-              <div className="mt-4 flex items-center">
-                <img src={exit} className="w-[35px]" />
-                <p className="pl-3">Keluar</p>
-              </div>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-          </div>
+      <div className="flex container ml-24">
+        <div>
+          <CardProfile1 />
+          <Sidebar />
         </div>
-        <div className="mt-24 basis-[50%]">
-          <div className="ml-4 bg-primary_70 rounded-md w-[900px] h-[60px] flex justify-center items-center">
+        <div className="pl-6 container relative mt-24">
+          <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">
             <p className="text-[30px] text-white text font-bold">
               Daftar Favorit Saya
             </p>
           </div>
-          <div className="mb-6 ml-4 mt-3 rounded-lg shadow-xl border border-gray-500">
+          <div className="mb-6 mt-3 rounded-lg shadow-xl">
             <div className="ml-4 mt-3 flex justify-center items-center">
               <Choice>
                 <nav>

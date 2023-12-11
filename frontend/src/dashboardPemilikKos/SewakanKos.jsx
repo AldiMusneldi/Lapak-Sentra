@@ -1,190 +1,113 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import profile from "../assets/gambar-testimoni/aldi.svg";
-import home from "../assets/icons/home.svg";
-import hunian from "../assets/icons/hunian.svg";
-import promotion from "../assets/icons/ceklist.svg";
-import statistic from "../assets/icons/statistic.svg";
-import exit from "../assets/icons/exit.svg";
-import iconWifi from "../assets/icons/wifi1.svg";
-import iconAC from "../assets/icons/ac1.svg";
-import iconTV from "../assets/icons/tv1.svg";
-import iconKulkas from "../assets/icons/kulkas1.svg";
-import iconKipas from "../assets/icons/kipas1.svg";
-import iconMeja from "../assets/icons/meja1.svg";
-import iconKursi from "../assets/icons/kursi1.svg";
-import iconKompor from "../assets/icons/kompor1.svg";
-import iconLemari from "../assets/icons/lemari1.svg";
-import iconTidur from "../assets/icons/tempattidur1.svg";
-import iconMandi from "../assets/icons/mandi1.svg";
-import iconMotor from "../assets/icons/motor1.svg";
-import iconMobil from "../assets/icons/mobil1.svg";
-import iconListrik from "../assets/icons/listrik1.svg";
-import iconMasjid from "../assets/icons/masjid.svg";
-import iconStasiun from "../assets/icons/stasiun.svg";
-import iconUniv from "../assets/icons/univ.svg";
-import iconRumahsakit from "../assets/icons/rumahsakit.svg";
-import iconSupermarket from "../assets/icons/supermarket.svg";
-import iconTempatmakan from "../assets/icons/tempatmakan.svg";
-import iconHalte from "../assets/icons/halte.svg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import iconWifi from '../assets/icons/wifi1.svg';
+import iconAC from '../assets/icons/ac1.svg';
+import iconTV from '../assets/icons/tv1.svg';
+import iconKulkas from '../assets/icons/kulkas1.svg';
+import iconKipas from '../assets/icons/kipas1.svg';
+import iconMeja from '../assets/icons/meja1.svg';
+import iconKursi from '../assets/icons/kursi1.svg';
+import iconKompor from '../assets/icons/kompor1.svg';
+import iconLemari from '../assets/icons/lemari1.svg';
+import iconTidur from '../assets/icons/tempattidur1.svg';
+import iconMandi from '../assets/icons/mandi1.svg';
+import iconMotor from '../assets/icons/motor1.svg';
+import iconMobil from '../assets/icons/mobil1.svg';
+import iconListrik from '../assets/icons/listrik1.svg';
+import iconMasjid from '../assets/icons/masjid.svg';
+import iconStasiun from '../assets/icons/stasiun.svg';
+import iconUniv from '../assets/icons/univ.svg';
+import iconRumahsakit from '../assets/icons/rumahsakit.svg';
+import iconSupermarket from '../assets/icons/supermarket.svg';
+import iconTempatmakan from '../assets/icons/tempatmakan.svg';
+import iconHalte from '../assets/icons/halte.svg';
+import CardProfileH from '../components/Hunian/Card-profileH/CardProfileH';
+import SideBarH from '../components/Hunian/SidebarH/SideBarH';
+import UploadImage from '../components/UMKM/Upload-image/UploadImage';
 
 const SewakanKos = () => {
   return (
     <>
-      <div className="pl-12 items-center flex">
-        <div className="flex flex-col relative mb-[1150px]">
-          <div className="bg-primary_70 w-[400px] h-[150px] rounded-t-xl flex justify-center items-center">
-            <img
-              src={profile}
-              className="mt-12 rounded-full w-[150px] h-[150px] absolute"
-            />
-          </div>
-          <div className="bg-white shadow-xl w-[400px] h-[150px] rounded-b-xl flex justify-center items-center">
-            <div>
-              <h1 className="text-2xl font-bold pt-4">Bevin Stevanius</h1>
-
-              <Link to="/pemilik/account">
-                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
-                  Lihat Profile
-                </button>
-              </Link>
-            </div>
-          </div>
-          <div className="mt-6">
-            <Link to="/dashboardhunian">
-              <button className="flex items-center">
-                <img src={home} />
-                <p className="pl-3">Dashboard Pemilik Hunian</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="">
-              <button className="mt-4 flex items-center">
-                <img src={hunian} />
-                <p className="pl-3">Sewakan Kost/Kontrakan saya</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="">
-              <button className="mt-4 flex items-center">
-                <img src={promotion} />
-                <p className="pl-3">Fitur Promosi</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="">
-              <button className="mt-4 flex items-center">
-                <img src={statistic} />
-                <p className="pl-3">Laporan Statistik</p>
-              </button>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-            <Link to="/">
-              <div className="mt-4 flex items-center">
-                <img src={exit} className="w-[35px]" />
-                <p className="pl-3">Keluar</p>
-              </div>
-            </Link>
-            <hr
-              className="mt-2"
-              style={{
-                borderTop: "1px solid grey",
-                display: "block",
-                width: "100%",
-              }}
-            />
-          </div>
+      <div className="flex container ml-24">
+        <div>
+          <CardProfileH />
+          <SideBarH />
         </div>
-        <div className="mt-24">
-          <div className="ml-8 bg-primary_70 rounded-md w-[900px] h-[60px] flex justify-center items-center">
+        <div className="pl-6 container relative mt-24">
+          <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">
             <p className="text-[30px] text-white text font-bold">
               Sewakan Kos/Kontrakan Saya
             </p>
           </div>
-          <div className="mb-6 ml-5">
-            <div className=" border-gray-300 ml-4 mt-3">
+          <div className="">
+            <div className="border border-gray-300 px-4 py-5 pr-24 mt-3 mb-4">
               <h1 className="mb-6 text-xl font-bold">Lengkapi Data Kos</h1>
               <div className="mb-3">
-                <h1>Nama Kost</h1>
+                <h1 className="pb-2">Nama Kost</h1>
                 <input
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
                 />
               </div>
               <div className="mb-3">
-                <h1>Luas Bangunan</h1>
+                <h1 className="pb-2">Luas Bangunan</h1>
                 <input
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
                 />
               </div>
               <div className="mb-3">
-                <h1>Jenis Kost</h1>
+                <h1 className="pb-2">Jenis Kost</h1>
                 <input
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
                 />
               </div>
               <div className="mb-3">
-                <h1>Kamar Mandi</h1>
+                <h1 className="pb-2"> Kamar Mandi</h1>
                 <input
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
                 />
               </div>
               <div className="mb-3">
-                <h1>Harga</h1>
+                <h1 className="pb-2">Harga</h1>
                 <input
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
                 />
               </div>
               <div className="mb-3">
-                <h1>Harga</h1>
+                <h1 className="pb-2">Harga</h1>
                 <input
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
                 />
               </div>
               <div className="mb-3">
-                <h1>Deskripsi</h1>
+                <h1 className="pb-2">Deskripsi</h1>
                 <textarea
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-28 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-28 w-full mb-4"
                 />
               </div>
-              <div className="mb-3">
+              <div className="">
                 <h1>Unggah Foto</h1>
-                <p className="pl-20">Foto Utama</p>
-                <p className="pl-20">Foto Tambahan</p>
+                <div className="flex mt-4">
+                  <p className="pl-12">Foto Utama</p>
+                  <div className="pl-16">
+                    <UploadImage />
+                  </div>
+                </div>
+                <div className="flex mt-3">
+                  <p className="pl-12">Foto Tambahan</p>
+                  <div className="flex pl-10">
+                  <UploadImage />
+                  <div className="pl-3">
+                  <UploadImage />
+                  </div>
+                  </div>
+                </div>
               </div>
               <div className="flex mb-3">
                 <h1>Fasilitas</h1>
@@ -267,7 +190,7 @@ const SewakanKos = () => {
                 <h1>Fasilitas Lainnya</h1>
                 <input
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
                 />
               </div>
               <div className="mb-3">
@@ -312,10 +235,10 @@ const SewakanKos = () => {
                 <h1>Tempat Terdekat Lainnya</h1>
                 <input
                   type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-80 mb-4"
+                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
                 />
               </div>
-              <Link to="">
+              <Link to="/hunian/dashboardhunian">
                 <button className="px-4 py-2 bg-primary_70 text-white rounded">
                   Daftarkan Kost Anda sekarang
                 </button>
