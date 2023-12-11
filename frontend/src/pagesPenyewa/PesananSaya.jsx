@@ -1,10 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ricecooker from "../assets/gambar-barang/ricecooker2.svg";
-import { Tabs, TabList, TabPanels, Tab, TabPanel, TabIndicator } from '@chakra-ui/react'
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  TabIndicator,
+} from "@chakra-ui/react";
+import { TbMessages } from "react-icons/tb";
 import CardProfile1 from "../components/Users/Card-profile/CardProfile1";
 import Sidebar from "../components/Users/Sidebar/Sidebar";
 
 const PesananSaya = () => {
+  const iconSize = 30;
+
   return (
     <>
       <div className="flex container ml-24">
@@ -20,103 +31,127 @@ const PesananSaya = () => {
           </div>
           <div className="mb-6">
             <div className="border border-gray-300 mt-3 rounded-md">
-              <div className="text-2xl ml-8">Detail Transaksi</div>
               <div className="mb-3">
-                {/* <tbody>
-                  <tr>
-                    <td className="border-t border-b border-gray-300 pl-8 pr-4 py-2">
-                      No.
-                    </td>
-                    <td className="border-t border-b border-gray-300 py-2">
-                      Produk
-                    </td>
-                    <td className="border-t border-b border-gray-300 pr-[168px] py-2">
-                      Variasi
-                    </td>
-                    <td className="border-t border-b border-gray-300 pl-8 pr-12 py-2">
-                      Harga Barang
-                    </td>
-                    <td className="border-t border-b border-gray-300 pl-6 pr-24 py-2">
-                      Kuantitas
-                    </td>
-                    <td className="border-t border-b border-gray-300 pr-10 py-2">
-                      Subtotal
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="pl-8 py-2">1</td>
-                    <td className="py-2">Rice Cooker</td>
-                    <td className="py-2">KSN-18 MG Merah</td>
-                    <td className="pl-8 py-2">Rp254.900</td>
-                    <td className="border-b border-gray-300 pl-6 py-2">1</td>
-                    <td className="border-b border-gray-300 py-2">Rp254.900</td>
-                  </tr>
-                  <tr>
-                    <td className="border-b py-2"></td>
-                    <td className="border-b py-2">
-                      <img src={ricecooker} alt="" />
-                    </td>
-                    <td className="border-b py-2"></td>
-                    <td className="border-b py-2"></td>
-                    <td className="border-b border-gray-300 py-2">
-                      Subtotal Barang <br />
-                      Total Proteksi Barang <br />
-                      Total Ongkos Kirim <br />
-                      Biaya Layanan <br />
-                      Total Penanganan <br />
-                      <hr
-                        className="mt-2"
-                        style={{
-                          borderTop: "1px solid grey",
-                          display: "block",
-                          width: "100%",
-                        }}
-                      />
-                      Total Pembayaran
-                    </td>
-                    <td className="border-b border-gray-300 py-2">
-                      Rp254.900 <br />
-                      Rp18.000 <br />
-                      Rp16.000 <br />
-                      Rp1000 <br />
-                      Rp28.890 <br />
-                      <hr
-                        className="mt-2"
-                        style={{
-                          borderTop: "1px solid grey",
-                          display: "block",
-                          width: "100%",
-                        }}
-                      />
-                      Rp318.790
-                    </td>
-                  </tr>
-                </tbody> */}
                 <Tabs position="relative" variant="unstyled">
-                  <TabList>
-                    <Tab>Belum Dibayar</Tab>
-                    <Tab>Dikirim</Tab>
-                    <Tab>Dibatalkan</Tab>
-                    <Tab>Dibayar</Tab>
-                  </TabList>
+                  <div className="flex justify-center font-semibold">
+                    <TabList>
+                      <Tab style={{ fontSize: "21px" }}>Belum Dibayar</Tab>
+                      <Tab style={{ fontSize: "21px" }}>Dikirim</Tab>
+                      <Tab style={{ fontSize: "21px" }}>Dibatalkan</Tab>
+                      <Tab style={{ fontSize: "21px" }}>Dibayar</Tab>
+                    </TabList>
+                  </div>
                   <TabIndicator
                     mt="-1.5px"
                     height="2px"
-                    bg="gray.500"
+                    bg="#695cff"
                     borderRadius="1px"
                   />
+                  <div className="flex justify-center">
+                    <hr
+                      style={{
+                        borderTop: "1px solid grey",
+                        display: "block",
+                        width: "60%",
+                      }}
+                    />
+                  </div>
                   <TabPanels>
                     <TabPanel>
-                      <p>Belum Dibayar</p>
+                      <div className="border border-gray-400 rounded-md">
+                        <div className="flex justify-between items-center">
+                          <div className="flex">
+                            <h1 className="pr-4 px-2">Megah Jaya Elektronik</h1>
+                            <div className="flex">
+                              <TbMessages size={iconSize} style={{ color: "#695CFF" }} />
+                              <p className="px-2 text-primary_70">Chat Penjual</p>
+                            </div>
+                          </div>
+                          <p className="text-red-400 px-2">Belum Bayar</p>
+                        </div>
+                        <hr
+                          className="pb-2"
+                          style={{
+                            borderTop: "1px solid grey",
+                            display: "block",
+                            width: "100%",
+                          }}
+                        />
+                        <div className="flex items-center">
+                          <div className="flex items-center">
+                            <img
+                              src={ricecooker}
+                              className="w-[125px] h-[125px] px-2"
+                            />
+                            <p className="px-2">
+                              SHARP RICE COOKER / MAGICCOM KS-N18MG-RD / KSN 18
+                              MG SL / KSN 18MG RD (1,8 LITER) GARANSI RESMI
+                              <p className="flex">
+                                Variasi : <span>Merah</span>
+                              </p>
+                              <p>1x</p>
+                            </p>
+                          </div>
+                          <p className="text-red-400 px-2">Rp254.900</p>
+                        </div>
+                        <hr
+                          className=""
+                          style={{
+                            borderTop: "1px solid grey",
+                            display: "block",
+                            width: "100%",
+                          }}
+                        />
+                        <div>
+                          <div className="flex justify-end">
+                            <p className="flex items-center">
+                              Jumlah Harus Dibayar:{" "}
+                              <span className="px-2 text-2xl text-red-600">
+                                Rp318.790
+                              </span>
+                            </p>
+                          </div>
+                          <div className="flex px-2 py-2 mb-4">
+                            <div className="text-[13px] flex items-center">
+                              <p>
+                                Bayar Sebelum 08-12-2023 22:17 dengan Bank BCA
+                              </p>
+                            </div>
+                            <div className="flex justify-end ml-auto">
+                              <Link to="">
+                                <button className="ml-4 px-4 py-2 bg-primary_70 text-white rounded">
+                                  Bayar Sekarang
+                                </button>
+                              </Link>
+                              <Link to="">
+                                <button className="ml-4 px-4 py-2 border border-gray-400 rounded">
+                                  Hubungi Penjual
+                                </button>
+                              </Link>
+                              <Link to="">
+                                <select
+                                  name=""
+                                  id=""
+                                  className="ml-4 py-2 border border-gray-400 rounded"
+                                >
+                                  <option value="">Lainnya</option>
+                                  <option value="">Batalkan Pesanan</option>
+                                  <option value="">Ubah Pembayaran</option>
+                                </select>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </TabPanel>
                     <TabPanel>
-                      <p>Dikirim</p>
+                      <p></p>
                     </TabPanel>
                     <TabPanel>
-                      <p>Dibatalkan</p>
+                      <p></p>
                     </TabPanel>
                     <TabPanel>
-                      <p>Dibayar</p>
+                      <p></p>
                     </TabPanel>
                   </TabPanels>
                 </Tabs>
