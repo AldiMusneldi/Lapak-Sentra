@@ -1,7 +1,8 @@
-import React from 'react';
-import ricecooker from '../assets/gambar-barang/ricecooker2.svg';
-import CardProfile1 from '../components/Users/Card-profile/CardProfile1';
-import Sidebar from '../components/Users/Sidebar/Sidebar';
+import React from "react";
+import ricecooker from "../assets/gambar-barang/ricecooker2.svg";
+import { Tabs, TabList, TabPanels, Tab, TabPanel, TabIndicator } from '@chakra-ui/react'
+import CardProfile1 from "../components/Users/Card-profile/CardProfile1";
+import Sidebar from "../components/Users/Sidebar/Sidebar";
 
 const PesananSaya = () => {
   return (
@@ -21,7 +22,7 @@ const PesananSaya = () => {
             <div className="border border-gray-300 mt-3 rounded-md">
               <div className="text-2xl ml-8">Detail Transaksi</div>
               <div className="mb-3">
-                <tbody>
+                {/* <tbody>
                   <tr>
                     <td className="border-t border-b border-gray-300 pl-8 pr-4 py-2">
                       No.
@@ -90,7 +91,35 @@ const PesananSaya = () => {
                       Rp318.790
                     </td>
                   </tr>
-                </tbody>
+                </tbody> */}
+                <Tabs position="relative" variant="unstyled">
+                  <TabList>
+                    <Tab>Belum Dibayar</Tab>
+                    <Tab>Dikirim</Tab>
+                    <Tab>Dibatalkan</Tab>
+                    <Tab>Dibayar</Tab>
+                  </TabList>
+                  <TabIndicator
+                    mt="-1.5px"
+                    height="2px"
+                    bg="gray.500"
+                    borderRadius="1px"
+                  />
+                  <TabPanels>
+                    <TabPanel>
+                      <p>Belum Dibayar</p>
+                    </TabPanel>
+                    <TabPanel>
+                      <p>Dikirim</p>
+                    </TabPanel>
+                    <TabPanel>
+                      <p>Dibatalkan</p>
+                    </TabPanel>
+                    <TabPanel>
+                      <p>Dibayar</p>
+                    </TabPanel>
+                  </TabPanels>
+                </Tabs>
               </div>
             </div>
           </div>
