@@ -303,6 +303,7 @@ function DetailFasilitas() {
               </div>
             </div>
           </div>
+          <div className="border rounded-md mb-5"></div>
         </div>
       </section>
     </>

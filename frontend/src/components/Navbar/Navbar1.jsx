@@ -49,7 +49,7 @@ const Navbar1 = ({ navigate }) => {
             </ul>
           </div>
           <div className="nav-profile basis-[10%] flex justify-center items-center ">
-            <Link className="text-xl font-bold flex justify-center basis-[50%]">
+            <Link to="/keranjang" className="text-xl font-bold flex justify-center basis-[50%]">
               <i class="fa-solid fa-cart-shopping"></i>
             </Link>
             <span className="basis-[40%] z-10">
