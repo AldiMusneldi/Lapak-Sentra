@@ -48,7 +48,7 @@ function Keranjang() {
                 <div className="harga">Rp254.900</div>
                 <div className="basis-[12%]  text-center">1</div>
                 <div className="total-harga">Rp254.900</div>
-                <div className="hapus text-Eror_70">hapu</div>
+                <div className="hapus text-Eror_70">hapus</div>
               </div>
             </div>
           </div>

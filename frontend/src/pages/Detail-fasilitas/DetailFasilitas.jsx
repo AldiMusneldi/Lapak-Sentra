@@ -212,12 +212,12 @@ function DetailFasilitas() {
                         </div>
                       </div>
                       <div className=" flex items-center  justify-between gap-6 w-[60%]  ">
-                        <div className="p-2 flex items-center gap-2 border border-primary_70 text-primary_70 rounded-md">
+                        <Link to="/keranjang" className="p-2 flex items-center gap-2 border border-primary_70 text-primary_70 rounded-md">
                           <span>
                             <i class="fa-solid fa-cart-plus"></i>
                           </span>
                           <p>Masukan Keranjang</p>
-                        </div>
+                        </Link>
                         <div className="p-2 flex items-center bg-primary_70 text-Neutral_10 rounded-md">
                           <p>Buat Pesanan</p>
                         </div>
