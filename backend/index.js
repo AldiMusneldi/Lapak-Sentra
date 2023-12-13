@@ -5,6 +5,7 @@ const cors = require("cors");
 const { createServer } = require("http");
 const routes = require("./routes");
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ const app = express();
 const port = process.env.APP_PORT;
 const server = createServer(app);
 
+app.use(cookieParser());
 app.use(
    cors({
       credentials: true,

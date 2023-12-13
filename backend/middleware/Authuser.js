@@ -15,4 +15,21 @@ function authenticateToken(req, res, next) {
   });
 }
 
-module.exports = { authenticateToken };
+const verifyUser = (req,res,next)=>{
+  const token = req.cookies.token;
+  if(!token){
+    return res.json({message : "No token"})
+  }else{
+    jwt.verify(token, "secretKey", (err, decoded)=>{
+      console.log(decoded.name);
+      if(err){
+        return res.json({message:"Authentication Error" })
+      }else{
+        req.name = decoded.name;
+        next();
+      }
+    })
+  }
+}
+
+module.exports = { authenticateToken, verifyUser };

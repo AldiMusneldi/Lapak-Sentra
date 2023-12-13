@@ -75,7 +75,9 @@ async function register(req, res) {
   
         if (passwordMatch) {
           const id = user[0].id;
-          const token = jwt.sign({ id }, "secretKey", { expiresIn: 300 });
+          const name = user[0].name;
+          const token = jwt.sign({ id,name }, "secretKey", { expiresIn: 3000 })
+          res.cookie('token', token);
           return res.json({ login: true, token, user });
         } else {
           return res.status(401).json({ login: false, message: 'Email atau password salah' });
@@ -90,7 +92,8 @@ async function register(req, res) {
   }
 
   function logout(req, res) {
-    res.json({ message: 'Logout successful' });
+    res.clearCookie('token');
+   return  res.json({ Status: 'Success' });
   }
   
 
