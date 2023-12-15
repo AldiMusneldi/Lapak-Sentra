@@ -39,6 +39,7 @@ import DashboardUMKM from './dashboardUMKM/DashboardUMKM';
 import DashboardUmkmEdit from './dashboardUMKM/DashboardUmkmEdit';
 import RegisterProduk from './dashboardUMKM/RegisterProduk';
 import PromosiUMKM from './dashboardUMKM/PromosiUMKM';
+import Keranjang from './pages/Keranjang/Keranjang';
 
 function App() {
   const [katagori, setKatagori] = useState(SemDat);
@@ -134,30 +135,30 @@ function App() {
           </Layout1>
         }
       />
-        <Route
-          path="/user/kos"
-          element={
-            <Layout1>
-              <KosSaya />
-            </Layout1>
-          }
-        />
-        <Route
-          path="/user/item"
-          element={
-            <Layout1>
-              <ItemFavorit />
-            </Layout1>
-          }
-        />
-        <Route
-          path="/user/pesanan"
-          element={
-            <Layout1>
-              <PesananSaya />
-            </Layout1>
-          }
-        />
+      <Route
+        path="/user/kos"
+        element={
+          <Layout1>
+            <KosSaya />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/user/item"
+        element={
+          <Layout1>
+            <ItemFavorit />
+          </Layout1>
+        }
+      />
+      <Route
+        path="/user/pesanan"
+        element={
+          <Layout1>
+            <PesananSaya />
+          </Layout1>
+        }
+      />
       <Route
         path="/hunian/account"
         element={
@@ -252,6 +253,14 @@ function App() {
           <Layout2>
             <PromosiUMKM />
           </Layout2>
+        }
+      />
+      <Route
+        path="/keranjang"
+        element={
+          <Layout1>
+            <Keranjang />
+          </Layout1>
         }
       />
 
