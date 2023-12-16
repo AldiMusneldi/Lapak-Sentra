@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import SemuaData from '../data/SemuaData';
 
+// panggil Api
+
 const KatagoriSlice = createSlice({
   name: 'SemuaKatagori',
   initialState: {
