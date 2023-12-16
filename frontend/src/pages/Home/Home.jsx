@@ -4,12 +4,18 @@ import CardsFitur from '../../components/Cards-fitur/CardsFitur';
 import ContentHome from '../../components/Content-home/ContentHome';
 import Testimoni from '../../components/Testimoni/Testimoni';
 import axios from 'axios';
+import Navbar from '../../components/Navbar/Navbar';
+import { useNavigate } from 'react-router-dom';
+import menu from '../../components/Menu/Menu';
+import Navbar1 from '../../components/Navbar/Navbar1';
+
 
 function Home({ katagori, setKatagori }) {
   const [auth,setAuth] = useState(false);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
- 
+  const navigate = useNavigate(menu);
+
   useEffect(()=>{
     axios.get('http://localhost:8000/api/v1/me')
     .then(res=>{
@@ -24,29 +30,19 @@ function Home({ katagori, setKatagori }) {
     })
   },[]);
 
-  const handleLogout = ()=>{
-    axios.get('http://localhost:8000/api/v1/logout')
-    .then(res => {
-      if(res.data.Status === "Success"){
-        location.reload(true);
-      }else{
-        alert("error");
-      }
-    }).catch(err=>console.log(err));
-  }
   return (
     <div>
-  
       <Hero />
       {
         auth
         ?
         <div>
-          <p>{name}</p>
-          <button className='font-semibold text-primary_70' onClick={handleLogout}>Logout</button>
+          <Navbar1 />
         </div>
       :
-      <div>Di Kasih Navbar Yang Gk login</div>
+      <div>
+        <Navbar navigate={navigate} />
+      </div>
     }
       <CardsFitur />
       <ContentHome katagori={katagori} setKatagori={setKatagori} />
