@@ -10,7 +10,7 @@ const Layout = (props) => {
   return (
     <>
       {/* <Navbar1 /> */}
-      <Navbar navigate={navigate} />
+      {/* <Navbar navigate={navigate} /> */}
       <main>{props.children}</main>
       <Footer navigate={navigate} />
     </>
