@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import CardSemua from '../../components/Cards/CardSemua';
 import { useDispatch, useSelector } from 'react-redux';
 import { lihatS } from '../../features/katagoriSlice';
+import axios from 'axios';
 function Lihatsemua() {
+  const [nama, setNama] = useState([]);
+
   const [isActive, setisActive] = useState('1');
   function aktive(satu) {
     const angka = satu;
@@ -12,8 +15,16 @@ function Lihatsemua() {
   const dispatch = useDispatch();
   const katagoris = useSelector((state) => state.Skatagori.lihatSemua);
   useEffect(() => {
+    api();
     dispatch(lihatS({ katagoriFilter: '' }));
   }, [dispatch]);
+
+  const api = async () => {
+    const response = await axios.get('http://localhost:8000/api/v1/kost');
+    setNama(response.data);
+  };
+
+  console.log(nama.data);
 
   return (
     <>

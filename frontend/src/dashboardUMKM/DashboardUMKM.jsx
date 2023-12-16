@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/icons/logo.svg';
 import CardProfileU from '../components/UMKM/Card-profileU/CardProfileU';
 import SidebarU from '../components/UMKM/SidebarU/SidebarU';
+import Produk from '../components/List/Produk';
+import { useDisclosure } from '@chakra-ui/react';
+import Modalpemilik from '../components/Modals/Modalpemilik';
+import { useDispatch, useSelector } from 'react-redux';
+import { filteredF } from '../features/katagoriSlice';
 // clear
-function DashboardUMKM() {
+const DashboardUMKM = () => {
+  const dispatch = useDispatch();
+  const filteredProduct = useSelector((state) => state.Skatagori.filteredDataF);
+
+  useEffect(() => {
+    dispatch(filteredF('fasilitas rumah'));
+  }, [dispatch]);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <div className="flex container ml-24">
@@ -55,13 +69,21 @@ function DashboardUMKM() {
               <div className="flex container ml-12 justify-center">
                 <Link to="/umkm/dashboardumkm/edit">
                   <button className="px-4 py-2 bg-primary_70 text-white rounded">
-                    Edit Deskripsi
+                    Edit
                   </button>
                 </Link>
               </div>
               <div className="text-2xl">
                 <h1>List Produk Yang Didaftarkan</h1>
-                {/*Panggil Cards */}
+                <div className="container mt-4 mb-2">
+                  <div className="basis-[90%] flex gap-3">
+                    {/* card nya */}
+                    {filteredProduct.slice(0,3).map((favor, index) => (
+                      <Produk favor={favor} key={index} onOpen={onOpen} />
+                    ))}
+                    <Modalpemilik onClose={onClose} isOpen={isOpen} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -69,6 +91,6 @@ function DashboardUMKM() {
       </div>
     </>
   );
-}
+};
 
 export default DashboardUMKM;

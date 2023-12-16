@@ -53,7 +53,7 @@ function DashboardUmkmEdit() {
               <div className="flex container ml-12 justify-center">
                 <Link to="/umkm/dashboardumkm">
                   <button className="px-4 py-2 bg-primary_70 text-white rounded">
-                    Simpan Deskripsi
+                    Simpan
                   </button>
                 </Link>
               </div>

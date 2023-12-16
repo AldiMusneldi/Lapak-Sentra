@@ -1,12 +1,22 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
 import { useDisclosure } from '@chakra-ui/react';
 import Modalpemilik from '../components/Modals/Modalpemilik';
 import CardsFavorit from '../components/Cards/CardsFavorit';
 import { useDispatch, useSelector } from 'react-redux';
 import { filterFavorit } from '../features/katagoriSlice';
+import { filterFavoritF } from '../features/katagoriSlice';
 import CardProfile1 from '../components/Users/Card-profile/CardProfile1';
 import Sidebar from '../components/Users/Sidebar/Sidebar';
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  TabIndicator,
+} from '@chakra-ui/react';
+import CardsFavoritF from '../components/Cards/CardsFavoritF';
+
 const ItemFavorit = () => {
   const dispatch = useDispatch();
   // ambil data dari Slice
@@ -15,47 +25,11 @@ const ItemFavorit = () => {
     dispatch(filterFavorit(true));
   }, [dispatch]);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  function updateAnimationPosition(element) {
-    const width = element.offsetWidth;
-    const left = element.offsetLeft;
 
-    const animation = document.querySelector(".animation");
-    animation.style.width = `${width}px`;
-    animation.style.left = `${left}px`;
-  }
-
-  const Choice = styled.div`
-    nav {
-      position: relative;
-      border-radius: 8px;
-      font-size: 0;
-    }
-    a {
-      font-size: 24px;
-      text-decoration: none;
-      line-height: 50px;
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      text-align: center;
-    }
-    .animation {
-      position: absolute;
-      height: 5px;
-      width: 300px;
-      bottom: 0;
-      z-index: 0;
-      background: #695cff;
-      border-radius: 8px;
-      transition: all 0.5s ease 0s;
-    }
-    a:nth-child(1) {
-      width: 300px;
-    }
-    a:nth-child(2) {
-      width: 250px;
-    }
-  `;
+  const favoritF = useSelector((state) => state.Skatagori.filterFavoritF);
+  useEffect(() => {
+    dispatch(filterFavoritF(true));
+  }, [dispatch]);
 
   return (
     <>
@@ -71,41 +45,72 @@ const ItemFavorit = () => {
             </p>
           </div>
           <div className="mb-6 mt-3 rounded-lg shadow-xl">
-            <div className="ml-4 mt-3 flex justify-center items-center">
-              <Choice>
-                <nav>
-                  <a
-                    href="#"
-                    onClick={(e) => updateAnimationPosition(e.target)}
-                  >
-                    Hunian
-                  </a>
-                  <a
-                    href="#"
-                    onClick={(e) => updateAnimationPosition(e.target)}
-                  >
-                    Fasilitas Rumah
-                  </a>
-                  <div className="animation start-home"></div>
-                </nav>
-                <hr
-                  style={{
-                    borderTop: "1px solid grey",
-                    display: "block",
-                    width: "100%",
-                  }}
-                />
-              </Choice>
-            </div>
-            <div className="mt-3 mb-3 ml-3 mr-3 flex justify-center ">
-              <div className="basis-[90%] flex flex-col gap-3">
-                {/* card nya */}
-                {favorit.map((favor, index) => {
-                  return (
-                    <CardsFavorit favor={favor} key={index} onOpen={onOpen} />
-                  );
-                })}
-                <Modalpemilik onClose={onClose} isOpen={isOpen} />
+            <div className="border border-gray-300 mt-3 rounded-md">
+              <div className="mb-3">
+                <Tabs position="relative" variant="unstyled">
+                  <div className="flex font-semibold">
+                    <TabList className="w-full px-40">
+                      <Tab style={{ fontSize: "26px" }} className="w-72">
+                        Hunian
+                      </Tab>
+                      <Tab style={{ fontSize: "26px" }} className="w-72">
+                        Fasilitas Rumah
+                      </Tab>
+                    </TabList>
+                  </div>
+                  <TabIndicator
+                    mt="-1.5px"
+                    height="5px"
+                    bg="#695cff"
+                    borderRadius="5px"
+                    style={{ width: "100px" }}
+                  />
+                  <div className="flex justify-center">
+                    <hr
+                      style={{
+                        borderTop: "1px solid grey",
+                        display: "block",
+                        width: "60%",
+                      }}
+                    />
+                  </div>
+                  <TabPanels>
+                    <TabPanel>
+                      <div className="mt-3 mb-3 ml-3 mr-3 flex justify-center ">
+                        <div className="basis-[90%] flex flex-col gap-3">
+                          {/* card nya */}
+                          {favorit.map((favor, index) => {
+                            return (
+                              <CardsFavorit
+                                favor={favor}
+                                key={index}
+                                onOpen={onOpen}
+                              />
+                            );
+                          })}
+                          <Modalpemilik onClose={onClose} isOpen={isOpen} />
+                        </div>
+                      </div>
+                    </TabPanel>
+                    <TabPanel>
+                      <div className="mt-3 mb-3 ml-3 mr-3 flex justify-center ">
+                        <div className="basis-[90%] flex flex-col gap-3">
+                          {/* card nya */}
+                          {favoritF.map((favor, index) => {
+                            return (
+                              <CardsFavoritF
+                                favor={favor}
+                                key={index}
+                                onOpen={onOpen}
+                              />
+                            );
+                          })}
+                          <Modalpemilik onClose={onClose} isOpen={isOpen} />
+                        </div>
+                      </div>
+                    </TabPanel>
+                  </TabPanels>
+                </Tabs>
               </div>
             </div>
           </div>
