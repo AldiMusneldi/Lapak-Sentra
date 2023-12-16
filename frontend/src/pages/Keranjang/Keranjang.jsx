@@ -12,7 +12,7 @@ function Keranjang() {
   return (
     <>
       <section id="keranjang" className="pt-[10rem] font-worksans text-Neutral_70">
-        <div className="container mx-auto">
+        <div className="container mx-auto my-5">
           {/* kembali */}
           <Link to={`/home`} onClick={() => Back('/home')} className="flex items-center gap-2 text-2xl">
             <span className="">
@@ -54,10 +54,15 @@ function Keranjang() {
           </div>
           {/* footer harga */}
           <div className="rounded-md flex flex-col gap-2 my-2 ">
-            <div className="flex border gap-3 p-5">
-              <div className="pilih-semua flex">
+            <div className="flex border justify-between  p-5">
+              <div className="pilih-semua items-center gap-2 flex">
                 <Checkbox colorScheme="green" />
                 <h2>Pilih semua</h2>
+              </div>
+              <div className="total flex items-center gap-2">
+                <p>Total (0 Produk):</p>
+                <h2 className="text-2xl text-Eror_70">Rp 0</h2>
+                <button className="p-2 text-Neutral_10 font-medium rounded-md bg-primary_70">Cekout</button>
               </div>
             </div>
           </div>
