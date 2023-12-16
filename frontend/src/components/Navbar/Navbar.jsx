@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import ReactLogo from "../../assets/logo.svg";
-import { Link, NavLink } from "react-router-dom";
-import menu from "../Menu/Menu";
-import { useDisclosure } from "@chakra-ui/react";
-import Role from "../Role/Role";
-import Role1 from "../Role/Role1";
+import React, { useState, useEffect } from 'react';
+import ReactLogo from '../../assets/logo.svg';
+import { Link, NavLink } from 'react-router-dom';
+import menu from '../Menu/Menu';
+import { useDisclosure } from '@chakra-ui/react';
+import Role from '../Role/Role';
+import Role1 from '../Role/Role1';
 
 const Navbar = ({ navigate }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();

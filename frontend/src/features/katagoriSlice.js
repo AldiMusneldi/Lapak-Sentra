@@ -11,6 +11,7 @@ const KatagoriSlice = createSlice({
     filteredDataK: [],
     filteredDataF: [],
     filterFavorit: [],
+    filterFavoritF: [],
   },
   reducers: {
     // fungsi untuk memfilter dari semua katagori
@@ -34,13 +35,17 @@ const KatagoriSlice = createSlice({
       const favorit = action.payload;
       state.filterFavorit = state.Skatagori.filter((filtr) => filtr.favorit === favorit);
     },
+    filterFavoritF(state, action) {
+      const favoritf = action.payload;
+      state.filterFavoritF = state.Skatagori.filter((filtr) => filtr.favoritf === favoritf);
+    },
   },
 });
 
 // generate actions dan redusers
 const katagoriRedusers = KatagoriSlice.reducer;
-const { filteredK, filteredF, lihatS, filterFavorit } = KatagoriSlice.actions;
+const { filteredK, filteredF, lihatS, filterFavorit, filterFavoritF } = KatagoriSlice.actions;
 
 // export actions dan reduser
 export default katagoriRedusers;
-export { filteredK, filteredF, lihatS, filterFavorit };
+export { filteredK, filteredF, lihatS, filterFavorit, filterFavoritF };

@@ -78,13 +78,6 @@ const SewakanKos = () => {
                 />
               </div>
               <div className="mb-3">
-                <h1 className="pb-2">Harga</h1>
-                <input
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
-                />
-              </div>
-              <div className="mb-3">
                 <h1 className="pb-2">Deskripsi</h1>
                 <textarea
                   type="text"
