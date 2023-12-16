@@ -1,19 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useDisclosure } from "@chakra-ui/react";
-import CardProfileU from "../components/UMKM/Card-profileU/CardProfileU";
-import SidebarU from "../components/UMKM/SidebarU/SidebarU";
-import { TbTrendingUp } from "react-icons/tb";
-import voucher from "../assets/gambar-promosi/ticket-01.svg";
-import bag from "../assets/gambar-promosi/shopping-bag-02.svg";
-import truck from "../assets/gambar-promosi/truck-02.svg";
-import bag1 from "../assets/gambar-promosi/shopping-bag-01.svg";
-import coin from "../assets/gambar-promosi/currency-dollar-circle.svg";
-import sale from "../assets/gambar-promosi/sale-04.svg";
-import store from "../assets/gambar-promosi/building-02.svg";
-import like from "../assets/gambar-promosi/like.svg";
-import quenue from "../assets/gambar-promosi/Add_To_Queue.svg";
-import add from "../assets/gambar-promosi/List_Add.svg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDisclosure } from '@chakra-ui/react';
+import CardProfileU from '../components/UMKM/Card-profileU/CardProfileU';
+import SidebarU from '../components/UMKM/SidebarU/SidebarU';
+import { TbTrendingUp } from 'react-icons/tb';
+import voucher from '../assets/gambar-promosi/ticket-01.svg';
+import bag from '../assets/gambar-promosi/shopping-bag-02.svg';
+import truck from '../assets/gambar-promosi/truck-02.svg';
+import bag1 from '../assets/gambar-promosi/shopping-bag-01.svg';
+import coin from '../assets/gambar-promosi/currency-dollar-circle.svg';
+import sale from '../assets/gambar-promosi/sale-04.svg';
+import store from '../assets/gambar-promosi/building-02.svg';
+import like from '../assets/gambar-promosi/like.svg';
+import quenue from '../assets/gambar-promosi/Add_To_Queue.svg';
+import add from '../assets/gambar-promosi/List_Add.svg';
 import {
   Popover,
   PopoverTrigger,

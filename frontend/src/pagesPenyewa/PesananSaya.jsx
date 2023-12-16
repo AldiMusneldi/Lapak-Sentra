@@ -63,8 +63,13 @@ const PesananSaya = () => {
                           <div className="flex">
                             <h1 className="pr-4 px-2">Megah Jaya Elektronik</h1>
                             <div className="flex">
-                              <TbMessages size={iconSize} style={{ color: "#695CFF" }} />
-                              <p className="px-2 text-primary_70">Chat Penjual</p>
+                              <TbMessages
+                                size={iconSize}
+                                style={{ color: "#695CFF" }}
+                              />
+                              <p className="px-2 text-primary_70">
+                                Chat Penjual
+                              </p>
                             </div>
                           </div>
                           <p className="text-red-400 px-2">Belum Bayar</p>
@@ -151,7 +156,53 @@ const PesananSaya = () => {
                       <p></p>
                     </TabPanel>
                     <TabPanel>
-                      <p></p>
+                      <div>
+                        Detail Pembayaran
+                        <div className="border border-black rounded-md">
+                          <div className="px-2 border border-black rounded-md">
+                            <div className="flex">
+                              <p>
+                                Nama Pembeli : <span>Aldi Musneldi</span>{" "}
+                              </p>
+                              <p className="flex justify-end ml-auto">
+                                Nama Penjual :{" "}
+                                <span>Megah Jaya Elektronik</span>
+                              </p>
+                            </div>
+                            <p>
+                              Alamat Pembeli :{" "}
+                              <span>
+                                Jl.Mangga Besar, Pondok Mangga, Jakarta Timur,
+                                DKI JAKARTA, INDONESIA
+                              </span>{" "}
+                            </p>
+                            <p>
+                              No. Handphone Pembeli : <span>6285151515151</span>{" "}
+                            </p>
+                          </div>
+                          <div className="flex px-2">
+                            <div>
+                              <p>No. Pesanan</p>
+                              <p>120333AKJW</p>
+                            </div>
+                            <div className="px-20">
+                              <p>Waktu Pembayaran</p>
+                              <p>20/11/23</p>
+                            </div>
+                            <div>
+                              <p>Metode Pembayaran</p>
+                              <p>Transfer Bank BCA</p>
+                            </div>
+                            <div className="px-24">
+                              <p>Jasa Kirim</p>
+                              <p>LS Yes</p>
+                            </div>
+                          </div>
+                          <div>
+                            <p>Rincian Pesanan  (1 Produk)</p>
+                          </div>
+                        </div>
+                      </div>
                     </TabPanel>
                   </TabPanels>
                 </Tabs>
