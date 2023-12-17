@@ -13,9 +13,10 @@ const uploads = multer({storage:storage});
 
 routes.post('/uploads',uploads.array("files") ,(req,res)=>{
     const image = req.files;
-    console.log(req.body);
+    const body =req.body;
+    console.log(body);
     console.log(image);
-    res.json({data:image, status:"success"});
+    res.json({data:body,image, status:"success"});
 });
 
 

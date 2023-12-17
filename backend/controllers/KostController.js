@@ -44,73 +44,94 @@ async function getKostMe(req, res) {
 }
 
 async function createKost(req, res) {
-   try {
-      const { name, price, type_kost, category_kost, land_size, address, facility, nearest_place, description } = req.body;
-      console.log(req.body);
-      const now = new Date();
-      const userId = req.id;
-      if (
-         name === undefined ||
-         name === '' ||
-         price === undefined ||
-         price === '' ||
-         type_kost === undefined ||
-         type_kost === '' ||
-         category_kost === undefined ||
-         category_kost === '' ||
-         land_size === undefined ||
-         land_size === '' ||
-         address === undefined ||
-         address === '' ||
-         facility === undefined ||
-         facility === '' ||
-         nearest_place === undefined ||
-         nearest_place === '' ||
-         description === undefined ||
-         description === ''
-      )
-         return res.status(400).json({ status: 400, msg: 'Invalid data! All fields are required.' });
-      await query('START TRANSACTION');
-      const kostId = randomUUID();
-      await query(
-         `
-        INSERT INTO kosts (
-            uuid, name, price, type_kost,category_kost, land_size, address, facility, nearest_place, description,userId, createdAt, updatedAt
-        ) VALUES (
-            ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
-        );
-    `,
-         [kostId, name, price, type_kost, category_kost, land_size, address, facility, nearest_place, description, userId, now, now]
-      );
-
-       // Proses upload gambar menggunakan multer
+  try {
+    // Menggunakan middleware multer untuk menangani form-data
     upload.array('images')(req, res, async function (err) {
       if (err) {
-        // Rollback transaksi SQL jika terjadi kesalahan upload
-        await query('ROLLBACK');
+        // Jangan lupa menangani kesalahan multer
         return res.status(500).json({ status: 500, msg: err.message });
       }
+
+      const {
+        name,
+        price,
+        type_kost,
+        category_kost,
+        land_size,
+        address,
+        facility,
+        nearest_place,
+        description,
+      } = req.body;
+
+      const now = new Date();
+      const userId = req.id;
+
+      // Pemeriksaan nilai null atau undefined
+      const requiredFields = [
+        name,
+        price,
+        type_kost,
+        category_kost,
+        land_size,
+        address,
+        facility,
+        nearest_place,
+        description,
+      ];
+
+      if (requiredFields.some((field) => field === undefined || field === null || field === '')) {
+        return res.status(400).json({ status: 400, msg: 'Invalid data! All fields are required.' });
+      }
+
+      await query('START TRANSACTION');
+
+      const kostId = randomUUID();
+      await query(
+        `
+         INSERT INTO kosts (
+             uuid, name, price, type_kost,category_kost, land_size, address, facility, nearest_place, description,userId, createdAt, updatedAt
+         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+     `,
+        [
+          kostId,
+          name,
+          price,
+          type_kost,
+          category_kost,
+          land_size,
+          address,
+          facility,
+          nearest_place,
+          description,
+          userId,
+          now,
+          now,
+        ]
+      );
 
       // Tambahkan data ke tabel imageKosts
       for (const file of req.files) {
         await query(
           `
-            INSERT INTO image_kost (kost_id, name, createdAt) VALUES (?, ?, ?);
-          `,
+             INSERT INTO image_kost (kost_id, name, createdAt) VALUES (?, ?, ?);
+           `,
           [kostId, file.path, now]
         );
+        console.log(file);
       }
 
       // Commit transaksi SQL
       await query('COMMIT');
-
+      console.log(req.body);
       return res.status(201).json({ status: 201, msg: 'Create kost success' });
     });
-   } catch (error) {
+  } catch (error) {
     await query('ROLLBACK');
-      return res.status(500).json({ status: 500, msg: error.message });
-   }
+    return res.status(500).json({ status: 500, msg: error.message });
+  }
 }
+
 
 async function updateKost(req, res) {
    try {
