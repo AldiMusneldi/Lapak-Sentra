@@ -7,12 +7,23 @@ const userModels = require('../models/kost');
 
 async function getAllKost(req, res) {
   try {
-    const response = await userModels.GetAllKost();
-    if (response) {
-      res.status(200).json({ status: 200, data: response, message: 'Resources Kost Succsessfully' });
-    } else {
-      res.status(404).json({ status: 404, message: 'Resources tidak ditemukan' });
-    }
+    const {page, limit} = req.query
+    const offset = ( page - 1) * limit
+    const data = await query('SELECT * FROM kosts LIMIT ? OFFSET ?', [+limit, +offset])
+    const [totalPageData] = await query('SELECT COUNT(*) AS count FROM kosts')
+    const totalPage = Math.ceil(+totalPageData.count / limit)
+    console.log(Math.ceil(+totalPageData.count / limit));
+    res.json({
+      data:data,
+      pagination:{
+        page:+page,
+        limit:+limit,
+        totalPageData:totalPageData.count,
+        totalPage
+      }
+    })
+
+  
   } catch (error) {
     return res.status(500).json({ status: 500, msg: error.message });
   }
