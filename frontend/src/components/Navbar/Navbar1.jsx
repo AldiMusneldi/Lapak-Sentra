@@ -28,7 +28,7 @@ const Navbar1 = ({ navigate }) => {
       <header className="navbar">
         <nav className="container mx-auto flex justify-between p-1 items-center font-Poppins">
           <div className="nav-title scale-100 flex basis-[35%] items-center gap-5">
-            <Link to="/home">
+            <Link to="/">
               <img src={ReactLogo} alt="React Logo" />
             </Link>
             <div className=" basis-[85%]">

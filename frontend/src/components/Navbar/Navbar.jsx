@@ -12,14 +12,14 @@ const Navbar = ({ navigate }) => {
 
   useEffect(() => {
     window.onscroll = function () {
-      const header = document.querySelector("header");
+      const header = document.querySelector('header');
       const e = header.offsetTop;
       if (window.pageYOffset > e) {
-        header.classList.add("navbar-fixed");
-        header.classList.remove("navbar");
+        header.classList.add('navbar-fixed');
+        header.classList.remove('navbar');
       } else {
-        header.classList.remove("navbar-fixed");
-        header.classList.add("navbar");
+        header.classList.remove('navbar-fixed');
+        header.classList.add('navbar');
       }
     };
   });
@@ -41,7 +41,7 @@ const Navbar = ({ navigate }) => {
       <header className="navbar">
         <nav className="container mx-auto flex justify-between p-1 items-center font-Poppins">
           <div className="nav-title scale-100 w-[10%]">
-            <Link to="/home">
+            <Link to="/">
               <img src={ReactLogo} alt="React Logo" />
             </Link>
           </div>
@@ -49,12 +49,7 @@ const Navbar = ({ navigate }) => {
             <ul className="flex justify-center gap-10 ">
               {menu.map((m) => (
                 <li key={m.id}>
-                  <Link
-                    to={`/${m.path}`}
-                    onClick={() => goToPage(`/${m.path}`)}
-                    className="text-Neutral_90 hover:text-primary_70 font-medium"
-                    style={{ cursor: "pointer" }}
-                  >
+                  <Link to={`/${m.path}`} onClick={() => goToPage(`/${m.path}`)} className="text-Neutral_90 hover:text-primary_70 font-medium" style={{ cursor: 'pointer' }}>
                     {m.text}
                   </Link>
                 </li>

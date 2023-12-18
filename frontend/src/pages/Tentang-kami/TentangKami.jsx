@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import AnimateAboutUs from '../../assets/animasi/animasi-about.svg';
 import BgTentangkami from '../../assets/animasi/bg-tentangkami.svg';
+import { useNavigate } from 'react-router-dom';
+import menu from '../../components/Menu/Menu';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
+import Navbar1 from '../../components/Navbar/Navbar1';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
+import { updateAuth } from '../../features/loginSlice';
 
 function TentangKami() {
   const BgAbout = styled.div`
@@ -31,8 +39,32 @@ function TentangKami() {
   const P = styled.p`
     width: 40rem;
   `;
+
+  const navigate = useNavigate(menu);
+  const auth = useSelector((state) => state.login.auth);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/v1/me').then((res) => {
+      console.log(res.data);
+      if (res.data.login === true) {
+        dispatch(updateAuth(true));
+      } else {
+        dispatch(updateAuth(false));
+      }
+    });
+  });
   return (
     <>
+      {/* validasi sudah login */}
+      {auth ? (
+        <div>
+          <Navbar1 navigate={navigate} />
+        </div>
+      ) : (
+        <div>
+          <Navbar navigate={navigate} />
+        </div>
+      )}
       <section className="pt-[6rem]" id="tentang-kami">
         <BgAbout>
           <h1 className="text-center py-24 font-title text-white font-semibold">Tentang Kami</h1>
@@ -52,6 +84,7 @@ function TentangKami() {
           </div>
         </div>
       </section>
+      <Footer navigate={navigate} />
     </>
   );
 }

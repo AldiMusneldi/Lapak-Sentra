@@ -1,9 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import AnimateContact from "../../assets/animasi/animasi-contact.svg";
-import BgHubungikami from "../../assets/animasi/bg-hubungikami.svg";
-import iconPone from "../../assets/icons/Phone.svg";
-import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import AnimateContact from '../../assets/animasi/animasi-contact.svg';
+import BgHubungikami from '../../assets/animasi/bg-hubungikami.svg';
+import iconPone from '../../assets/icons/Phone.svg';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
+import { updateAuth } from '../../features/loginSlice';
+import Navbar from '../../components/Navbar/Navbar';
+import Navbar1 from '../../components/Navbar/Navbar1';
+import Footer from '../../components/Footer/Footer';
+import menu from '../../components/Menu/Menu';
 
 function HubungiKami() {
   const BgHubungi = styled.div`
@@ -12,7 +19,7 @@ function HubungiKami() {
     height: 300px;
 
     ::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -28,14 +35,34 @@ function HubungiKami() {
       font-size: 50px;
     }
   `;
-
+  const navigate = useNavigate(menu);
+  const auth = useSelector((state) => state.login.auth);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/v1/me').then((res) => {
+      console.log(res.data);
+      if (res.data.login === true) {
+        dispatch(updateAuth(true));
+      } else {
+        dispatch(updateAuth(false));
+      }
+    });
+  });
   return (
     <>
+      {/* validasi sudah login */}
+      {auth ? (
+        <div>
+          <Navbar1 navigate={navigate} />
+        </div>
+      ) : (
+        <div>
+          <Navbar navigate={navigate} />
+        </div>
+      )}
       <section className="pt-[6rem]" id="hubungi-kami">
         <BgHubungi>
-          <h1 className="text-center py-24 font-title text-white font-semibold">
-            Hubungi Kami
-          </h1>
+          <h1 className="text-center py-24 font-title text-white font-semibold">Hubungi Kami</h1>
         </BgHubungi>
         <div className="flex">
           <form action="">
@@ -45,39 +72,22 @@ function HubungiKami() {
                 <label for="username" className="block text-base mb-2">
                   Nama :
                 </label>
-                <input
-                  type="text"
-                  id="username"
-                  className="h-10 pl-4 border w-[30rem] border-black rounded-md"
-                  placeholder="Masukkan Nama Anda"
-                />
+                <input type="text" id="username" className="h-10 pl-4 border w-[30rem] border-black rounded-md" placeholder="Masukkan Nama Anda" />
               </div>
               <div className="mt-3">
                 <label for="handphone" className="block text-base mb-2">
                   Email :
                 </label>
-                <input
-                  type="text"
-                  id="handphone"
-                  className="h-10 pl-4 border w-[30rem] border-black rounded-md"
-                  placeholder="Masukkan Email Anda"
-                />
+                <input type="text" id="handphone" className="h-10 pl-4 border w-[30rem] border-black rounded-md" placeholder="Masukkan Email Anda" />
               </div>
               <div className="mt-3">
                 <label for="email" className="block text-base mb-2">
                   Pesan :
                 </label>
-                <textarea
-                  type="text"
-                  id="email"
-                  className="h-40 pl-4 py-2 border w-[30rem] border-black rounded-md"
-                  placeholder="Masukkan Pesan Anda"
-                />
+                <textarea type="text" id="email" className="h-40 pl-4 py-2 border w-[30rem] border-black rounded-md" placeholder="Masukkan Pesan Anda" />
               </div>
               <div className="mt-3">
-                <button className="w-28  py-2 text-white rounded-xl bg-primary_70">
-                  Kirim
-                </button>
+                <button className="w-28  py-2 text-white rounded-xl bg-primary_70">Kirim</button>
               </div>
             </div>
           </form>
@@ -88,9 +98,7 @@ function HubungiKami() {
                 <div className="flex my-3 ">
                   <img src={iconPone} />
                   <Link to="">
-                    <h1 className="pl-3 hover:text-primary_70 text-Neutral_70">
-                      +62851-5652-7939
-                    </h1>
+                    <h1 className="pl-3 hover:text-primary_70 text-Neutral_70">+62851-5652-7939</h1>
                   </Link>
                 </div>
                 <div className="group">
@@ -111,6 +119,7 @@ function HubungiKami() {
           </div>
         </div>
       </section>
+      <Footer navigate={navigate} />
     </>
   );
 }

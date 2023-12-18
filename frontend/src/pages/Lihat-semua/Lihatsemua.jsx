@@ -3,6 +3,11 @@ import CardSemua from '../../components/Cards/CardSemua';
 import { useDispatch, useSelector } from 'react-redux';
 import { lihatS } from '../../features/katagoriSlice';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import menu from '../../components/Menu/Menu';
+import { updateAuth } from '../../features/loginSlice';
+import Navbar1 from '../../components/Navbar/Navbar1';
+import Navbar from '../../components/Navbar/Navbar';
 function Lihatsemua() {
   const [nama, setNama] = useState([]);
 
@@ -13,21 +18,40 @@ function Lihatsemua() {
   }
 
   const dispatch = useDispatch();
+  const navigate = useNavigate(menu);
   const katagoris = useSelector((state) => state.Skatagori.lihatSemua);
+  const auth = useSelector((state) => state.login.auth);
   useEffect(() => {
     api();
+    login();
     dispatch(lihatS({ katagoriFilter: '' }));
   }, [dispatch]);
 
   const api = async () => {
     const response = await axios.get('http://localhost:8000/api/v1/kost');
-    setNama(response.data);
+    setNama(response);
   };
-
-  console.log(nama.data);
-
+  const login = async () => {
+    const response = await axios.get('http://localhost:8000/api/v1/me').then((res) => {
+      console.log(res.data);
+      if (res.data.login === true) {
+        dispatch(updateAuth(response));
+      } else {
+        dispatch(updateAuth(false));
+      }
+    });
+  };
   return (
     <>
+      {auth ? (
+        <div>
+          <Navbar1 navigate={navigate} />
+        </div>
+      ) : (
+        <div>
+          <Navbar navigate={navigate} />
+        </div>
+      )}
       <section className="pt-[10rem] mb-[2rem]" id="lihatsemua">
         <div className="container mx-auto">
           <div className="content-title ">
