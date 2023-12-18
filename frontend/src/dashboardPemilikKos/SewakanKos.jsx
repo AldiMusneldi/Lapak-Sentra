@@ -35,54 +35,51 @@ const SewakanKos = () => {
         </div>
         <div className="pl-6 container relative mt-24">
           <div className="bg-primary_70 w-full rounded-md h-[60px] flex justify-center items-center">
-            <p className="text-[30px] text-white text font-bold">
-              Sewakan Kos/Kontrakan Saya
-            </p>
+            <p className="text-[30px] text-white text font-bold">Tambah Kos/Kontrakan </p>
           </div>
           <div className="">
             <div className="border border-gray-300 px-4 py-5 pr-24 mt-3 mb-4">
-              <h1 className="mb-6 text-xl font-bold">Lengkapi Data Kos</h1>
+              <h1 className="mb-6 text-xl font-bold">Tambah Data Hunian</h1>
+              <form action=""></form>
               <div className="mb-3">
-                <h1 className="pb-2">Nama Kost</h1>
-                <input
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
-                />
+                <h1 className="pb-2">Nama Hunian</h1>
+                <input type="text" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" />
+              </div>
+              <div className="mb-3">
+                <h1 className="pb-2">Alamat Lengkap</h1>
+                <input type="text" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" />
+              </div>
+              <div className="mb-3">
+                <h1 className="pb-2">Kota</h1>
+                <select name="" id="" className=" border border-black rounded-sm pl-2 h-10 w-full mb-4">
+                  <option value="">Pilih Kota</option>
+                  <option value="">Jakarta Pusat</option>
+                  <option value="">Jakarta Barat</option>
+                  <option value="">Jakarta Utara</option>
+                  <option value="">Jakarta Selatan</option>
+                  <option value="">Jakarta Timur</option>
+                </select>
               </div>
               <div className="mb-3">
                 <h1 className="pb-2">Luas Bangunan</h1>
-                <input
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
-                />
+                <input type="text" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" />
               </div>
               <div className="mb-3">
-                <h1 className="pb-2">Jenis Kost</h1>
-                <input
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
-                />
-              </div>
-              <div className="mb-3">
-                <h1 className="pb-2"> Kamar Mandi</h1>
-                <input
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
-                />
+                {/* ganti dengan dropdown */}
+                <h1 className="pb-2">Tipe</h1>
+                <select name="" id="" className=" border border-black rounded-sm pl-2 h-10 w-full mb-4">
+                  <option value="">Pilih Tipe Hunian</option>
+                  <option value="">Kost</option>
+                  <option value="">Kontrakan</option>
+                </select>
               </div>
               <div className="mb-3">
                 <h1 className="pb-2">Harga</h1>
-                <input
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
-                />
+                <input type="text" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" />
               </div>
               <div className="mb-3">
                 <h1 className="pb-2">Deskripsi</h1>
-                <textarea
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-28 w-full mb-4"
-                />
+                <textarea type="text" className="border border-black rounded-sm pl-2 h-28 w-full mb-4" />
               </div>
               <div className="">
                 <h1>Unggah Foto</h1>
@@ -95,10 +92,10 @@ const SewakanKos = () => {
                 <div className="flex mt-3">
                   <p className="pl-12">Foto Tambahan</p>
                   <div className="flex pl-10">
-                  <UploadImage />
-                  <div className="pl-3">
-                  <UploadImage />
-                  </div>
+                    <UploadImage />
+                    <div className="pl-3">
+                      <UploadImage />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -181,10 +178,7 @@ const SewakanKos = () => {
               </div>
               <div className="mb-3">
                 <h1>Fasilitas Lainnya</h1>
-                <input
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
-                />
+                <input type="text" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" />
               </div>
               <div className="mb-3">
                 <h1>Tempat Terdekat</h1>
@@ -226,15 +220,10 @@ const SewakanKos = () => {
               </div>
               <div className="mb-3">
                 <h1>Tempat Terdekat Lainnya</h1>
-                <input
-                  type="text"
-                  className="border border-black rounded-sm pl-2 h-10 w-full mb-4"
-                />
+                <input type="text" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" />
               </div>
               <Link to="/hunian/dashboardhunian">
-                <button className="px-4 py-2 bg-primary_70 text-white rounded">
-                  Daftarkan Kost Anda sekarang
-                </button>
+                <button className="px-4 py-2 bg-primary_70 text-white rounded">Daftarkan Kost Anda sekarang</button>
               </Link>
             </div>
           </div>

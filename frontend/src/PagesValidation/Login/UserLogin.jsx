@@ -32,26 +32,27 @@ const UserLogin = () => {
   // };
 
   const [values, setValues] = useState({
-    email : '',
-    password: ''
+    email: '',
+    password: '',
   });
 
   const navigate = useNavigate('/');
   axios.defaults.withCredentials = true;
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/api/v1/login', values)
-    .then(res  => {
-      // console.log(res);
-      if( res.data.login === true){
-        navigate('/')
-      }else{
-        alert(res.data.message);
-      }
-    })
-    .catch(err => console.log(err));
-  }
+    axios
+      .post('http://localhost:8000/api/v1/login', values)
+      .then((res) => {
+        // console.log(res);
+        if (res.data.login === true) {
+          navigate('/');
+        } else {
+          alert(res.data.message);
+        }
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
@@ -63,9 +64,7 @@ const UserLogin = () => {
             </Link>
           </div>
           <div className="mb-2">
-            <h1 className="font-title text-center font-semibold text-2xl">
-              Masuk Sebagai Penyewa
-            </h1>
+            <h1 className="font-title text-center font-semibold text-2xl">Masuk Sebagai Penyewa</h1>
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -76,10 +75,10 @@ const UserLogin = () => {
                 <input
                   type="text"
                   id="username"
-                  name='email'
+                  name="email"
                   placeholder="Masukkan username"
                   className="pr-3 pl-12 py-2 w-72 text-black rounded-xl border border-Neutral_90"
-                  onChange={(e) => setValues({...values, email: e.target.value})}
+                  onChange={(e) => setValues({ ...values, email: e.target.value })}
                 />
               </div>
               <div className="relative mb-4 ml-5">
@@ -88,29 +87,24 @@ const UserLogin = () => {
                 <input
                   type="password"
                   id="password"
-                  name='password'
+                  name="password"
                   placeholder="Masukkan kata sandi anda"
                   className="pr-3 pl-12 py-2 w-72 text-black rounded-xl border border-black"
-                  onChange={(e) => setValues({...values, password: e.target.value})}
+                  onChange={(e) => setValues({ ...values, password: e.target.value })}
                 />
               </div>
               <div className="relative mb-4 ml-5">
                 <img src={IconGoogle} alt="" className="absolute ml-3 mt-2" />
-                <button className="pr-3 pl-12 py-2 w-72 text-black rounded-xl border border-black">
-                  Masuk Dengan Google
-                </button>
+                <button className="pr-3 pl-12 py-2 w-72 text-black rounded-xl border border-black">Masuk Dengan Google</button>
               </div>
               <div className="relative ml-5">
-                <button
-                  type="submit"
-                  className="py-2 w-72 text-center text-Neutral_10 rounded-xl bg-primary_70"
-                >
+                <button type="submit" className="py-2 w-72 text-center text-Neutral_10 rounded-xl bg-primary_70">
                   {/* {isLoading ? "Loading..." : "Masuk"} */}Login
                 </button>
               </div>
               <div>
                 <p className="text-center">
-                  Belum punya akun?{" "}
+                  Belum punya akun?{' '}
                   <Link to="/daftar/penyewa">
                     <span className="text-indigo-700">Daftar Sekarang</span>
                   </Link>

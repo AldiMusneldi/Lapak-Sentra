@@ -47,62 +47,13 @@ function App() {
 
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <Layout>
-            <Home katagori={katagori} setKatagori={setKatagori} />
-          </Layout>
-        }
-      />
-      <Route
-        path="/home"
-        element={
-          <Layout1>
-            <Home katagori={katagori} setKatagori={setKatagori} />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/hunian"
-        element={
-          <Layout1>
-            <Hunian />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/fasilitas-rumah"
-        element={
-          <Layout1>
-            <FasilitasRumah />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/tentang-kami"
-        element={
-          <Layout1>
-            <TentangKami />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/hubungi-kami"
-        element={
-          <Layout1>
-            <HubungiKami />
-          </Layout1>
-        }
-      />
-      <Route
-        path="/lihat-semua"
-        element={
-          <Layout1>
-            <Lihatsemua />
-          </Layout1>
-        }
-      />
+      <Route path="/" element={<Home katagori={katagori} setKatagori={setKatagori} />} />
+
+      <Route path="/hunian" element={<Hunian />} />
+      <Route path="/fasilitas-rumah" element={<FasilitasRumah />} />
+      <Route path="/tentang-kami" element={<TentangKami />} />
+      <Route path="/hubungi-kami" element={<HubungiKami />} />
+      <Route path="/lihat-semua" element={<Lihatsemua />} />
       <Route
         path="/detailkos"
         element={
@@ -168,7 +119,7 @@ function App() {
         }
       />
       <Route
-        path="/hunian/account/edit"
+        path="/hunian/account/edit/"
         element={
           <Layout2>
             <EditHunian />

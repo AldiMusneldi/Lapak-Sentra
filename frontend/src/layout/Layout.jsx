@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import menu from '../components/Menu/Menu';
 import { useNavigate } from 'react-router-dom';
@@ -9,8 +8,7 @@ const Layout = (props) => {
   const navigate = useNavigate(menu);
   return (
     <>
-      {/* <Navbar1 /> */}
-      {/* <Navbar navigate={navigate} /> */}
+      <Layout navigate={navigate} />
       <main>{props.children}</main>
       <Footer navigate={navigate} />
     </>

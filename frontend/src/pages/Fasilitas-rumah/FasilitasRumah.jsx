@@ -4,15 +4,43 @@ import FasilitasH from '../../components/Dropdown/FasilitasH';
 import CardSemua from '../../components/Cards/CardSemua';
 import { useDispatch, useSelector } from 'react-redux';
 import { filteredF } from '../../features/katagoriSlice';
+import { useNavigate } from 'react-router-dom';
+import menu from '../../components/Menu/Menu';
+import axios from 'axios';
+import Navbar1 from '../../components/Navbar/Navbar1';
+import Navbar from '../../components/Navbar/Navbar';
+import { updateAuth } from '../../features/loginSlice';
+import Footer from '../../components/Footer/Footer';
 
 function FasilitasRumah() {
   const dispatch = useDispatch();
   const katagoris = useSelector((state) => state.Skatagori.filteredDataF);
+  const auth = useSelector((state) => state.login.auth);
+  const navigate = useNavigate(menu);
   useEffect(() => {
     dispatch(filteredF('fasilitas rumah'));
+    axios.get('http://localhost:8000/api/v1/me').then((res) => {
+      console.log(res.data);
+      if (res.data.login === true) {
+        dispatch(updateAuth(true));
+      } else {
+        dispatch(updateAuth(false));
+      }
+    });
   }, [dispatch]);
+
   return (
     <>
+      {/* validasi sudah login */}
+      {auth ? (
+        <div>
+          <Navbar1 navigate={navigate} />
+        </div>
+      ) : (
+        <div>
+          <Navbar navigate={navigate} />
+        </div>
+      )}
       <section className="pt-[10rem] mb-[2rem] font-worksans" id="fasilitasrumah">
         <div className="container mx-auto">
           <div className="filter mx-auto w-[90%]">
@@ -43,6 +71,7 @@ function FasilitasRumah() {
           </div>
         </div>
       </section>
+      <Footer navigate={navigate} />
     </>
   );
 }

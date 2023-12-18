@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CardSemua = ({ kost }) => {
   const navigate = useNavigate();
@@ -27,12 +27,6 @@ const CardSemua = ({ kost }) => {
                 <span className="text-Eror_70">
                   <i class="fa-solid fa-heart"></i>
                 </span>
-              </div>
-              <div className="bintang flex text-Neutral_70">
-                <span className="text-secondary_70">
-                  <i class="fa-solid fa-star"></i>
-                </span>
-                <p>4.5</p>
               </div>
             </div>
             <div className="katagori flex pt-1 px-2 gap-2 text-sm mb-[0.5rem]">
