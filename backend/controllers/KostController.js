@@ -13,7 +13,8 @@ async function getAllKost(req, res) {
     const [totalPageData] = await query('SELECT COUNT(*) AS count FROM kosts')
     const totalPage = Math.ceil(+totalPageData.count / limit)
     console.log(Math.ceil(+totalPageData.count / limit));
-    res.json({
+    res.status(200).json({
+      status:200,
       data:data,
       pagination:{
         page:+page,
