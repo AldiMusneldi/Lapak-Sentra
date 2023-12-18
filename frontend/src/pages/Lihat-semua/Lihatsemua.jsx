@@ -8,6 +8,7 @@ import menu from '../../components/Menu/Menu';
 import { updateAuth } from '../../features/loginSlice';
 import Navbar1 from '../../components/Navbar/Navbar1';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
 function Lihatsemua() {
   const [nama, setNama] = useState([]);
 
@@ -88,6 +89,7 @@ function Lihatsemua() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
