@@ -105,7 +105,7 @@ const HunianLogin = () => {
               <div>
                 <p className="text-center">
                   Belum punya akun?{' '}
-                  <Link to="/daftar/penyewa">
+                  <Link to="/daftar/hunian">
                     <span className="text-indigo-700">Daftar Sekarang</span>
                   </Link>
                 </p>

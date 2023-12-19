@@ -113,7 +113,7 @@ const UmkmLogin = () => {
                      <div>
                         <p className="text-center">
                            Belum punya akun?{' '}
-                           <Link to="/daftar/penyewa">
+                           <Link to="/daftar/umkm">
                               <span className="text-indigo-700">Daftar Sekarang</span>
                            </Link>
                         </p>
