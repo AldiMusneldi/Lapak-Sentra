@@ -8,6 +8,7 @@ import iconLock from '../../assets/icons/lock.svg';
 import iconUnhide from '../../assets/icons/visibility.svg';
 import IconGoogle from '../../assets/icons/google.svg';
 import axios from 'axios';
+import Swal from "sweetalert2";
 
 const UmkmLogin = () => {
     const [values, setValues] = useState({
@@ -23,14 +24,43 @@ const UmkmLogin = () => {
         axios
           .post('http://localhost:8000/api/v1/login', values)
           .then((res) => {
-            // console.log(res);
-            if (res.data.login === true) {
-              navigate('/umkm/dashboardumkm');
-            } else {
-              alert(res.data.message);
+            if (res.data.role !== 'ownermerchant') {
+                axios.get('http://localhost:8000/api/v1/logout')
+                .then(res => {
+                  if(res.data.Status === "Success"){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal',
+                        text: 'Silahkan login sesuai role anda',
+                      });
+                  }
+                }).catch(err=>console.log(err));
+            } 
+            if(res.data.role === 'ownermerchant'){
+                navigate('/umkm/dashboardumkm');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Berhasil',
+                    text: 'Selamat Anda Berhasil Login',
+                  });
             }
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+             console.log({ errornya: err.message });
+            if(err.response.data.login === false) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: 'Email atau password salah. Silakan coba lagi.',
+                  });
+            }
+            // console.log({ errornya: err.message });
+            // Swal.fire({
+            //   icon: 'error',
+            //   title: 'Error',
+            //   text: err.response.data.message,
+            // });
+          });
       };
    return (
       <>

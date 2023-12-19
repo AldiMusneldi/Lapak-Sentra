@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {useDispatch,useSelector} from 'react-redux';
-import { LoginUser, reset } from '../../features/authSlice';
+import React, { useState } from 'react';
+
 import { Link, useNavigate } from 'react-router-dom';
 import ReactLogo from '../../assets/logo.svg';
 import IconPerson from '../../assets/icons/user.svg';
@@ -8,6 +7,7 @@ import iconLock from '../../assets/icons/lock.svg';
 import iconUnhide from '../../assets/icons/visibility.svg';
 import IconGoogle from '../../assets/icons/google.svg';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const HunianLogin = () => {
     const [values, setValues] = useState({
@@ -23,14 +23,36 @@ const HunianLogin = () => {
         axios
           .post('http://localhost:8000/api/v1/login', values)
           .then((res) => {
-            // console.log(res);
-            if (res.data.login === true) {
-              navigate('/hunian/account');
-            } else {
-              alert(res.data.message);
+            if (res.data.role !== 'ownerkost') {
+                axios.get('http://localhost:8000/api/v1/logout')
+                .then(res => {
+                  if(res.data.Status === "Success"){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal',
+                        text: 'Silahkan login sesuai role anda',
+                      });
+                  }
+                }).catch(err=>console.log(err));
+            }else{
+                navigate('/hunian/account');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Berhasil',
+                    text: 'Selamat Anda Berhasil Login',
+                  });
             }
           })
-          .catch((err) => console.log(err));
+          .catch((err) =>{
+            console.log({ errornya: err.message });
+            if(err.response.data.login === false) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: 'Email atau password salah. Silakan coba lagi.',
+                  });
+            }
+          });
       };
     return (
     <>

@@ -78,7 +78,7 @@ async function register(req, res) {
           const name = user[0].name;
           const token = jwt.sign({ id,name }, "secretKey", { expiresIn: 3000 })
           res.cookie('token', token);
-          return res.json({ login: true, token, user });
+          return res.json({ login: true, token, user, role: user[0].role });
         } else {
           return res.status(401).json({ login: false, message: 'Email atau password salah' });
         }
