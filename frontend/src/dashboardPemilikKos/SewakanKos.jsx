@@ -176,10 +176,10 @@ const SewakanKos = () => {
                   </div>
                 </div>
               </div>
-              <div className="mb-3">
+              {/* <div className="mb-3">
                 <h1>Fasilitas Lainnya</h1>
                 <input type="text" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" />
-              </div>
+              </div> */}
               <div className="mb-3">
                 <h1>Tempat Terdekat</h1>
                 <div className="flex mb-3">
@@ -218,10 +218,10 @@ const SewakanKos = () => {
                   <p className="pl-3">Tempat Makan</p>
                 </div>
               </div>
-              <div className="mb-3">
+              {/* <div className="mb-3">
                 <h1>Tempat Terdekat Lainnya</h1>
                 <input type="text" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" />
-              </div>
+              </div> */}
               <Link to="/hunian/dashboardhunian">
                 <button className="px-4 py-2 bg-primary_70 text-white rounded">Daftarkan Kost Anda sekarang</button>
               </Link>
