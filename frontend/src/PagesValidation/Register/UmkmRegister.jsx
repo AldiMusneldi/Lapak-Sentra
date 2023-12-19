@@ -24,7 +24,7 @@ function UmkmRegister() {
          .then(
             (res) => {
                console.log(res);
-               navigate('/umkm/dashboardumkm');
+               navigate('/masuk/umkm');
             },
 
             (req) => {

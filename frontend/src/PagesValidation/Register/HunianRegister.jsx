@@ -21,7 +21,7 @@ function HunianRegister() {
     axios.post('http://localhost:8000/api/v1/register', values)
     .then(res => { 
       console.log(res);
-      navigate('/hunian/account');
+      navigate('/masuk/hunian');
     },
     
       req => {
