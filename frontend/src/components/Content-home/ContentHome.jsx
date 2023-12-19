@@ -1,5 +1,5 @@
 import RowRight from '../../assets/icons/row_Right.svg';
-
+import { Tabs, TabList, Tab, TabIndicator } from '@chakra-ui/react';
 import Cards from '../Cards/Cards';
 import SemDat from '../../data/DataBaru';
 import { Link, NavLink } from 'react-router-dom';
@@ -34,24 +34,37 @@ const ContentHome = ({ katagori, setKatagori }) => {
           </div>
           <div className="content-menu font-Poppins font-medium text-2xl mb-[1rem]">
             <div className=" ">
-              <ul className="menu-cont border-b-2 border-Neutral_30 justify-between flex">
-                <li className="border-b-4 border-primary_70  p-2 ">
-                  <button onClick={() => filtered()}>Semua Katagori</button>
-                </li>
-                <li className=" p-2 ">
-                  <NavLink onClick={() => filtered('kost')} className={({ isActive, isPending }) => (isPending ? 'pending' : isActive ? 'active' : '')}>
-                    Kost
-                  </NavLink>
-                </li>
-                <li className=" p-2">
-                  <NavLink onClick={() => filtered('kontrakan')}>Kontrakan</NavLink>
-                </li>
-                <li className=" p-2">
-                  <NavLink onClick={() => filtered('fasilitas rumah')}>Fasilitas rumah</NavLink>
-                </li>
-                <li className=" p-2">
-                  <NavLink onClick={() => filtered()}>Kerjasama Mitra</NavLink>
-                </li>
+              <ul className="menu-cont justify-between flex">
+                <Tabs width="100%">
+                  <TabList justifyContent="space-between">
+                    <Tab _selected={{ color: '#695cff' }}>
+                      <button className="text-2xl" onClick={() => filtered()}>
+                        Semua Katagori
+                      </button>
+                    </Tab>
+                    <Tab _selected={{ color: '#695cff' }}>
+                      <NavLink className="text-2xl" onClick={() => filtered('kost')}>
+                        Kost
+                      </NavLink>
+                    </Tab>
+                    <Tab _selected={{ color: '#695cff' }}>
+                      <NavLink className="text-2xl" onClick={() => filtered('kontrakan')}>
+                        Kontrakan
+                      </NavLink>
+                    </Tab>
+                    <Tab _selected={{ color: '#695cff' }}>
+                      <NavLink className="text-2xl" onClick={() => filtered('fasilitas rumah')}>
+                        Fasilitas rumah
+                      </NavLink>
+                    </Tab>
+                    <Tab _selected={{ color: '#695cff' }}>
+                      <NavLink className="text-2xl" onClick={() => filtered()}>
+                        Kerjasama Mitra
+                      </NavLink>
+                    </Tab>
+                  </TabList>
+                  <TabIndicator mt="-1.5px" height="3px" bg="#695cff" borderRadius="1px" />
+                </Tabs>
               </ul>
             </div>
           </div>

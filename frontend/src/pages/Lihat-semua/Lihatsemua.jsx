@@ -8,6 +8,8 @@ import menu from '../../components/Menu/Menu';
 import { updateAuth } from '../../features/loginSlice';
 import Navbar1 from '../../components/Navbar/Navbar1';
 import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
+import { Tabs, TabList, Tab, TabIndicator } from '@chakra-ui/react';
 function Lihatsemua() {
   const [nama, setNama] = useState([]);
 
@@ -61,22 +63,37 @@ function Lihatsemua() {
             </div>
             <div className="content-menu font-Poppins font-medium text-2xl mb-[1rem]">
               <div className=" ">
-                <ul className="menu-cont border-b-2 border-Neutral_30 justify-between flex">
-                  <li onClick={() => aktive('1')} className={`p-2 ${isActive === '1' ? 'border-b-4 border-primary_70 text-primary_70' : ''}`}>
-                    <button onClick={() => dispatch(lihatS({ katagoris }))}>Semua Katagori</button>
-                  </li>
-                  <li onClick={() => aktive('2')} className={`p-2 ${isActive === '2' ? 'border-b-4 border-primary_70 text-primary_70' : ''}`}>
-                    <button onClick={() => dispatch(lihatS({ katagoriFilter: 'kost' }))}>Kost</button>
-                  </li>
-                  <li onClick={() => aktive('3')} className={`p-2 ${isActive === '3' ? 'border-b-4 border-primary_70 text-primary_70' : ''}`}>
-                    <button onClick={() => dispatch(lihatS({ katagoriFilter: 'kontrakan' }))}>Kontrakan</button>
-                  </li>
-                  <li onClick={() => aktive('4')} className={`p-2 ${isActive === '4' ? 'border-b-4 border-primary_70 text-primary_70' : ''}`}>
-                    <button onClick={() => dispatch(lihatS({ katagoriFilter: 'fasilitas rumah' }))}>Fasilitas rumah</button>
-                  </li>
-                  <li className=" p-2">
-                    <button onClick={() => lihatS()}>Kerjasama Mitra</button>
-                  </li>
+                <ul className="menu-cont justify-between flex">
+                  <Tabs width="100%">
+                    <TabList justifyContent="space-between">
+                      <Tab _selected={{ color: '#695cff' }}>
+                        <button className="text-2xl" onClick={() => dispatch(lihatS({ katagoris }))}>
+                          Semua Katagori
+                        </button>
+                      </Tab>
+                      <Tab _selected={{ color: '#695cff' }}>
+                        <button className="text-2xl" onClick={() => dispatch(lihatS({ katagoriFilter: 'kost' }))}>
+                          Kost
+                        </button>
+                      </Tab>
+                      <Tab _selected={{ color: '#695cff' }}>
+                        <button className="text-2xl" onClick={() => dispatch(lihatS({ katagoriFilter: 'kontrakan' }))}>
+                          Kontrakan
+                        </button>
+                      </Tab>
+                      <Tab _selected={{ color: '#695cff' }}>
+                        <button className="text-2xl" onClick={() => dispatch(lihatS({ katagoriFilter: 'fasilitas rumah' }))}>
+                          Fasilitas rumah
+                        </button>
+                      </Tab>
+                      <Tab _selected={{ color: '#695cff' }}>
+                        <button className="text-2xl" onClick={() => lihatS()}>
+                          Kerjasama Mitra
+                        </button>
+                      </Tab>
+                    </TabList>
+                    <TabIndicator mt="-1.5px" height="3px" bg="#695cff" borderRadius="1px" />
+                  </Tabs>
                 </ul>
               </div>
             </div>
@@ -88,6 +105,7 @@ function Lihatsemua() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
