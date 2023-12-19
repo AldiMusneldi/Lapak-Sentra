@@ -44,7 +44,7 @@ function UserRegister() {
                {/* <input type="text" id="role" name="role" className="h-10 pl-4 border w-full border-black rounded-md" placeholder="Masukkan Nama Lengkap Anda" value={'ownerkost'} hidden /> */}
                   <div className="w-96 p-6 ml-52 mt-16 shadow-lg flex flex-col bg-white rounded-md">
                      <div>
-                        <h1 className="font-bold text-2xl">Daftar Akun Pemilik Hunian</h1>
+                        <h1 className="font-bold text-2xl">Daftar Akun Penyewa</h1>
                         <label for="username" className="block text-base mb-2">
                            Nama Lengkap
                         </label>
