@@ -11,12 +11,6 @@ const Hunian = ({ onOpen, favor }) => {
                 <span className="text-black text-sm">
                   <i class="fa-regular fa-heart"></i>
                 </span>
-              <div className="bintang flex text-Neutral_70">
-                <span className="text-secondary_70 text-sm">
-                  <i class="fa-solid fa-star"></i>
-                </span>
-                <p className="text-sm">4.5</p>
-              </div>
             </div>
             <div className="katagori flex pt-1 gap-2 text-sm mb-[0.5rem]">
               <div className="border border-Neutral_90 basis-[22%] text-center p-1 rounded-lg">

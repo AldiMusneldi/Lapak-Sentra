@@ -23,7 +23,7 @@ function HunianRegister() {
       .then(
         (res) => {
           console.log(res);
-          navigate('/hunian/account');
+          navigate('/masuk/hunian');
         },
 
         (req) => {
