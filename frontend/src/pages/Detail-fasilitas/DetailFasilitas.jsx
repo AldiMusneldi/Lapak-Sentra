@@ -4,7 +4,7 @@ import gambar2 from '../../assets/gambar-barang/ricecooker2.svg';
 import gambar3 from '../../assets/gambar-barang/ricecooker3.svg';
 import gambar4 from '../../assets/gambar-barang/ricecooker4.svg';
 import gambarPemilik from '../../assets/icons/logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function DetailFasilitas() {
   const kota = [
@@ -29,6 +29,10 @@ function DetailFasilitas() {
       nama: 'Jakarta Timur',
     },
   ];
+  const navigate = useNavigate();
+  function buatPesanan(pesan) {
+    navigate(pesan);
+  }
   const [kot, setKot] = useState('');
   const [angka, setAngka] = useState(0);
   const TambahAngka = () => {
@@ -203,15 +207,6 @@ function DetailFasilitas() {
                         </div>
                       </div>
                       <div className=" flex items-center  justify-between gap-6 w-[60%]  ">
-                        <li className="list-none ">Metode Pembayaran</li>
-                        <div className="flex gap-2 items-center text-primary_70">
-                          <p>Pilih</p>
-                          <Link to="">
-                            <i class="fa-solid fa-chevron-right"></i>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className=" flex items-center  justify-between gap-6 w-[60%]  ">
                         <Link to="/keranjang" className="p-2 flex items-center gap-2 border border-primary_70 text-primary_70 rounded-md">
                           <span>
                             <i class="fa-solid fa-cart-plus"></i>
@@ -219,7 +214,7 @@ function DetailFasilitas() {
                           <p>Masukan Keranjang</p>
                         </Link>
                         <div className="p-2 flex items-center bg-primary_70 text-Neutral_10 rounded-md">
-                          <p>Buat Pesanan</p>
+                          <button onClick={() => buatPesanan('/pemesanan')}>Buat Pesanan</button>
                         </div>
                       </div>
                     </div>

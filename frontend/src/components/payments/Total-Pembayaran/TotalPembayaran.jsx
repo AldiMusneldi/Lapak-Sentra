@@ -1,6 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const TotalPembayaran = () => {
+  const navigate = useNavigate();
+  const pesan = (pesan) => {
+    navigate(pesan);
+  };
   return (
     <>
       <div className="total p-2 border border-Neutral_70 rounded-md">
@@ -40,7 +45,9 @@ const TotalPembayaran = () => {
             </p>
           </div>
           <div className="">
-            <button className="p-2 bg-primary_70 text-Neutral_10 text-lg font-semibold rounded-md">Pesan Sekarang</button>
+            <button onClick={() => pesan('/pembayaran')} className="p-2 bg-primary_70 text-Neutral_10 text-lg font-semibold rounded-md">
+              Pesan Sekarang
+            </button>
           </div>
         </div>
       </div>
