@@ -81,20 +81,22 @@ const SewakanKos = () => {
                 <h1 className="pb-2">Deskripsi</h1>
                 <textarea type="text" className="border border-black rounded-sm pl-2 h-28 w-full mb-4" />
               </div>
-              <div className="">
+              <div className="my-5">
                 <h1>Unggah Foto</h1>
-                <div className="flex mt-4">
-                  <p className="pl-12">Foto Utama</p>
-                  <div className="pl-16">
-                    <UploadImage />
+                <div className=" gap-20 flex mt-4">
+                  <p className="">Foto Utama</p>
+                  <div className="">
+                    <input type="file" />
                   </div>
                 </div>
-                <div className="flex mt-3">
-                  <p className="pl-12">Foto Tambahan</p>
-                  <div className="flex pl-10">
-                    <UploadImage />
-                    <div className="pl-3">
-                      <UploadImage />
+                <div className="flex mt-3 ">
+                  <div className="basis-[70%] ">
+                    <p>Foto Tambahan</p>
+                  </div>
+                  <div className="flex basis-[40%]  ">
+                    <input type="file" />
+                    <div className="">
+                      <input type="file" />
                     </div>
                   </div>
                 </div>

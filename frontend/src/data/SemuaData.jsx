@@ -259,7 +259,7 @@ const SemuaData = [
     favoritf: true,
     kecamatan: 'Kecamatan Lewiliang',
     gambar: ricecooker,
-    harga: 'Rp439.000',
+    harga: 'Rp254.900',
     satuan: 'pcs',
   },
   {

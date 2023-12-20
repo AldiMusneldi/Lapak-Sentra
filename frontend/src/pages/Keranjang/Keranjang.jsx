@@ -1,20 +1,48 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BsArrowLeft } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
 import { Checkbox } from '@chakra-ui/react';
 import gambarBarang from '../../assets/gambar-barang/ricecooker2.svg';
+import Footer from '../../components/Footer/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import menu from '../../components/Menu/Menu';
+import axios from 'axios';
+import Navbar1 from '../../components/Navbar/Navbar1';
+import Navbar from '../../components/Navbar/Navbar';
 
 function Keranjang() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(menu);
   function Back(b) {
     navigate(b);
   }
+  const auth = useSelector((state) => state.login.auth);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/v1/me').then((res) => {
+      console.log(res.data);
+      if (res.data.login === true) {
+        dispatch(updateAuth(true));
+      } else {
+        dispatch(updateAuth(false));
+      }
+    });
+  });
   return (
     <>
+      {/* validasi sudah login */}
+      {auth ? (
+        <div>
+          <Navbar1 navigate={navigate} />
+        </div>
+      ) : (
+        <div>
+          <Navbar navigate={navigate} />
+        </div>
+      )}
       <section id="keranjang" className="pt-[10rem] font-worksans text-Neutral_70">
         <div className="container mx-auto">
           {/* kembali */}
-          <Link to={`/home`} onClick={() => Back('/home')} className="flex items-center gap-2 text-2xl">
+          <Link to={`/`} onClick={() => Back('/')} className="flex items-center gap-2 text-2xl">
             <span className="">
               <BsArrowLeft />
             </span>
@@ -62,12 +90,15 @@ function Keranjang() {
               <div className="total flex items-center gap-2">
                 <p>Total (0 Produk):</p>
                 <h2 className="text-2xl text-Eror_70">Rp 0</h2>
-                <button className="p-2 text-Neutral_10 font-medium rounded-md bg-primary_70">Cekout</button>
+                <Link to="/pemesanan" className="p-2 text-Neutral_10 font-medium rounded-md bg-primary_70">
+                  Cekout
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

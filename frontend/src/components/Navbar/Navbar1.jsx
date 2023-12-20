@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import menu from '../Menu/Menu';
 import Search from '../Search/Search';
 import MenuProfile from '../Dropdown/MenuProfile';
-
-const Navbar1 = ({ navigate }) => {
+import { BsCart2 } from 'react-icons/bs';
+const Navbar1 = ({ navigate, cartCount }) => {
   useEffect(() => {
     window.onscroll = function () {
       const header = document.querySelector('header');
@@ -48,9 +48,10 @@ const Navbar1 = ({ navigate }) => {
               })}
             </ul>
           </div>
-          <div className="nav-profile basis-[10%] flex justify-center items-center ">
-            <Link to="/keranjang" className="text-xl font-bold flex justify-center basis-[50%]">
-              <i class="fa-solid fa-cart-shopping"></i>
+          <div className="nav-profile basis-[10%] gap-3 flex justify-center items-center ">
+            <Link to="/keranjang" className="text-2xl text-Neutral_70 p-1 relative font-bold flex justify-center w-[35%]">
+              <BsCart2 />
+              {cartCount?.length ? <div className="absolute top-0 right-0 text-xs w-4 h-4 justify-center items-center flex rounded-full bg-red-400 px-1 text-Neutral_10">1</div> : <></>}
             </Link>
             <span className="basis-[40%] z-10">
               <MenuProfile navigate={navigate} />

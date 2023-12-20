@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CardSemua from '../../components/Cards/CardSemua';
 import { useDispatch, useSelector } from 'react-redux';
-import { lihatS } from '../../features/katagoriSlice';
+import { getHunian, lihatS, updateHunian } from '../../features/katagoriSlice';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import menu from '../../components/Menu/Menu';
@@ -22,22 +22,24 @@ function Lihatsemua() {
   const dispatch = useDispatch();
   const navigate = useNavigate(menu);
   const katagoris = useSelector((state) => state.Skatagori.lihatSemua);
+  const datahunian = useSelector((state) => state.Skatagori.dataHunian);
+  console.log(datahunian.pagination);
   const auth = useSelector((state) => state.login.auth);
   useEffect(() => {
+    dispatch(getHunian());
     api();
     login();
     dispatch(lihatS({ katagoriFilter: '' }));
   }, [dispatch]);
 
   const api = async () => {
-    const response = await axios.get('http://localhost:8000/api/v1/kost');
-    setNama(response);
+    const response = await axios.get('http://localhost:8000/api/v1/kost?page=2&limit=8');
+    setNama(response.data);
   };
   const login = async () => {
-    const response = await axios.get('http://localhost:8000/api/v1/me').then((res) => {
-      console.log(res.data);
+    await axios.get('http://localhost:8000/api/v1/me').then((res) => {
       if (res.data.login === true) {
-        dispatch(updateAuth(response));
+        dispatch(updateAuth(true));
       } else {
         dispatch(updateAuth(false));
       }
