@@ -157,27 +157,26 @@ const PesananSaya = () => {
                     </TabPanel>
                     <TabPanel>
                       <div>
-                        Detail Pembayaran
+                        <p className="px-3 py-2 text-lg">Detail Pembayaran</p>
                         <div className="border border-black rounded-md">
                           <div className="px-2 border border-black rounded-md">
                             <div className="flex">
-                              <p>
-                                Nama Pembeli : <span>Aldi Musneldi</span>{" "}
+                              <p className="font-bold">
+                                Nama Pembeli : <span className="font-normal">Aldi Musneldi</span>{" "}
                               </p>
-                              <p className="flex justify-end ml-auto">
-                                Nama Penjual :{" "}
-                                <span>Megah Jaya Elektronik</span>
+                              <p className="flex justify-end ml-auto font-bold">
+                                Nama Penjual : <span className="font-normal">Megah Jaya Elektronik</span>
                               </p>
                             </div>
-                            <p>
+                            <p className="font-bold">
                               Alamat Pembeli :{" "}
-                              <span>
+                              <span className="font-normal">
                                 Jl.Mangga Besar, Pondok Mangga, Jakarta Timur,
                                 DKI JAKARTA, INDONESIA
                               </span>{" "}
                             </p>
-                            <p>
-                              No. Handphone Pembeli : <span>6285151515151</span>{" "}
+                            <p className="font-bold">
+                              No. Handphone Pembeli : <span className="font-normal">6285151515151</span>{" "}
                             </p>
                           </div>
                           <div className="flex px-2">
@@ -198,8 +197,101 @@ const PesananSaya = () => {
                               <p>LS Yes</p>
                             </div>
                           </div>
-                          <div>
-                            <p>Rincian Pesanan  (1 Produk)</p>
+                          <div className="font-bold px-2 pt-8">
+                            <p>Rincian Pesanan (1 Produk)</p>
+                          </div>
+                          <div className="flex ">
+                            <div className="px-2">
+                              <p>No</p>
+                            </div>
+                            <div className="px-8">
+                              <p>Produk</p>
+                            </div>
+                            <div className="px-10">
+                              <p>Variasi</p>
+                            </div>
+                            <div className="px-20">
+                              <p>Harga Barang</p>
+                            </div>
+                            <div className="">
+                              <p>Kuantitas</p>
+                            </div>
+                            <div className="px-16">
+                              <p>Subtotal</p>
+                            </div>
+                          </div>
+                          <hr
+                            className=""
+                            style={{
+                              borderTop: "1px solid grey",
+                              display: "block",
+                              width: "100%",
+                            }}
+                          />
+                          <div className="flex text-gray-400">
+                            <div className="px-2">
+                              <p>1.</p>
+                            </div>
+                            <div className="px-10">
+                              <p>Rice Cooker</p>
+                            </div>
+                            <div className="">
+                              <p>KSN-18 MG Merah</p>
+                            </div>
+                            <div className="px-8">
+                              <p>Rp254.900</p>
+                            </div>
+                            <div className="px-24">
+                              <p>1</p>
+                            </div>
+                            <div>
+                              <p>Rp254.900</p>
+                            </div>
+                          </div>
+                          <hr
+                            className=""
+                            style={{
+                              borderTop: "1px solid grey",
+                              display: "block",
+                              width: "100%",
+                            }}
+                          />
+                          <div className="mb-8"></div>
+                          <hr
+                            className=""
+                            style={{
+                              borderTop: "1px solid grey",
+                              display: "block",
+                              width: "100%",
+                            }}
+                          />
+                          <div className="flex justify-end text-2xl font-bold">
+                            <h1 className="px-[84px]">Subtotal</h1>
+                            <h1 className="px-4">Rp254.900</h1>
+                          </div>
+                          <div className="flex justify-end text-2xl font-bold">
+                            <h1 className="px-8">Total Kuantitas</h1>
+                            <h1 className="px-4">1 Barang</h1>
+                          </div>
+                          <div className="flex justify-end py-4 px-5">
+                            <div className="flex border border-gray-500 rounded-md text-lg">
+                              <div className="px-2 pr-24 py-2">
+                                <p>Subtotal Barang</p>
+                                <p>Total Proteksi Barang</p>
+                                <p>Total Ongkos Kirim </p>
+                                <p>Biaya Layanan</p>
+                                <p>Total Penanganan</p>
+                                <p>Total Pembayaran</p>
+                              </div>
+                              <div className="flex-col px-6 py-2">
+                                <p>Rp254.900</p>
+                                <p>Rp18.000</p>
+                                <p>Rp16.000</p>
+                                <p>Rp1000</p>
+                                <p>Rp28.890</p>
+                                <p className="text-2xl text-red-500">Rp318.790</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
