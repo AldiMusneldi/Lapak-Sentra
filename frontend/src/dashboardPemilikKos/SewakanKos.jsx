@@ -85,6 +85,11 @@ const SewakanKos = () => {
          .catch((err) => console.log(err));
       console.log(e);
    };
+   const [file, setFile] = useState();
+    function handleChangeImage(e) {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
    return (
       <>
          <div className="flex container ml-24">
@@ -100,7 +105,8 @@ const SewakanKos = () => {
                   <div className="border border-gray-300 px-4 py-5 pr-24 mt-3 mb-4">
                      <h1 className="mb-6 text-xl font-bold">Tambah Data Hunian</h1>
                      <form onSubmit={handleSubmit}>
-                        <input type="file" name='images'/>
+                        <input type="file" name='images'onChange={handleChangeImage}/>
+                        <img src="{file}" />
                         <div className="mb-3">
                            <h1 className="pb-2">Nama Hunian</h1>
                            <input type="text" name="name" className="border border-black rounded-sm pl-2 h-10 w-full mb-4" onChange={(e) => setValues({ ...values, name: e.target.value })}/>

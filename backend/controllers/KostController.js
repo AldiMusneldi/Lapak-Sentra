@@ -56,6 +56,7 @@ async function getKostMe(req, res) {
 }
 
 async function createKost(req, res) {
+  console.log(req.body, req.files);
   try {
     upload.array('images')(req, res, async function (err) {
       if (err) {
