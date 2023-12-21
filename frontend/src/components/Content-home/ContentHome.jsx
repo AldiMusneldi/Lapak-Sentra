@@ -4,7 +4,8 @@ import Cards from '../Cards/Cards';
 import SemDat from '../../data/DataBaru';
 import { Link, NavLink } from 'react-router-dom';
 
-const ContentHome = ({ katagori, setKatagori }) => {
+const ContentHome = ({ katagori, setKatagori, products, addtocart }) => {
+  // console.log(products);
   function filtered(KatagoriFilter) {
     const filteredData = KatagoriFilter ? SemDat.filter((kat) => kat.katagori === KatagoriFilter) : SemDat;
     setKatagori(filteredData);

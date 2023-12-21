@@ -40,7 +40,6 @@ function HubungiKami() {
   const dispatch = useDispatch();
   useEffect(() => {
     axios.get('http://localhost:8000/api/v1/me').then((res) => {
-      console.log(res.data);
       if (res.data.login === true) {
         dispatch(updateAuth(true));
       } else {

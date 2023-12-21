@@ -27,56 +27,54 @@ import UploadImage from '../components/UMKM/Upload-image/UploadImage';
 import axios from 'axios';
 
 const SewakanKos = () => {
-   const navigate = useNavigate();
-   const [checkedValuesFacility, setValueFacility] = useState([]);
-   const handleChangeFacility = (event)=>{
-      const {value, checked} = event.target
-      if(checked){
-         setValueFacility(pre=> [...pre,value])
-      }else{
-         setValueFacility(pre=>{
-            return [...pre.filter(facility => facility !== value)]
-         })
-      }  
-   }
-   console.log(checkedValuesFacility);
+  const navigate = useNavigate();
+  const [checkedValuesFacility, setValueFacility] = useState([]);
+  const handleChangeFacility = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setValueFacility((pre) => [...pre, value]);
+    } else {
+      setValueFacility((pre) => {
+        return [...pre.filter((facility) => facility !== value)];
+      });
+    }
+  };
+  console.log(checkedValuesFacility);
 
-   const [checkedValuesPlace, setValuePlace] = useState([]);
-   const handleChangePlace = (event)=>{
-      const {value, checked} = event.target
-      if(checked){
-         setValuePlace(pre=> [...pre,value])
-      }else{
-         setValuePlace(pre=>{
-            return [...pre.filter(place => place !== value)]
-         })
-      }  
-   }
-   console.log(checkedValuesPlace);
+  const [checkedValuesPlace, setValuePlace] = useState([]);
+  const handleChangePlace = (event) => {
+    const { value, checked } = event.target;
+    if (checked) {
+      setValuePlace((pre) => [...pre, value]);
+    } else {
+      setValuePlace((pre) => {
+        return [...pre.filter((place) => place !== value)];
+      });
+    }
+  };
+  console.log(checkedValuesPlace);
 
-   const [values, setValues] = useState({
-      
-      name: '',
-      price: '',
-      type_kost: '',
-      category_kost: '',
-      address: '',
-      land_size: '',
-      city: '',
-      facility: checkedValuesFacility,
-      nearest_place: checkedValuesPlace,
-      description: '',
-      
-   });
-   const handleSubmit = (e) => {
-      e.preventDefault();
-      axios
-         .post('http://localhost:8000/api/v1/kost', values)
-         .then(
-            (res) => {
-               console.log(res);
-               navigate('/hunian/dashboardhunian');
-            },
+  const [values, setValues] = useState({
+    name: '',
+    price: '',
+    type_kost: '',
+    category_kost: '',
+    address: '',
+    land_size: '',
+    city: '',
+    facility: checkedValuesFacility,
+    nearest_place: checkedValuesPlace,
+    description: '',
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post('http://localhost:8000/api/v1/kost', values)
+      .then(
+        (res) => {
+          console.log(res);
+          navigate('/hunian/dashboardhunian');
+        },
 
             (req) => {
                console.log(req);
@@ -317,11 +315,163 @@ const SewakanKos = () => {
                         {/* </Link> */}
                      </form>
                   </div>
-               </div>
+                  <div className="flex mt-3">
+                    <p className="pl-12">Foto Tambahan</p>
+                    <div className="flex pl-10">
+                      <UploadImage />
+                      <div className="pl-3">
+                        <UploadImage />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex mb-3">
+                  <h1>Fasilitas</h1>
+                  <div className="mt-10 -ml-12">
+                    <div className="flex mb-3">
+                      <input type="checkbox" id="wifi" value="wifi " onChange={handleChangeFacility} />
+                      <label htmlFor="wifi" className="flex">
+                        <img src={iconWifi} className="pl-3" />
+                        <p className="pl-3">Wifi</p>
+                      </label>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="ac" value={'ac'} onChange={handleChangeFacility} />
+                      <label htmlFor="ac" className="flex">
+                        <img src={iconAC} className="pl-3" />
+                        <p className="pl-3">AC</p>
+                      </label>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="tv" value="tv " onChange={handleChangeFacility} />
+                      <label htmlFor="tv" className="flex">
+                        <img src={iconTV} className="pl-3" />
+                        <p className="pl-3">TV</p>
+                      </label>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="kulkas" value="kulkas " onChange={handleChangeFacility} />
+                      <label htmlFor="kulkas" className="flex">
+                        <img src={iconKulkas} className="pl-3" />
+                        <p className="pl-3">Kulkas</p>
+                      </label>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="" value="kipas " onChange={handleChangeFacility} />
+                      <img src={iconKipas} className="pl-3" />
+                      <p className="pl-3">Kipas Angin</p>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="" value="meja " onChange={handleChangeFacility} />
+                      <img src={iconMeja} className="pl-3" />
+                      <p className="pl-3">Meja</p>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="" value="kursi " onChange={handleChangeFacility} />
+                      <img src={iconKursi} className="pl-3" />
+                      <p className="pl-3">Kursi</p>
+                    </div>
+                  </div>
+                  <div className="mt-10 ml-10">
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="" value="kompor " onChange={handleChangeFacility} />
+                      <img src={iconKompor} className="pl-3" />
+                      <p className="pl-3">Kompor</p>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="" value="lemari " onChange={handleChangeFacility} />
+                      <img src={iconLemari} className="pl-3" />
+                      <p className="pl-3">Lemari</p>
+                    </div>
+                    <div className="flex mb-4">
+                      <input type="checkbox" name="" id="" value="tidur " onChange={handleChangeFacility} />
+                      <img src={iconTidur} className="pl-3" />
+                      <p className="pl-3">Tempat Tidur</p>
+                    </div>
+                    <div className="flex mb-4">
+                      <input type="checkbox" name="" id="" value="mandi " onChange={handleChangeFacility} />
+                      <img src={iconMandi} className="pl-3" />
+                      <p className="pl-3">Kamar Mandi</p>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="" value="motor " onChange={handleChangeFacility} />
+                      <img src={iconMotor} className="pl-3" />
+                      <p className="pl-3">Parkiran Motor</p>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="" value="mobil " onChange={handleChangeFacility} />
+                      <img src={iconMobil} className="pl-3" />
+                      <p className="pl-3">Parkiran Mobil</p>
+                    </div>
+                    <div className="flex mb-3">
+                      <input type="checkbox" name="" id="" value="listrik " onChange={handleChangeFacility} />
+                      <img src={iconListrik} className="pl-3" />
+                      <p className="pl-3">Listrik</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mb-3">
+                  <h1>Tempat Terdekat</h1>
+                  <div className="flex mb-3">
+                    <input type="checkbox" name="" id="masjid" value="masjid" onChange={handleChangePlace} />
+                    <label htmlFor="masjid" className="flex">
+                      <img src={iconMasjid} className="pl-3" />
+                      <p className="pl-3">Masjid</p>
+                    </label>
+                  </div>
+                  <div className="flex mb-3">
+                    <input type="checkbox" name="" id="univ" value="univ" onChange={handleChangePlace} />
+                    <label htmlFor="univ" className="flex">
+                      <img src={iconUniv} className="pl-3" />
+                      <p className="pl-3">Universitas</p>
+                    </label>
+                  </div>
+                  <div className="flex mb-3">
+                    <input type="checkbox" name="" id="halte" value="halte" onChange={handleChangePlace} />
+                    <label htmlFor="halte" className="flex">
+                      <img src={iconHalte} className="pl-3" />
+                      <p className="pl-3">Halte</p>
+                    </label>
+                  </div>
+                  <div className="flex mb-3">
+                    <input type="checkbox" name="" id="statiun" value="statiun" onChange={handleChangePlace} />
+                    <label htmlFor="statiun" className="flex">
+                      <img src={iconStasiun} className="pl-3" />
+                      <p className="pl-3">Stasiun</p>
+                    </label>
+                  </div>
+                  <div className="flex mb-3">
+                    <input type="checkbox" name="" id="supermarket" value="supermarket" onChange={handleChangePlace} />
+                    <label htmlFor="supermarket" className="flex">
+                      <img src={iconSupermarket} className="pl-3" />
+                      <p className="pl-3">Supermarket</p>
+                    </label>
+                  </div>
+                  <div className="flex mb-3">
+                    <input type="checkbox" name="" id="rumahsakit" value="rumahsakit" onChange={handleChangePlace} />
+                    <label htmlFor="rumahsakit" className="flex">
+                      <img src={iconRumahsakit} className="pl-3" />
+                      <p className="pl-3">Rumah Sakit</p>
+                    </label>
+                  </div>
+                  <div className="flex mb-3">
+                    <input type="checkbox" name="" id="tempatmakan" value="tempatmakan" onChange={handleChangePlace} />
+                    <label htmlFor="tempatmakan" className="flex">
+                      <img src={iconTempatmakan} className="pl-3" />
+                      <p className="pl-3">Tempat Makan</p>
+                    </label>
+                  </div>
+                </div>
+                {/* <Link to="/hunian/dashboardhunian"> */}
+                <button className="px-4 py-2 bg-primary_70 text-white rounded">Daftarkan Kost Anda sekarang</button>
+                {/* </Link> */}
+              </form>
             </div>
-         </div>
-      </>
-   );
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default SewakanKos;

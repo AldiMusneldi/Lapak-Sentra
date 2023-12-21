@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { LoginUser, reset } from '../../features/authSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import ReactLogo from '../../assets/logo.svg';
 import IconPerson from '../../assets/icons/user.svg';
@@ -7,9 +8,29 @@ import iconLock from '../../assets/icons/lock.svg';
 import iconUnhide from '../../assets/icons/visibility.svg';
 import IconGoogle from '../../assets/icons/google.svg';
 import axios from 'axios';
-import Swal from 'sweetalert2';
 
 const UserLogin = () => {
+  // const [email, setEmail] = useState("");
+
+  // const [password, setPassword] = useState("");
+  // // const dispatch = useDispatch();
+  // // const navigate = useNavigate();
+  // const { user, isError, isSuccess, isLoading, message } = useSelector(
+  //   (state) => state.auth
+  // );
+
+  // useEffect(() => {
+  //   if (user || isSuccess) {
+  //     navigate("/");
+  //   }
+  //   dispatch(reset());
+  // }, [user, isSuccess, dispatch, navigate]);
+
+  // const Auth = (e) => {
+  //   e.preventDefault();
+  //   dispatch(LoginUser({ email, password }));
+  // };
+
   const [values, setValues] = useState({
     email: '',
     password: '',
@@ -23,25 +44,12 @@ const UserLogin = () => {
     axios
       .post('http://localhost:8000/api/v1/login', values)
       .then((res) => {
-        if (res.data.role !== 'userkost') {
-          axios.get('http://localhost:8000/api/v1/logout')
-          .then(res => {
-            if(res.data.Status === "Success"){
-              Swal.fire({
-                  icon: 'error',
-                  title: 'Gagal',
-                  text: 'Silahkan login sesuai role anda',
-                });
-            }
-          }).catch(err=>console.log(err));
-      }else{
+        // console.log(res);
+        if (res.data.login === true) {
           navigate('/');
-          Swal.fire({
-              icon: 'success',
-              title: 'Berhasil',
-              text: 'Selamat Anda Berhasil Login',
-            });
-      }
+        } else {
+          alert(res.data.message);
+        }
       })
       .catch((err) => console.log(err));
   };
